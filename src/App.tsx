@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import BottomNav from "@/components/BottomNav";
@@ -16,6 +16,7 @@ import { Children } from "./pages/Children";
 import { useState } from "react";
 import { SplashScreen } from "@/components/SplashScreen";
 import Profile from "./pages/Profile";
+import { Hash } from "lucide-react";
 
 const queryClient = new QueryClient();
 
@@ -33,7 +34,7 @@ const App = () => {
               <Toaster />
               <Sonner />
               <AuthProvider>
-                <BrowserRouter>
+                <HashRouter>
                   <Routes>
                     <Route path="/" element={<Index />} />
                     <Route path="/quran" element={<Quran />} />
@@ -45,7 +46,7 @@ const App = () => {
                     <Route path="*" element={<NotFound />} />
                   </Routes>
                   <BottomNav />
-                </BrowserRouter>
+                </HashRouter>
               </AuthProvider>
             </>
           )}

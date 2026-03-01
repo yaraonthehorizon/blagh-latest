@@ -11,9 +11,8 @@ export default defineConfig(({ mode }) => ({
     hmr: {
       overlay: false,
     },
-    build: { outDir: ".." },
-    base: "/balagh/",
   },
+  base: "/balagh/",
   plugins: [react(), mode === "development" && componentTagger()].filter(
     Boolean,
   ),

@@ -34,7 +34,8 @@ export function CurrentDateCard() {
     year: "numeric",
   })
     .format(date)
-    .replace("AH", ""); // Remove "AH" suffix
+    .replace(/AH|هـ|ه/g, "")
+    .trim(); // Remove "AH and ه" suffix
 
   return (
     <div className="flex flex-col rounded-xl bg-card p-5 shadow-card text-center">
@@ -42,10 +43,10 @@ export function CurrentDateCard() {
         {dayOfWeek}
       </h2>
 
-      <div className="grid grid-cols-2 gap-4">
-        <div className="flex flex-col items-center justify-center space-y-1">
+      <div className="flex items-stretch justify-center divide-x divide-border rtl:divide-x-reverse">
+        <div className="flex flex-1 flex-col items-center justify-center space-y-1 px-2">
           <span className="text-sm font-medium text-primary">{hijriMonth}</span>
-          <span className="text-3xl font-bold text-foreground font-arabic">
+          <span className="text-3xl font-bold text-foreground ">
             {hijriDay}
           </span>
 
@@ -54,10 +55,8 @@ export function CurrentDateCard() {
           </span>
         </div>
 
-        <div className="flex flex-col items-center justify-center space-y-1 border-s border-border">
-          <span className="text-sm font-medium text-secondary">
-            {gregMonth}
-          </span>
+        <div className="flex flex-1 flex-col items-center justify-center space-y-1 px-2">
+          <span className="text-sm font-medium text-primary">{gregMonth}</span>
           <span className="text-3xl font-bold text-foreground">{gregDay}</span>
           <span className="text-sm text-muted-foreground border-t border-border">
             {gregYear}
