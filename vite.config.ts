@@ -11,7 +11,7 @@ export default defineConfig(({ mode }) => ({
     hmr: {
       overlay: false,
     },
-    base: "/balagh-your-islamic-compass/",
+    base: "/balagh/",
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(
     Boolean,
