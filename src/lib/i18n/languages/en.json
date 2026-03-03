@@ -22,8 +22,12 @@
   },
 
   "quick_action": {
+    "prayer": "Prayer",
+    "calander": "Calander",
+    "quran": "Mushaf",
     "duaa": "Duaa",
-    "msbha": "Msbha",
+    "hadith": "Hadith",
+    "tsbeeh": "Tsbeeh",
     "athkar": "Athkar",
     "qibla": "Qibla"
   },
@@ -60,6 +64,7 @@
   },
   "content": {
     "home": {
+      "welcome": "Welcome, {{name}}",
       "prayer": "prayer",
       "in": "in",
       "minutes": "minute/s",
@@ -74,6 +79,47 @@
       "fiqh": "Fiqh",
       "seerah": "Seerah",
       "hadith": "Hadith"
+    },
+    "knowledge": {
+      "browse_topics": "Browse Topics",
+      "categories": {
+        "quran": "Quranic Sciences",
+        "tafsir": "Tafsir (Exegesis)",
+        "sunnah": "Sunnah",
+        "creed": "Aqidah (Creed)",
+        "fiqh": "Fiqh (Jurisprudence)",
+        "seerah": "Seerah (Biography)",
+        "tazkiyah": "Tazkiyah (Purification)"
+      }
+    },
+    "athkar": {
+      "tools": {
+        "quran_reader": {
+          "name": "Quran Reader",
+          "desc": "Read with translations & tafsir"
+        },
+        "prayer_times": {
+          "name": "Prayer Times",
+          "desc": "Accurate times & reminders"
+        },
+        "qibla_compass": {
+          "name": "Qibla Compass",
+          "desc": "Find the direction of Qibla"
+        },
+        "athkar": { "name": "Athkar", "desc": "Morning & evening remembrance" },
+        "duaa_collection": {
+          "name": "Dua Collection",
+          "desc": "Supplications for every occasion"
+        },
+        "hijri_calendar": {
+          "name": "Hijri Calendar",
+          "desc": "Islamic date & events"
+        },
+        "tasbih_counter": {
+          "name": "Tasbih Counter",
+          "desc": "Digital counter for dhikr"
+        }
+      }
     },
     "profile": {
       "title": "My Space",
@@ -121,8 +167,6 @@
       }
     }
   },
-
-  "welcome": "Welcome to Balagh",
 
   "basmala": "In the name of Allah, the Most Gracious, the Most Merciful"
 }

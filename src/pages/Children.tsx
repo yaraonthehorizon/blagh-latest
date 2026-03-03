@@ -1,17 +1,16 @@
-import { useTranslation } from "react-i18next";
-import adab from "@/assets/children-categories/adab.png";
-import adeiah from "@/assets/children-categories/adeiah.png";
-import akhlaq from "@/assets/children-categories/akhlaq.png";
-import aqeeda from "@/assets/children-categories/aqeeda.png";
-import fiqh from "@/assets/children-categories/fiqh.png";
-import hadeeth from "@/assets/children-categories/hadeeth.png";
-import misc from "@/assets/children-categories/misc-small.png";
-import seera from "@/assets/children-categories/seera-small.png";
-import tafseer from "@/assets/children-categories/tafseer.png";
-
+import adab from "@/assets/categories/adab.png";
+import adeiah from "@/assets/categories/adeiah.png";
+import akhlaq from "@/assets/categories/akhlaq.png";
+import aqeeda from "@/assets/categories/aqeeda.png";
+import fiqh from "@/assets/categories/fiqh.png";
+import hadeeth from "@/assets/categories/hadeeth.png";
+import misc from "@/assets/categories/misc-small.png";
+import seera from "@/assets/categories/seera-small.png";
+import tafseer from "@/assets/categories/tafseer.png";
 import { useQna } from "@/hooks/use-qna";
 import { useNavigate } from "react-router-dom";
 import { Header } from "@/components/Header";
+import SearchBar from "@/components/SearchBar";
 
 export function Children() {
   const categories = useQna();
@@ -39,12 +38,10 @@ export function Children() {
   ];
 
   return (
-    <div className="min-h-screen bg-background px-5 pb-24 ">
-      <div className="relative max-w-lg mx-auto">
-        <Header
-          headerTitleKey="content.children.title"
-          className="text-primary text-2xl"
-        />
+    <div className="min-h-screen bg-background px-4 pb-24 ">
+      <div className="relative px-2 pb-8 max-w-lg mx-auto">
+        <Header headerTitleKey="page_title.children" />
+        <SearchBar />
         <div className="grid grid-cols-2 gap-3">
           {categories.map((category, index) => {
             const lastIndex = categories.length - 1;
@@ -55,16 +52,16 @@ export function Children() {
                 onClick={() => navigate(`/children/${category.id}`)}
                 className={`${
                   index === lastIndex ? "col-span-2" : ""
-                } flex  items-center justify-between rounded-2xl border-2 p-4 shadow-sm transition-transform hover:scale-105 active:scale-95 ${style.color}`}
+                } flex flex-col items-center justify-center gap-4 rounded-2xl border-2 p-4 shadow-sm transition-transform hover:scale-105 active:scale-95 ${style.color}`}
               >
-                <span className="font-bold text-base text-center leading-tight">
-                  {category.title}
-                </span>
                 <img
                   src={style.icon}
                   alt={category.title}
-                  className="mb-3 h-16 w-16 object-contain"
+                  className="h-16 w-16 object-contain"
                 />
+                <span className="font-bold text-base text-center leading-tight">
+                  {category.title}
+                </span>
               </button>
             );
           })}

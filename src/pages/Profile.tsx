@@ -46,24 +46,18 @@ const MySpace = () => {
     <div className="min-h-screen bg-background px-5 pb-24 ">
       <div className="relative px-6 pb-8  max-w-lg mx-auto">
         <Header headerTitleKey="page_title.profile" className="text-primary" />
-        <button className="rounded-full bg-card p-2 text-muted-foreground shadow-card">
-          <Settings className="h-5 w-5" />
-        </button>
-
         <div className="grid grid-cols-2 gap-3 mb-6">
           {stats.map((s) => (
             <div key={s.label} className="rounded-xl bg-card p-4 shadow-card">
               <s.icon className="mb-2 h-5 w-5 text-secondary" />
-              <p className="font-display text-xl font-bold text-foreground">
-                {s.value}
-              </p>
+              <p className=" text-xl font-bold text-foreground">{s.value}</p>
               <p className="text-xs text-muted-foreground">{s.label}</p>
             </div>
           ))}
         </div>
 
         <div className="mb-6">
-          <h2 className="font-display text-lg font-bold text-foreground mb-3">
+          <h2 className=" text-lg font-bold text-foreground mb-3">
             {t("content.profile.services.title")}
           </h2>
           <div className="grid grid-cols-3 gap-3">
@@ -105,7 +99,7 @@ const MySpace = () => {
           <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">
             {t("content.profile.weekly_insight")}
           </p>
-          <p className="font-display text-sm italic text-foreground leading-relaxed">
+          <p className=" text-sm italic text-foreground leading-relaxed">
             {t("content.profile.insight_text")}
           </p>
         </div>

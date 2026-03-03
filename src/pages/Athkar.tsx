@@ -1,3 +1,5 @@
+import { Header } from "@/components/Header";
+import SearchBar from "@/components/SearchBar";
 import {
   BookOpen,
   Compass,
@@ -7,51 +9,74 @@ import {
   Calendar,
   Star,
 } from "lucide-react";
-
-const tools = [
-  {
-    name: "Quran Reader",
-    desc: "Read with translations & tafsir",
-    icon: BookOpen,
-  },
-  { name: "Prayer Times", desc: "Accurate times & reminders", icon: Clock },
-  { name: "Qibla Compass", desc: "Find the direction of Qibla", icon: Compass },
-  { name: "Athkar", desc: "Morning & evening remembrance", icon: Moon },
-  {
-    name: "Dua Collection",
-    desc: "Supplications for every occasion",
-    icon: HandHeart,
-  },
-  { name: "Hijri Calendar", desc: "Islamic date & events", icon: Calendar },
-  { name: "Tasbih Counter", desc: "Digital counter for dhikr", icon: Star },
-];
+import { useTranslation } from "react-i18next";
 
 export function Athkar() {
+  const { t } = useTranslation();
+  const tools = [
+    {
+      id: "quran_reader",
+      icon: BookOpen,
+      color: "text-emerald-600 bg-emerald-50",
+    },
+    {
+      id: "prayer_times",
+      icon: Clock,
+      color: "text-blue-600 bg-blue-50",
+    },
+    {
+      id: "qibla_compass",
+      icon: Compass,
+      color: "text-indigo-600 bg-indigo-50",
+    },
+    {
+      id: "athkar",
+      icon: Moon,
+      color: "text-amber-600 bg-amber-50",
+    },
+    {
+      id: "duaa_collection",
+      icon: HandHeart,
+      color: "text-rose-600 bg-rose-50",
+    },
+    {
+      id: "hijri_calendar",
+      icon: Calendar,
+      color: "text-cyan-600 bg-cyan-50",
+    },
+    {
+      id: "tasbih_counter",
+      icon: Star,
+      color: "text-stone-600 bg-stone-50",
+    },
+  ];
   return (
-    <div className="min-h-screen bg-background px-5 pb-24 pt-12">
-      <h1 className="font-display text-2xl font-bold text-foreground mb-1">
-        Worship Tools
-      </h1>
-      <p className="text-sm text-muted-foreground mb-6">
-        Your spiritual toolkit
-      </p>
-      <div className="space-y-3">
-        {tools.map((t) => (
-          <button
-            key={t.name}
-            className="flex w-full items-center gap-4 rounded-xl bg-card p-4 shadow-card text-left transition-transform hover:scale-[1.01] active:scale-[0.99]"
-          >
-            <div className="rounded-full bg-primary/10 p-3 text-primary">
-              <t.icon className="h-5 w-5" />
-            </div>
-            <div>
-              <p className="font-display text-sm font-semibold text-foreground">
-                {t.name}
-              </p>
-              <p className="text-xs text-muted-foreground">{t.desc}</p>
-            </div>
-          </button>
-        ))}
+    <div className="min-h-screen bg-background px-4 pb-24">
+      <div className="relative px-2 pb-8 max-w-lg mx-auto">
+        <Header headerTitleKey="page_title.athkar" />
+        <SearchBar />
+        <div className="grid grid-cols-2 gap-3">
+          {tools.map((tool) => (
+            <button
+              key={tool.id}
+              className="flex flex-col w-full items-center justify-center gap-4 rounded-xl bg-card p-4 shadow-card transition-transform hover:scale-[1.01] active:scale-[0.99]"
+            >
+              <div
+                className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full ${tool.color}`}
+              >
+                <tool.icon className="h-6 w-6" />
+              </div>
+              <div className="text-center">
+                <h3 className="font-bold text-foreground text-base leading-tight">
+                  {t(`content.athkar.tools.${tool.id}.name`)}
+                </h3>
+                <p className="text-xs text-muted-foreground mt-1">
+                  {t(`content.athkar.tools.${tool.id}.desc`)}
+                </p>
+              </div>
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );

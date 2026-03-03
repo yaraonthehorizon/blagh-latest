@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://undefinedyara.github.io/balagh",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -12,8 +11,9 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "build:preview": "vite build --mode preview",
+    "deploy:preview": "npm run build:preview && gh-pages -d dist"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

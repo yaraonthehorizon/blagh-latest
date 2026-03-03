@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import BottomNav from "@/components/BottomNav";
@@ -18,8 +18,9 @@ import { useState } from "react";
 import { SplashScreen } from "@/components/SplashScreen";
 import Profile from "./pages/Profile";
 import { FloatingActionButton } from "@/components/FloatingActionButton";
-import Search from "./pages/Search";
+import Search from "./components/SearchBar";
 import ChildrenCategory from "./pages/ChildrenCategory";
+import "@/lib/i18n/init";
 
 const queryClient = new QueryClient();
 
@@ -37,7 +38,7 @@ const App = () => {
               <Toaster />
               <Sonner />
               <AuthProvider>
-                <HashRouter>
+                <BrowserRouter basename={import.meta.env.VITE_BASE_PATH}>
                   <Routes>
                     <Route path="/" element={<Index />} />
                     <Route path="/quran" element={<Quran />} />
@@ -51,12 +52,11 @@ const App = () => {
                       element={<ChildrenCategory />}
                     />
                     <Route path="/profile" element={<Profile />} />
-                    <Route path="/search" element={<Search />} />
                     <Route path="*" element={<NotFound />} />
                   </Routes>
                   <FloatingActionButton />
                   <BottomNav />
-                </HashRouter>
+                </BrowserRouter>
               </AuthProvider>
             </>
           )}
