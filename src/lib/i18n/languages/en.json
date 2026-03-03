@@ -4,16 +4,18 @@
     "quran": "Quran",
     "athkar": "Athkar",
     "duaa": "Duaa",
+    "hadith": "Hadith",
     "bleegh": "Bleegh",
     "knowledge": "Knowledge",
-    "children": "Children"
+    "children": "Children",
+    "search": "Search",
+    "profile": "Profile"
   },
   "routes": {
     "home": "Home",
     "quran": "Mushaf",
-    "hadeeth": "Hadeeth",
+    "hadith": "Hadith",
     "knowledge": "Knowledge",
-
     "children": "Children",
     "bleegh": "Bleegh",
     "services": "Services"
@@ -64,14 +66,14 @@
       "daily_verse": "Today's Verse",
       "daily_hadith": "Today's Hadith",
       "daily_reflection": "Today's Reflection",
-      "daily_reflection_prompt": "What act of kindness can you do today that no one will ever know about?",
-      "children_section": {
-        "title": "Essential Knowledge for Kids",
-        "aqidah": "Aqidah",
-        "fiqh": "Fiqh",
-        "seerah": "Seerah",
-        "hadith": "Hadith"
-      }
+      "daily_reflection_prompt": "What act of kindness can you do today that no one will ever know about?"
+    },
+    "children": {
+      "title": "Children World",
+      "aqidah": "Aqidah",
+      "fiqh": "Fiqh",
+      "seerah": "Seerah",
+      "hadith": "Hadith"
     },
     "profile": {
       "title": "My Space",
@@ -92,8 +94,34 @@
       "juz_progress": "Juz 5 of 30",
       "weekly_insight": "Weekly Insight",
       "insight_text": "You've been consistent with your morning azkar this week. Keep it up — small deeds done consistently are the most beloved to Allah."
+    },
+    "search": {
+      "placeholder": "Search for Surahs, Hadiths, or Topics...",
+      "input_placeholder": "Type to search...",
+      "tabs": {
+        "quran": "Quran",
+        "hadith": "Hadith"
+      },
+      "tab_content": {
+        "quran": "Search the Quran by Surah name, number, or topic.",
+        "hadith": "Search the Hadith collection by keywords or categories."
+      }
+    },
+    "hadith": {
+      "subtitle": "Explore the sayings of the Prophet ﷺ",
+      "browse_collection": "Browse Collection",
+      "categories": {
+        "quran": "The Noble Qur'an and Qur'anic Sciences",
+        "hadith": "The Hadith and Hadith Sciences",
+        "creed": "The Creed",
+        "fiqh": "Jurisprudence and Juristic Principles",
+        "virtues": "Virtues and Manners",
+        "dawah": "Da‘wah and Hisbah",
+        "seerah": "Seerah and History"
+      }
     }
   },
+
   "welcome": "Welcome to Balagh",
 
   "basmala": "In the name of Allah, the Most Gracious, the Most Merciful"

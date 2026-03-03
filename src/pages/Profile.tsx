@@ -1,3 +1,4 @@
+import { Header } from "@/components/Header";
 import {
   BookOpen,
   Flame,
@@ -42,79 +43,72 @@ const MySpace = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background px-5 pb-24 pt-12">
-      <div className="flex items-center justify-between mb-6">
-        <div>
-          <h1 className="font-display text-2xl font-bold text-foreground">
-            {t("content.profile.title")}
-          </h1>
-          <p className="text-sm text-muted-foreground">
-            {t("content.profile.subtitle")}
-          </p>
-        </div>
+    <div className="min-h-screen bg-background px-5 pb-24 ">
+      <div className="relative px-6 pb-8  max-w-lg mx-auto">
+        <Header headerTitleKey="page_title.profile" className="text-primary" />
         <button className="rounded-full bg-card p-2 text-muted-foreground shadow-card">
           <Settings className="h-5 w-5" />
         </button>
-      </div>
 
-      <div className="grid grid-cols-2 gap-3 mb-6">
-        {stats.map((s) => (
-          <div key={s.label} className="rounded-xl bg-card p-4 shadow-card">
-            <s.icon className="mb-2 h-5 w-5 text-secondary" />
-            <p className="font-display text-xl font-bold text-foreground">
-              {s.value}
-            </p>
-            <p className="text-xs text-muted-foreground">{s.label}</p>
-          </div>
-        ))}
-      </div>
-
-      <div className="mb-6">
-        <h2 className="font-display text-lg font-bold text-foreground mb-3">
-          {t("content.profile.services.title")}
-        </h2>
-        <div className="grid grid-cols-3 gap-3">
-          {services.map((s) => (
-            <button
-              key={s.label}
-              className="flex flex-col items-center justify-center rounded-xl bg-card p-3 shadow-card transition-transform hover:scale-[1.02] active:scale-[0.98]"
-            >
-              <div className="mb-2 rounded-full bg-primary/10 p-2.5 text-primary">
-                <s.icon className="h-5 w-5" />
-              </div>
-              <span className="text-xs font-medium text-foreground text-center leading-tight">
-                {s.label}
-              </span>
-            </button>
+        <div className="grid grid-cols-2 gap-3 mb-6">
+          {stats.map((s) => (
+            <div key={s.label} className="rounded-xl bg-card p-4 shadow-card">
+              <s.icon className="mb-2 h-5 w-5 text-secondary" />
+              <p className="font-display text-xl font-bold text-foreground">
+                {s.value}
+              </p>
+              <p className="text-xs text-muted-foreground">{s.label}</p>
+            </div>
           ))}
         </div>
-      </div>
 
-      <div className="rounded-xl bg-card p-5 shadow-card mb-4">
-        <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">
-          {t("content.profile.khatmah_progress")}
-        </p>
-        <div className="mb-2 flex items-center justify-between">
-          <span className="text-sm font-medium text-foreground">
-            {t("content.profile.juz_progress")}
-          </span>
-          <span className="text-sm font-semibold text-secondary">17%</span>
+        <div className="mb-6">
+          <h2 className="font-display text-lg font-bold text-foreground mb-3">
+            {t("content.profile.services.title")}
+          </h2>
+          <div className="grid grid-cols-3 gap-3">
+            {services.map((s) => (
+              <button
+                key={s.label}
+                className="flex flex-col items-center justify-center rounded-xl bg-card p-3 shadow-card transition-transform hover:scale-[1.02] active:scale-[0.98]"
+              >
+                <div className="mb-2 rounded-full bg-primary/10 p-2.5 text-primary">
+                  <s.icon className="h-5 w-5" />
+                </div>
+                <span className="text-xs font-medium text-foreground text-center leading-tight">
+                  {s.label}
+                </span>
+              </button>
+            ))}
+          </div>
         </div>
-        <div className="h-2 rounded-full bg-muted overflow-hidden">
-          <div
-            className="h-full rounded-full gradient-spiritual"
-            style={{ width: "17%" }}
-          />
-        </div>
-      </div>
 
-      <div className="rounded-xl bg-card p-5 shadow-card">
-        <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">
-          {t("content.profile.weekly_insight")}
-        </p>
-        <p className="font-display text-sm italic text-foreground leading-relaxed">
-          {t("content.profile.insight_text")}
-        </p>
+        <div className="rounded-xl bg-card p-5 shadow-card mb-4">
+          <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">
+            {t("content.profile.khatmah_progress")}
+          </p>
+          <div className="mb-2 flex items-center justify-between">
+            <span className="text-sm font-medium text-foreground">
+              {t("content.profile.juz_progress")}
+            </span>
+            <span className="text-sm font-semibold text-secondary">17%</span>
+          </div>
+          <div className="h-2 rounded-full bg-muted overflow-hidden">
+            <div
+              className="h-full rounded-full gradient-spiritual"
+              style={{ width: "17%" }}
+            />
+          </div>
+        </div>
+
+        <div className="rounded-xl bg-card p-5 shadow-card">
+          <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">
+            {t("content.profile.weekly_insight")}
+          </p>
+          <p className="font-display text-sm italic text-foreground leading-relaxed">
+            {t("content.profile.insight_text")}
+          </p>
+        </div>
       </div>
     </div>
   );

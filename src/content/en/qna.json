@@ -1,0 +1,1748 @@
+[
+  {
+    "id": "creed-section",
+    "title": "The Creed",
+    "description": "Firm belief in the lordship of Allah Almighty, His divinity, His names and attributes, and the fundamentals of religion.",
+    "order": 1,
+    "items": [
+      {
+        "id": "q1-who-is-your-lord",
+        "question": "Who is your Lord?",
+        "answer": "My Lord is Allah, who has provided me and all the creatures with His favor. He is the God I worship, and I worship none but Him. He is the Creator, the Owner, the Provider, and the One Who manages the whole universe. The evidence lies in His saying: {All praise be to Allah, the Lord of the worlds.} [Surat al-Fatihah: 2]",
+        "order": 1
+      },
+      {
+        "id": "q2-what-is-your-religion",
+        "question": "What is your religion?",
+        "answer": "My religion is Islam, which is all about submitting to Allah through monotheism, yielding to Him through obedience, and dissociating oneself from Shirk (polytheism) and its people. The Almighty said: {The true religion with Allah is Islam...} [Surat Āl 'Imrān: 19]",
+        "order": 2
+      },
+      {
+        "id": "q3-who-is-your-prophet",
+        "question": "Who is your prophet?",
+        "answer": "Muhammad (may Allah's peace and blessings be upon him). The Almighty said: {Muhammad is the Messenger of Allah...} [Surat al-Fat'h: 9]",
+        "order": 3
+      },
+      {
+        "id": "q4-words-and-meaning-of-tawhid",
+        "question": "What are the words of Tawhid (monotheism) and the meaning of Tawhid?",
+        "answer": "The words of Tawhid are \"La ilaha illallah\". This means that none is worthy of worship except Allah. Allah Almighty says: {Then know [O Prophet] that none has the right to be worshiped except Allah...} [Surat Muhammad: 24] Allah Almighty also says: {That is because it is Allah Who is the Truth, and whatever they invoke besides Him is falsehood, and it is Allah Who is the Most High, the Most Great.} [Surat al-Hajj: 62]",
+        "order": 4
+      },
+      {
+        "id": "q5-where-is-allah",
+        "question": "Where is Allah Almighty?",
+        "answer": "Allah is in heaven, above the Throne and above all the creation. The Almighty said: {The Most Compassionate rose over the Throne.} [Surat Taha: 5] Allah Almighty also says: {He is the Vanquisher over His slaves, and He is the All-Wise, the All-Aware.} [Surat al-An'am: 18]",
+        "order": 5
+      },
+      {
+        "id": "q6-meaning-of-testimony-muhammad-messenger",
+        "question": "What is the meaning of the testimony that Muhammad is the Messenger of Allah?",
+        "answer": "It means that Allah sent him to the worlds as a bringer of glad tidings and as a warner. And it is a must to: 1. Obey his commands. 2. Believe what he reported. 3. Refrain from disobeying him. 4. Worship Allah only in compliance with his Sharia, which requires following the Sunnah and abandoning religious innovations. The Almighty says: {Whoever obeys the Messenger has indeed obeyed Allah...} [Surat an-Nisa': 86] Allah Almighty also says: {Nor does he speak out of his own desire. It is but a revelation sent down [to him].} [Surat an-Najm: 3-4] Allah Almighty also says: {Indeed, in the Messenger of Allah, you have an excellent example for those who look forward to Allah and the Last Day and remember Allah much.} [Surat al-Ahzāb: 59]",
+        "order": 6
+      },
+      {
+        "id": "q7-why-did-allah-create-us",
+        "question": "Why did Allah Almighty create us?",
+        "answer": "He created us to worship Him alone without associating partners with Him. He did not create us for no purpose, play, or recreation, nor did He leave us neglected and unattended. The Almighty said: {I have not created the jinn and mankind except to worship Me.} [Surat adh-Dhāriyāt: 56]",
+        "order": 7
+      },
+      {
+        "id": "q8-what-is-worship",
+        "question": "What is worship?",
+        "answer": "It is a broad term that includes all apparent and hidden sayings and deeds that Allah loves and is pleased with. Examples of the apparent sayings and deeds include making Dhikr with the tongue, like Tasbih (glorifying Allah), Tahmid (praising Allah), and Takbīr (proclaiming Allah's greatness), praying, and performing Hajj (pilgrimage). On the other hand, reliance on Allah, fearing Him, and having hopes in Him are examples of the hidden aspects of worship.",
+        "order": 8
+      },
+      {
+        "id": "q9-what-is-our-greatest-duty",
+        "question": "What is our greatest duty?",
+        "answer": "Our greatest duty is to believe in the Oneness of Allah Almighty, i.e., adopt Tawhid. The Almighty said: {and they were commanded only to worship Allah with sincere devotion to Him.} [Surat al-Bayyinah: 5]",
+        "order": 9
+      },
+      {
+        "id": "q10-types-of-tawhid",
+        "question": "What are the types of Tawhid?",
+        "answer": "1. Tawhid ar-Rubūbiyyah (Oneness of Lordship): It means to believe that Allah alone is the Creator, the Provider, the Owner, and the Disposer of Affairs. 2. Tawhid al-Ulūhiyyah (Oneness of Worship): It means to single Allah out with worship, i.e., to worship none but Allah Almighty. 3. Tawhid al-Asma' wa as-Sifat (Oneness of Names and Attributes): It means to believe in Allah's names and attributes that are mentioned in the Qur'an and Sunnah without Tamthīl (drawing resemblance between Allah and His creatures), Tashbīh (likening), Ta'til (negating), or Takyīf (describing manner and nature). Evidence supporting the three types of Tawhīd is: Allah Almighty's statement: {Lord of the heavens and earth and all that is between them. So, worship Him and be constant in worshiping Him. Do you know anyone equal to Him?} [Surat Maryam: 65]",
+        "order": 10
+      },
+      {
+        "id": "q11-gravest-sin",
+        "question": "What is the gravest sin?",
+        "answer": "Shirk (polytheism), i.e., associating partners with Allah Almighty. The Almighty said: {Allah does not forgive associating partners with Him but forgives anything less than that for whom He wills. Whoever associates partners with Allah has indeed committed a grave sin.} [Surat an-Nisa': 86]",
+        "order": 11
+      },
+      {
+        "id": "q12-what-is-shirk-and-types",
+        "question": "What is Shirk and what are its types?",
+        "answer": "Shirk means ascribing to Allah Almighty an equal in His worship, lordship, or in His names and attributes. Dedicating any type of worship to anyone other than Allah Almighty is also considered Shirk. Its types are: Major Shirk, like supplicating, prostrating, or slaughtering a sacrifice for other than Allah Almighty. Minor Shirk is the type of Shirk that does not take one out of the fold of Islam, like swearing by other than Allah Almighty, using amulets, which are things worn or hung to bring about benefit or ward off harm, and a little show-off, such as praying in a perfect manner while people are seeing.",
+        "order": 12
+      },
+      {
+        "id": "q13-knowledge-of-unseen",
+        "question": "Does anyone know the unseen other than Allah?",
+        "answer": "No one knows the unseen except Allah alone. The Almighty said: {Say, \"No one in the heavens and earth has knowledge of the unseen except Allah.\" Nor do they know when they will be resurrected.} [Surat an-Naml: 65]",
+        "order": 13
+      },
+      {
+        "id": "q14-pillars-of-iman",
+        "question": "What are the pillars of Imān (faith)?",
+        "answer": "The pillars of faith are six, which are: 1. Belief in Allah Almighty 2. Belief in His angels. 3. Belief in His books. 4. Belief in His messengers. 5. Belief in the Last Day. 6. Belief in destiny, with the pleasant and unpleasant aspects thereof. Evidence lies in the famous Hadith of Jibril (Gabriel) that was narrated by Muslim. Gabriel said to the Prophet (may Allah's peace and blessings be upon him):\" Tell me about faith.' He said: 'It is to believe in Allah, His angels, His books, His messengers, the Last Day, and destiny with the pleasant and unpleasant aspects thereof.'\"",
+        "order": 14
+      },
+      {
+        "id": "q15-meaning-of-pillars-of-iman",
+        "question": "What is the meaning of the pillars of Iman?",
+        "answer": "Belief in Allah Almighty: It is to believe that Allah is the One Who created and provided for you and that He is the Owner and the only One Who manages the creatures' affairs. He is the Deity, and no one but Him is truly worthy of worship. The creation, the command, the judgment, and the legislation belong to Him alone with no partners. He is the Magnificent, the Great, and the Perfect to Whom all praise is due and Who has the beautiful names and sublime attributes. He has no equal, and nothing is like Him. \nBelief in the Angels: Angels are creatures Allah created from light to worship Him and fully obey His commands. The Almighty said: {In fact, those [angels] are His honored slaves. * They do not speak before He speaks, and they only do as He commands.} [Surat al-Anbiya': 26-27] The Prophet said:\"Angels were created from light.\" Gabriel, who was assigned to bring down the revelation to the prophets, is one of the angels. \nBelief in the Books: These are the books that Allah sent down to His messengers. Examples are: The Qur'an (Muhammad), The Gospel ('Isa), The Torah (Mūsa), The Psalms (Dāwūd), and the Scriptures of Ibrāhīm and Mūsa. \nBelief in the Messengers: They are the messengers whom Allah Almighty sent to His servants to teach them, bring them the glad tidings of good and Paradise, and warn them against evil and the Hellfire. The best among them are the Messengers of Firm Resolve: Nūh, Abraham, Moses, Jesus, and Muhammad. \nBelief in the Last Day: It refers to what comes after death in the grave, on the Day of Judgment, and on the Day of Resurrection and Reckoning. The Almighty said: {Every soul will taste death, and you will be paid your reward in full on the Day of Resurrection. Whoever is spared from the Fire and admitted into Paradise has truly won...} [Surat Al 'Imrān: 185] \nBelief in destiny and its good and bad aspects: It is to believe that Allah knows everything that happens in the universe, which He had previously written in the Preserved Tablet and had willed to create. It has four levels: First: Knowledge of Allah Almighty. Second: Allah had written this in the Preserved Tablet. Third: Everything happens by the will of Allah. Fourth: Believing that all creatures are created by Allah.",
+        "order": 15
+      },
+      {
+        "id": "q16-definition-of-quran",
+        "question": "What is the definition of the Qur'an?",
+        "answer": "It is the word of Allah Almighty, and it is not created. The Almighty said: {If any of the polytheists asks you for protection, give it to him, so that he may hear the Word of Allah...} [Surat at-Tawbah: 100] In a Hadith, it was narrated: \"The superiority of Allah's Words over all other words is like the superiority of Allah over His creatures.\"",
+        "order": 16
+      },
+      {
+        "id": "q17-what-is-sunnah",
+        "question": "What is the Sunnah?",
+        "answer": "It is every word, deed, approval, physical or moral quality of the Prophet (may Allah's peace and blessings be upon him).",
+        "order": 17
+      },
+      {
+        "id": "q18-religious-innovation",
+        "question": "What is religious innovation? Should we accept it?",
+        "answer": "It is everything that people have introduced in the religion that did not exist either at the time of the Prophet (may Allah's peace and blessings be upon him) or at the time of his Companions. We should not accept it and we must reject it. Because the Prophet said: \"Every religious innovation is an error.\" Moreover, the Prophet said: \"Whoever does something that is not in accordance with this matter of ours (Islam) will be rejected.\" Examples include adding to an act of worship or celebrating the birthday of the Prophet.",
+        "order": 18
+      },
+      {
+        "id": "q19-principle-of-wala-and-bara",
+        "question": "What is the principle of Wala' (allegiance) and Bara' (dissociation)?",
+        "answer": "Allegiance: It means loving and supporting the believers. The Almighty said: {The believers, both men and women, are allies of one another...} [Surat at-Tawbah: 100] Dissociation: It means hating the disbelievers and taking them as enemies. The Almighty said: {Indeed, you have a good example in Abraham and those with him, when they said to their people, \"We dissociate ourselves from you and whatever you worship besides Allah. We renounce you, and the enmity and hatred have arisen between you and us forever until you believe in Allah alone\".} [Surat al-Mumtahanah: 4]",
+        "order": 19
+      },
+      {
+        "id": "q20-acceptance-of-other-religions",
+        "question": "Does Allah accept any religion other than Islam?",
+        "answer": "Allah does not accept any religion other than Islam. The Almighty said: {Anyone who seeks a religion other than Islam, will never be accepted from him, and in the Hereafter, he will be among the losers.} [Surat Al 'Imrān: 85]",
+        "order": 20
+      },
+      {
+        "id": "q21-examples-of-kufr",
+        "question": "Kufr (disbelief) could be committed by words, deeds, and beliefs; give examples.",
+        "answer": "An example of committing Kufr by words is reviling Allah Almighty or His Messenger (may Allah's peace and blessings be upon him). An example of committing Kufr by deeds is degrading the Mus-haf (a bound copy of the Qur'an) or prostrating to other than Allah Almighty. An example of committing Kufr by belief is believing that there is someone who is worthy of worship other than Allah Almighty or that there is a creator besides Allah Almighty.",
+        "order": 21
+      },
+      {
+        "id": "q22-hypocrisy-and-types",
+        "question": "What is hypocrisy and what are its types?",
+        "answer": "1. Major Hypocrisy: It means hiding disbelief and proclaiming faith. It takes one outside the fold of Islam and it is considered major disbelief. The Almighty said: {Indeed, the hypocrites will be in the lowest depths of the Fire, and you will never find for them any helper.} [Surat an-Nisa': 86] 2. Minor Hypocrisy: Examples include: lying, breaking promises, and betraying trusts. Hypocrisy does not take one out of the fold of Islam. Rather, it is a sin. The Messenger of Allah said:\"Signs of the hypocrite are three: when he speaks, he tells lies; when he makes a promise, he breaks it; and when he is entrusted, he betrays the trust.\"",
+        "order": 22
+      },
+      {
+        "id": "q23-seal-of-the-prophets",
+        "question": "Who is the seal of the prophets and messengers?",
+        "answer": "Muhammad (may Allah's peace and blessings be upon him). The Almighty said: {Muhammad is not the father of any of your men, but he is the Messenger of Allah and the seal of the prophets...} [Surat al-Ahzāb: 59] The Prophet also said:\"I am the seal of the prophets, and there is no prophet after me.\"",
+        "order": 23
+      },
+      {
+        "id": "q24-what-is-a-miracle",
+        "question": "What is a miracle?",
+        "answer": "A miracle is every supernatural act or event with which Allah Almighty supported His prophets to prove their truthfulness. Examples are: Splitting the moon for the Prophet Muhammad. The Almighty said: {The Hour has drawn near, and the moon has split asunder. * Whenever they see a sign, they turn away and say, \"Same old magic!\"} [Surat al-Qamar: 1-2] Splitting the sea for Moses and the drowning of Pharaoh and his soldiers. The Almighty said: {And [remember] when We parted the sea for you and saved you, while We drowned the people of Pharaoh while you were looking on.} [Surat al-Baqarah: 152]",
+        "order": 24
+      },
+      {
+        "id": "q25-who-are-the-companions",
+        "question": "Who are the Companions? Should we love them?",
+        "answer": "A Companion is the one who met the Prophet (may Allah's peace and blessings be upon him), believed in him, and died as a Muslim. We should love them and follow their example. The best Companions are the four Caliphs: Abu Bakr, 'Umar, 'Uthman, and 'Ali. Allah Almighty says: {As for the first forerunners of the Emigrants and the Helpers, and those who followed them in righteous deeds, Allah is pleased with them, and they are pleased with Him.} [Surat at-Tawbah: 100]",
+        "order": 25
+      },
+      {
+        "id": "q26-mothers-of-the-believers",
+        "question": "Who are the Mothers of the Believers?",
+        "answer": "They are the Prophet's wives. Allah Almighty says: {The Prophet has a greater claim over the believers than their own selves, and his wives are their mothers.} [Surat al-Ahzāb: 59]",
+        "order": 26
+      },
+      {
+        "id": "q27-duty-towards-prophets-household",
+        "question": "What is our duty towards the household of the Prophet (may Allah's peace and blessings be upon him)?",
+        "answer": "The household includes his wives, his offspring, and the believers from among Banu Hashim and Banu Al-Muttalib. It is our duty to love and support them, hate whoever hates them, and avoid extremism regarding them. The Almighty said: {Allah only intends to keep evil away from you, O members of the [Prophet's] household, and to completely purify you.} [Surat al-Ahzāb: 33] The Prophet said: \"I remind you of Allah with regard to my household\" (repeated three times).",
+        "order": 27
+      },
+      {
+        "id": "q28-duty-towards-muslim-rulers",
+        "question": "What is our duty towards the Muslim rulers?",
+        "answer": "Our duty towards the Muslim rulers is to respect them, obey them in whatever does not involve sin, supplicate for them and advise them secretly, and not to rebel against them unless we witness manifest disbelief. The Almighty said: {0 you who believe, obey Allah and the Messenger, and those of you who are in authority.} [Surat an-Nisa': 86]",
+        "order": 28
+      },
+      {
+        "id": "q29-abode-of-the-believers",
+        "question": "What is the abode of the believers?",
+        "answer": "The abode of the believers is Paradise. Allah Almighty says: {Allah will surely admit those who believe and do righteous deeds to gardens under which rivers flow...} [Surat Muhammad: 24]",
+        "order": 29
+      },
+      {
+        "id": "q30-abode-of-the-disbelievers",
+        "question": "What is the abode of the disbelievers?",
+        "answer": "The abode of the disbelievers is Hellfire. Allah Almighty says: {But if you did not do it... then beware of the Fire, whose fuel will be people and stones, which is prepared for the disbelievers.} [Surat al-Baqarah: 152]",
+        "order": 30
+      },
+      {
+        "id": "q31-fear-and-hope",
+        "question": "What is fear? What is hope? What is the evidence?",
+        "answer": "Fear: It is being afraid of Allah and of His punishment. \nHope: It is having the desire for Allah's reward, His forgiveness, and His mercy. \nEvidence lies in His saying: {Those whom they call upon seek means of nearness to their Lord... hoping for His Mercy and fearing His punishment.} [Surat al-Isra': 37] Allah Almighty also says: {Inform My slaves that I am indeed the All-Forgiving, the Most Merciful and that My punishment is the most painful punishment.} [Surat al-Hijr: 49-50]",
+        "order": 31
+      },
+      {
+        "id": "q32-names-and-attributes-of-allah",
+        "question": "Mention some of the names and attributes of Allah Almighty.",
+        "answer": "Allah, Ar-Rabb (the Lord), Ar-Rahman (the Most Compassionate), As-Samī (the All-Hearing), Al-Basir (the All-Seeing), Al-'Alīm (the All-Knowing), Ar-Razzaq (the All-Provider), Al-Hayy (the Ever-Living), Al-'Azhīm (the Magnificent), Al-Hakīm (the All-Wise).",
+        "order": 32
+      },
+      {
+        "id": "q33-explain-allah-names",
+        "question": "Explain these names.",
+        "answer": "Allah: The only God worthy of worship with no partners. \nAr-Rabb: The only Creator, Owner, Provider, and Disposer of Affairs. \nAs-Samī': The One Whose Hearing encompasses everything. \nAl-Basīr: The One Who sees everything. \nAl-'Alīm: The One Whose knowledge encompasses everything in the past, present, and the future. \nAr-Rahmān: The One Whose mercy encompasses all creatures. \nAr-Razzāq: The One Who provides for all creatures. \nAl-Hayy: The One Who does not die. \nAl-'Azhīm: The One Who possesses all perfection and magnificence. \nAl-Hakīm: The One Who perfected His creation and Whose creation and command are based on His wisdom.",
+        "order": 33
+      },
+      {
+        "id": "q34-duty-towards-muslim-scholars",
+        "question": "What is our duty towards the Muslim scholars?",
+        "answer": "Our duty towards the Muslim scholars is to love them and refer to them in Sharia-related issues and unprecedented events. We should mention the scholars in a positive way. Allah Almighty says: {Allah will raise in ranks those who believed from among you and those who are given knowledge.} [Surat al-Mujādalah: 11]",
+        "order": 34
+      },
+      {
+        "id": "q35-allies-of-allah",
+        "question": "Who are the Awliya' (allies) of Allah Almighty?",
+        "answer": "They are the righteous believers who follow the Sunnah of the Prophet. The Almighty said: {Indeed, the allies of Allah will have no fear, nor will they grieve. Those who believe and fear Allah.} [Surat Yūnus: 62-63]",
+        "order": 35
+      },
+      {
+        "id": "q36-iman-words-and-deeds",
+        "question": "Does Imān (faith) include words and deeds?",
+        "answer": "Imān includes words, deeds, and beliefs. The words are spoken by the tongue, the beliefs and deeds in the heart, and the deeds are practiced by the body parts. In the Hadith, the Prophet said:\"Imān (faith) has over seventy branches... the most excellent of which is the declaration that there is no god but Allah... and modesty is a branch of faith.\"",
+        "order": 36
+      },
+      {
+        "id": "q37-iman-increase-decrease",
+        "question": "Does Imān increase and decrease?",
+        "answer": "Imān increases by obeying Allah and decreases by disobeying Him. Allah Almighty says: {The true believers are those whose hearts are filled with awe when Allah is mentioned, and their faith increases when His verses are recited to them...} [Surat al-Anfal: 2]",
+        "order": 37
+      },
+      {
+        "id": "q38-what-is-ihsan",
+        "question": "What is Ihsan (benevolence/excellence)?",
+        "answer": "To worship Allah as if you see Him, and if you cannot see Him, He sees you.",
+        "order": 38
+      },
+      {
+        "id": "q39-acceptance-of-deeds",
+        "question": "When will the deeds be accepted by Allah Almighty?",
+        "answer": "The acceptance of deeds is contingent on two conditions: 1. If the deed is dedicated with full sincerity to Allah Almighty. 2. If the deed conforms with the Sunnah of the Prophet (may Allah's peace and blessings be upon him).",
+        "order": 39
+      },
+      {
+        "id": "q40-what-is-tawakkul",
+        "question": "What is Tawakkul (reliance) on Allah Almighty?",
+        "answer": "It means reliance on Allah Almighty in bringing benefit and warding off harm, while utilizing the available means. The Almighty said: {Whoever puts his trust in Allah, He is sufficient for him.} [Surat at-Talaq: 3]",
+        "order": 40
+      },
+      {
+        "id": "q41-enjoining-good-forbidding-evil",
+        "question": "What is the duty of enjoining good and forbidding evil?",
+        "answer": "Enjoining good means: enjoining people to do every act of obedience to Allah Almighty. Forbidding evil means: forbidding people from every sin with which they disobey Allah Almighty. Allah Almighty says: {You are the best nation ever raised for mankind: you enjoin what is right and forbid what is wrong and believe in Allah.} [Surat Āl 'Imrān: 110]",
+        "order": 41
+      },
+      {
+        "id": "q42-who-are-ahl-us-sunnah",
+        "question": "Who are Ahl-us-Sunnah wa al-Jama'ah?",
+        "answer": "They are those people who adopt the way of the Prophet and his Companions in terms of words, deeds, and beliefs. They are called \"Ahl-us-Sunnah\" for following the Prophet's Sunnah and refraining from introducing innovations. \"Al-Jama'ah\" (group) refers to the fact that they have united on the truth. The Prophet said: \"...my Ummah will split into seventy-three sects, all of them will be in Hellfire except for the one sect.\" They said: \"Which one is it...?\" He said: \"That upon which I am and my Companions.\"",
+        "order": 42
+      }
+    ]
+  },
+  {
+    "id": "fiqh-section",
+    "title": "Islamic Jurisprudence",
+    "description": "Knowledge related to practical legal rulings like ritual purification, prayer, charity, fasting, and pilgrimage.",
+    "order": 2,
+    "items": [
+      {
+        "id": "q1-define-taharah",
+        "question": "Define Tahārah (ritual purification).",
+        "answer": "Tahārah means purification from Hadath (ritual impurity) and removal of Khabath (material impurity). The Prophet said:\"Purification is the key to prayer.\" Purification from Khabath means removal of material impurity from the body, clothes, or place of prayer. Purification from Hadath means performing ablution or Ghusl (ritual bath) or Tayammum (dry ablution).",
+        "order": 1
+      },
+      {
+        "id": "q2-purify-najasah",
+        "question": "How could one purify what is affected by Najāsah (material impurity)?",
+        "answer": "By washing it with water until it becomes clean. As for what is licked by a dog, it has to be washed seven times the first of which must be with dust. The Prophet said:\"When a dog drinks from the vessel of any of you, let him purify it by washing it seven times the first of which should be with dust.\"",
+        "order": 2
+      },
+      {
+        "id": "q3-merit-of-ablution",
+        "question": "What is the merit of ablution?",
+        "answer": "The Prophet (may Allah's peace and blessings be upon him) said: \"If a Muslim or a believer performs ablution... when he washes his face, every sin he committed with his eyes is washed away... when he washes his hands, every sin he committed with his hands is washed away... and when he washes his feet, every sin that his feet walked towards is washed away... until he comes out pure of all sins.\"",
+        "order": 3
+      },
+      {
+        "id": "q4-how-to-perform-ablution",
+        "question": "How should we perform ablution?",
+        "answer": "By washing both hands (three times). Making Madmadah (rinsing mouth), Istinshāq (sniffing water), and Istinthar (blowing water out) - three times. Washing the face - three times. Washing the arms including the elbows - three times. Wiping over the head (forwards and backwards) and wiping the ears. Washing both feet up to the ankles - three times.",
+        "order": 4
+      },
+      {
+        "id": "q5-obligatory-acts-of-ablution",
+        "question": "What are the obligatory acts of ablution? How many are they?",
+        "answer": "The obligatory acts render one's ablution invalid if left out. They are: 1. Washing the face (including mouth and nose). 2. Washing the arms including the elbows. 3. Wiping over the head (including the ears). 4. Washing the feet up to the ankles. 5. Maintaining the prescribed order. 6. Succession (washing organs successively without long intervals). Evidence: {0 you who believe, when you rise up for prayer, wash your faces, and your hands up to the elbows; wipe over your heads; and wash your feet up to the ankles.} [Surat al-Ma'idah: 6]",
+        "order": 5
+      },
+      {
+        "id": "q6-sunan-of-ablution",
+        "question": "What are the Sunan (recommended acts) of ablution? How many are they?",
+        "answer": "Acts which increase reward but whose omission does not invalidate ablution. They are: 1. Saying: Bismillah. 2. Using the Siwāk. 3. Washing the palms. 4. Washing between the fingers. 5. Washing the organs for a second and third time. 6. Starting with the right side. 7. Saying Dhikr after ablution: \"Ash-hadu allā ilaha illallāh...\" 8. Performing two Rak'ahs after ablution.",
+        "order": 6
+      },
+      {
+        "id": "q7-invalidators-of-ablution",
+        "question": "What are the invalidators of ablution?",
+        "answer": "1. Whatever comes out of the two private parts (urine, feces, wind). 2. Sleep, insanity, or loss of consciousness. 3. Eating camel meat. 4. Touching the private parts, front or back, with the hand without a barrier.",
+        "order": 7
+      },
+      {
+        "id": "q8-what-is-tayammum",
+        "question": "What is Taymmum (dry ablution)?",
+        "answer": "Tayammum: It means using dust or the like of earth when water is unavailable, or it cannot be used. The Almighty said: {And if you find no water, then purify yourselves with clean earth and wipe your faces and hands with it.} [Surat an-Nisa': 43]",
+        "order": 8
+      },
+      {
+        "id": "q9-how-to-perform-tayammum",
+        "question": "How do we perform Tayammum?",
+        "answer": "We perform Tayammum by striking dust once with the palms of both hands and wiping the face and the back parts of the hands once only. The Prophet demonstrated this to 'Ammar ibn Yasir by striking the earth, blowing off dust, and passing hands over his face and hands.",
+        "order": 9
+      },
+      {
+        "id": "q10-invalidators-of-tayammum",
+        "question": "What are the invalidators of Tayammum?",
+        "answer": "All the invalidators of ablution, also when water is available.",
+        "order": 10
+      },
+      {
+        "id": "q11-khuffs-and-jawrabs",
+        "question": "What are the Khuffs and the Jawrabs? Is it permissible to wipe over them in ablution?",
+        "answer": "The Khuffs refer to leather socks. The Jawrabs refer to socks made of other materials. It is permissible to wipe over them in ablution instead of washing the feet. This is supported by the Hadith of Al-Mughīrah ibn Shu'bah that the Prophet performed ablution and wiped over his socks.",
+        "order": 11
+      },
+      {
+        "id": "q12-rationale-wiping-leather-socks",
+        "question": "What is the rationale behind wiping over leather socks?",
+        "answer": "It is meant to make things easy for people and alleviate hardship, especially in cold weather or during travel. The Almighty said: {Allah wants ease for you and does not want hardship for you.} [Surat al-Baqarah: 152]",
+        "order": 12
+      },
+      {
+        "id": "q13-conditions-wiping-socks",
+        "question": "What are the conditions of the validity of wiping over leather socks?",
+        "answer": "1. To put them on while in a state of Tahārah (after ablution). 2. The leather socks must be pure. 3. They must cover the whole feet including the ankles. 4. Wiping must be within the prescribed time: one day and night for the resident, three days and nights for the traveler.",
+        "order": 13
+      },
+      {
+        "id": "q14-manner-wiping-socks",
+        "question": "What is the manner of wiping over leather socks?",
+        "answer": "By putting one's wet fingers over one's toes and wiping them up to the shin, using the right hand for the right foot and the left hand for the left foot. Fingers should be apart and it is done once.",
+        "order": 14
+      },
+      {
+        "id": "q15-invalidates-wiping-socks",
+        "question": "What invalidates wiping over leather socks?",
+        "answer": "1. Expiry of the specific duration of time. 2. Taking off the leather socks or one of them after wiping.",
+        "order": 15
+      },
+      {
+        "id": "q16-merit-of-prayer",
+        "question": "What is the merit of prayer?",
+        "answer": "The Prophet said: \"Tell me, if there were a river at the door of one of you from which he washed five times a day, would any of his filthiness remain?\" They said: \"No...\" He said: \"That is like the five obligatory prayers by which Allah obliterates sins.\"",
+        "order": 16
+      },
+      {
+        "id": "q17-meaning-of-salah",
+        "question": "What is the meaning of Salah (prayer)?",
+        "answer": "Salah is worshiping Allah by specific words and acts. It starts with Takbīr (saying: Allāhu Akbar) and ends with Taslīm (salutation of peace).",
+        "order": 17
+      },
+      {
+        "id": "q18-ruling-of-salah",
+        "question": "What is the ruling of Salah (prayer)?",
+        "answer": "Prayer is an obligation upon every Muslim. Allah Almighty says: {Indeed, prayer is prescribed for the believers at specific times.} [Surat an-Nisa': 103]",
+        "order": 18
+      },
+      {
+        "id": "q19-abandoning-prayer",
+        "question": "What is the ruling on abandoning the prayer?",
+        "answer": "Abandoning the prayer constitutes disbelief. The Prophet said: \"The covenant (that distinguishes) between us and them (disbelievers) is the prayer; so, whoever abandons it has indeed committed disbelief.\"",
+        "order": 19
+      },
+      {
+        "id": "q20-obligatory-prayers-per-day",
+        "question": "How many prayers are obligatory upon the Muslim in one day and night? What are the number of Rak'ahs (units of prayer) in each prayer?",
+        "answer": "There are five prayers: Fajr (2 Rak'ahs), Dhuhr (4 Rak'ahs), 'Asr (4 Rak'ahs), Maghrib (3 Rak'ahs), and 'Ishā' (4 Rak'ahs).",
+        "order": 20
+      },
+      {
+        "id": "q21-conditions-of-prayer",
+        "question": "What are the conditions of prayer?",
+        "answer": "1. Islam. 2. Sanity. 3. Discernment (being a child of age). 4. Niyyah (intention). 5. Commencement of the prescribed time. 6. Tahārah (ritual purity). 7. Purification from physical impurity. 8. Covering the 'Awrah. 9. Facing the Qiblah.",
+        "order": 21
+      },
+      {
+        "id": "q22-pillars-of-salah",
+        "question": "What are the pillars of Salah (prayer)?",
+        "answer": "There are fourteen pillars: 1. Standing. 2. Opening Takbīr. 3. Reciting Surat al-Fatihah. 4. Rukū' (bowing). 5. Rising from Rukū'. 6. Standing up straight. 7. Sujūd (prostration) on seven parts. 8. Rising from Sujūd. 9. Sitting between two prostrations. 10. Serenity (calmness). 11. The last Tashahhud. 12. Sitting for Tashahhud. 13. Two Taslīms. 14. Maintaining order.",
+        "order": 22
+      },
+      {
+        "id": "q23-obligatory-acts-of-prayer",
+        "question": "What are the obligatory acts of the prayer?",
+        "answer": "There are eight: 1. Saying Takbīrs other than the opening one. 2. Saying: \"Sami' allāhu liman hamidah\". 3. Saying: \"Rabbana wa laka al-hamd\". 4. Saying: \"Subhāna rabbiya Al-'Azhīm\" once in Rukū'. 5. Saying: \"Subhāna rabbiya Al-A'lā\" once in Sujūd. 6. Saying: \"Rabbighfir lī\" between prostrations. 7. Saying the first Tashahhud. 8. Sitting for the first Tashahhud.",
+        "order": 23
+      },
+      {
+        "id": "q24-sunan-of-prayer",
+        "question": "What are the Sunan (recommended acts) of the prayer?",
+        "answer": "There are eleven verbal acts (like the opening supplication, Ta'awwudh, Bismillah, Āmīn, reciting a surah, etc.) and various physical postures (raising hands at certain points, placing right hand over left, looking at place of prostration, Iftirash and Tawarruk sitting positions).",
+        "order": 24
+      },
+      {
+        "id": "q25-prayer-invalidators",
+        "question": "What are the prayer invalidators?",
+        "answer": "1. Leaving out a pillar or condition. 2. Talking deliberately. 3. Eating or drinking. 4. Frequent movements. 5. Leaving out an obligatory act deliberately.",
+        "order": 25
+      },
+      {
+        "id": "q26-how-to-pray",
+        "question": "How should the Muslim pray?",
+        "answer": "Face Qiblah, make intention, opening Takbir, place right hand over left, recite opening supplication, seek refuge, say Bismillah, recite Al-Fatihah, recite another surah, bow (Rukū'), rise from bowing, prostrate (Sujūd), sit between prostrations, second prostration, second Rak'ah, Tashahhud, and finally Taslim.",
+        "order": 26
+      },
+      {
+        "id": "q27-adhkar-after-prayer",
+        "question": "What Adhkār (regular supplications) should be recited after making Taslīm and ending the prayer?",
+        "answer": "Seek forgiveness 3 times, \"Allāhumma anta as-salām...\", \"La ilaha illallah...\", \"Subhanallah\" (33 times), \"Alhamdulillāh\" (33 times), \"Allāhu Akbar\" (33 times), and complete 100 with \"Lā ilaha illallāh...\", plus reciting Surat al-Ikhlās, Al-Mu'awwidhāt, and Ayat al-Kursi.",
+        "order": 27
+      },
+      {
+        "id": "q28-regular-sunnah-prayers",
+        "question": "What are the regular Sunnah prayers? What is their merit?",
+        "answer": "Two Rak'ahs before Fajr, four before Zhuhr, two after Zhuhr, two after Maghrib, and two after 'Ishā'. Merit: The Prophet said: \"Allah builds a house in Paradise for whoever prays twelve voluntary Rak'ahs in one day and night.\"",
+        "order": 28
+      },
+      {
+        "id": "q29-best-day-of-week",
+        "question": "What is the best day of the week?",
+        "answer": "The best day is Friday. The Prophet said: \"Friday is among the best of your days... so send more blessings on me on that day...\"",
+        "order": 29
+      },
+      {
+        "id": "q30-ruling-friday-prayer",
+        "question": "What is the ruling on the Jumu'ah (Friday) prayer?",
+        "answer": "It is an individual duty on every male, adult, sane, and resident Muslim. The Almighty said: {0 you who believe, when the call for prayer is made on Friday, then hasten to the remembrance of Allah and leave off trading.} [Surat al-Jumu'ah: 9]",
+        "order": 30
+      },
+      {
+        "id": "q31-rakahs-of-friday-prayer",
+        "question": "What is the number of Rak'ahs of the Jumu'ah prayer?",
+        "answer": "The Jumu'ah prayer consists of two Rak'ahs in which the Imam audibly recites the Qur'anic verses, preceded by two Khutbahs (sermons).",
+        "order": 31
+      },
+      {
+        "id": "q32-missing-friday-prayer",
+        "question": "Is it permissible not to attend the Jumu'ah prayer?",
+        "answer": "It is impermissible, except for a Sharia-approved excuse. The Prophet said: \"Whoever misses three Friday prayers out of negligence, Allah places a seal upon his heart.\"",
+        "order": 32
+      },
+      {
+        "id": "q33-sunnah-acts-on-friday",
+        "question": "Mention the Sunnah acts to be performed on Friday.",
+        "answer": "1. Taking a bath. 2. Putting on perfume. 3. Wearing best clothes. 4. Going early to the mosque. 5. Walking to the mosque. 6. Invoking blessings upon the Prophet frequently. 7. Reciting Surat al-Kahf. 8. Seeking the hour in which supplication is answered.",
+        "order": 33
+      },
+      {
+        "id": "q34-merit-congregational-prayer",
+        "question": "What is the merit of the congregational prayer?",
+        "answer": "The Prophet said: \"Praying in congregation is twenty-seven times better than praying alone.\"",
+        "order": 34
+      },
+      {
+        "id": "q35-what-is-khushu",
+        "question": "What is Khushūʻ(humility) in prayer?",
+        "answer": "It means the attendance of the heart and the serenity of the body while performing the prayer. The Almighty said: {The believers have attained true success: those who humble themselves in their prayers.} [Surat al-Mu'uminūn: 1-2]",
+        "order": 35
+      },
+      {
+        "id": "q36-what-is-zakah",
+        "question": "What is Zakah?",
+        "answer": "It is a due right on a specific type of property, given to a specific group of people, at a specific time. It is a pillar of Islam taken from the rich and given to the poor. The Almighty said: {Give Zakah.} [Surat al-Baqarah: 152]",
+        "order": 36
+      },
+      {
+        "id": "q37-recommended-charity",
+        "question": "What is the recommended charity?",
+        "answer": "It is different from Zakah, as it is giving anything by way of charity to be used in any aspects of goodness at any time. The Almighty said: {Spend in the way of Allah.} [Surat al-Baqarah: 152]",
+        "order": 37
+      },
+      {
+        "id": "q38-definition-of-siyam",
+        "question": "What is the definition of Siyām (fasting)?",
+        "answer": "It means worshiping Allah by abstaining from the invalidators of fasting from dawn until sunset while having the intention. Two types: 1. Obligatory fasting (Ramadan). 2. Voluntary fasting (e.g., Monday and Thursday, White Days).",
+        "order": 38
+      },
+      {
+        "id": "q39-merit-fasting-ramadan",
+        "question": "What is the merit of fasting the month of Ramadan?",
+        "answer": "The Prophet said: \"Whoever fasts Ramadan out of faith and seeking reward from Allah will have his past sins forgiven.\"",
+        "order": 39
+      },
+      {
+        "id": "q40-merit-voluntary-fasting",
+        "question": "What is the merit of voluntary fasting?",
+        "answer": "The Prophet said: \"Whoever fasts a day for the sake of Allah, Allah will keep his face away from Hellfire (the distance of) seventy autumns for that day.\"",
+        "order": 40
+      },
+      {
+        "id": "q41-fasting-invalidators",
+        "question": "What are the fasting invalidators?",
+        "answer": "1. Eating and drinking deliberately. 2. Vomiting deliberately.",
+        "order": 41
+      },
+      {
+        "id": "q42-sunnah-acts-of-fasting",
+        "question": "What are the Sunnah acts of fasting?",
+        "answer": "1. Hastening to break the fast. 2. Having the Suhūr and delaying it. 3. Increasing good deeds. 4. Saying: \"I am fasting\" if insulted. 5. Supplicating at time of breaking fast. 6. Breaking fast with dates or water.",
+        "order": 42
+      },
+      {
+        "id": "q43-what-is-hajj",
+        "question": "What is Hajj?",
+        "answer": "Hajj means worshiping Allah by visiting His Sacred House and performing specific rituals during a specific time. The Almighty said: {Pilgrimage to the House is a duty owed to Allah upon all people who are able to make their way to it...} [Surat Al 'Imrān: 97]",
+        "order": 43
+      },
+      {
+        "id": "q44-pillars-of-hajj",
+        "question": "What are the pillars of Hajj?",
+        "answer": "1. Ihrām (entering the ritual state). 2. Standing at 'Arafah. 3. Performing the Tawaf of Ifādah. 4. Performing Sa'y between Safa and Marwah.",
+        "order": 44
+      },
+      {
+        "id": "q45-merit-of-hajj",
+        "question": "What is the merit of Hajj?",
+        "answer": "The Prophet said: \"Whoever performs Hajj for the sake of Allah, while abstaining from intercourse and foul language, will return (free from sins) as if he were born anew.\"",
+        "order": 45
+      },
+      {
+        "id": "q46-what-is-umrah",
+        "question": "What is 'Umrah?",
+        "answer": "'Umrah (minor pilgrimage) means worshiping Allah by visiting His Sacred House to perform specific rituals at any time.",
+        "order": 46
+      },
+      {
+        "id": "q47-pillars-of-umrah",
+        "question": "What are the pillars of 'Umrah?",
+        "answer": "1. Ihrām. 2. Tawaf. 3. Sa'y between Safa and Marwah.",
+        "order": 47
+      },
+      {
+        "id": "q48-what-is-jihad",
+        "question": "What is Jihad (striving) in the cause of Allah?",
+        "answer": "It means exerting one's utmost effort in spreading Islam and defending it and its people or fighting the enemies of Islam and Muslims. The Almighty said: {And strive in the cause of Allah with your wealth and your lives.} [Surat at-Tawbah: 100]",
+        "order": 48
+      }
+    ]
+  },
+  {
+    "id": "prophetic-sirah-section",
+    "title": "Prophetic Biography",
+    "description": "Knowledge related to the life of Prophet Muhammad (may Allah's peace and blessings be upon him) from his birth to his death.",
+    "order": 3,
+    "items": [
+      {
+        "id": "q1-lineage-of-prophet",
+        "question": "What is the lineage of our Prophet Muhammad (may Allah's peace and blessings be upon him)?",
+        "answer": "He is Muhammad ibn 'Abdullah ibn 'Abd al-Muttalib ibn Hashim. Hashim was from the Quraysh, who belongs to the Arabs, offspring of Ismā'il, son of Ibrahim.",
+        "order": 1
+      },
+      {
+        "id": "q2-prophets-mother",
+        "question": "What is the name of our Prophet's mother?",
+        "answer": "Aminah bint Wahb.",
+        "order": 2
+      },
+      {
+        "id": "q3-prophets-father-death",
+        "question": "When did his father die?",
+        "answer": "His father died in Madīnah when the Prophet was still an embryo in his mother's womb and was not yet born.",
+        "order": 3
+      },
+      {
+        "id": "q4-prophets-birth",
+        "question": "When was the Prophet (may Allah's peace and blessings be upon him) born?",
+        "answer": "He was born in the Year of the Elephant, on Monday, in Rabī al-Awwal.",
+        "order": 4
+      },
+      {
+        "id": "q5-where-born",
+        "question": "Where was he born?",
+        "answer": "In Makkah.",
+        "order": 5
+      },
+      {
+        "id": "q6-wet-nurses",
+        "question": "Who were his wet nurses?",
+        "answer": "Umm Ayman, Thuwaybah, and Halīmah as-Sa'diyyah.",
+        "order": 6
+      },
+      {
+        "id": "q7-prophets-mother-death",
+        "question": "When did his mother die?",
+        "answer": "His mother died when he was six years old, and his grandfather, 'Abdul-Muttalib, took care of him.",
+        "order": 7
+      },
+      {
+        "id": "q8-guardian-after-grandfather",
+        "question": "Who took care of him after the death of his grandfather 'Abdul-Muttalib?",
+        "answer": "When he was eight years old, his grandfather died and his uncle, Abu Talib, took care of him.",
+        "order": 8
+      },
+      {
+        "id": "q9-trip-to-levant",
+        "question": "When did he travel with his uncle to the Levant?",
+        "answer": "He traveled to the Levant when he was twelve years old.",
+        "order": 9
+      },
+      {
+        "id": "q10-second-trip-marriage",
+        "question": "When was his second trip?",
+        "answer": "He traveled the second time for Khadījah (may Allah be pleased with her). On returning, he married her; he was twenty-five years old.",
+        "order": 10
+      },
+      {
+        "id": "q11-rebuilding-kaabah",
+        "question": "When did the Quraysh rebuild the Ka'bah?",
+        "answer": "The Quraysh rebuilt the Ka'bah when he was thirty-five years old. He restored the Black Stone to its place with his hands after four tribes lifted it together.",
+        "order": 11
+      },
+      {
+        "id": "q12-mission-prophethood",
+        "question": "How old was he when he was assigned the mission of prophethood? To whom was he sent?",
+        "answer": "He was forty years old, and he was sent as a bringer of glad tidings and as a warner to all people.",
+        "order": 12
+      },
+      {
+        "id": "q13-start-of-revelation",
+        "question": "How did the revelation start?",
+        "answer": "It started with the true vision: He would see no vision, except that it would occur just the way he had seen it.",
+        "order": 13
+      },
+      {
+        "id": "q14-state-before-revelation",
+        "question": "What was his state before the revelation? When did the revelation descend upon him the first time?",
+        "answer": "He was worshiping Allah in the Cave of Hirā', and the revelation descended upon him while he was in the cave.",
+        "order": 14
+      },
+      {
+        "id": "q15-first-verses",
+        "question": "What were the first Qur'anic verses that were revealed to him?",
+        "answer": "The verses: {Read in the name of your Lord Who created, created man from a clinging clot. Read, and your Lord is the Most Generous...} [Surat al- 'Alaq: 1-5]",
+        "order": 15
+      },
+      {
+        "id": "q16-first-believers",
+        "question": "Who was the first one to believe in his message?",
+        "answer": "From men: Abu Bakr as-Siddiq. From women: Khadījah bint Khuwaylid. From boys: 'Ali ibn Abi Talib. From freed slaves: Zayd ibn Harithah. From slaves: Bilal al-Habashi.",
+        "order": 16
+      },
+      {
+        "id": "q17-dawah-carried-out",
+        "question": "How was Da'wah (preaching) to Islam carried out?",
+        "answer": "The Da'wah to Islam was carried out secretly for almost three years. Then, the Prophet was commanded to call people in public.",
+        "order": 17
+      },
+      {
+        "id": "q18-dawah-public-state",
+        "question": "What was the state of the Prophet (may Allah's peace and blessings be upon him) and those who believed in him after starting to make Da'wah publicly?",
+        "answer": "The polytheists started hurting him and the Muslims severely. Believers were given permission to emigrate to Abyssinia. Allah protected the Prophet with his uncle, Abu Tālib.",
+        "order": 18
+      },
+      {
+        "id": "q19-deaths-after-ten-years",
+        "question": "Who died ten years after the beginning of the Prophet's mission?",
+        "answer": "Both his uncle Abu Talib and his wife Khadījah.",
+        "order": 19
+      },
+      {
+        "id": "q20-isra-and-miraj",
+        "question": "When did the Isra' (Night Journey) along with the Mi'rāj (Ascension Journey) take place?",
+        "answer": "It took place when the Prophet was fifty years old. In this journey the five prayers were prescribed. Isra': Journey from Sacred Mosque to Aqsa Mosque. Mi'raj: Ascension from Aqsa Mosque to heaven.",
+        "order": 20
+      },
+      {
+        "id": "q21-calling-outside-makkah",
+        "question": "How did the Prophet (may Allah's peace and blessings be upon him) call the people outside Makkah to Islam?",
+        "answer": "He called the people of Ta'if and presented himself to people in gathering seasons until the Ansar from Madīnah came and pledged allegiance.",
+        "order": 21
+      },
+      {
+        "id": "q22-years-in-makkah",
+        "question": "How long did the Prophet (may Allah's peace and blessings be upon him) stay in Makkah, giving Da'wah?",
+        "answer": "He stayed there for thirteen years.",
+        "order": 22
+      },
+      {
+        "id": "q23-emigration-destination",
+        "question": "Where did the Prophet (may Allah's peace and blessings be upon him) emigrate?",
+        "answer": "He emigrated from Makkah to Madīnah.",
+        "order": 23
+      },
+      {
+        "id": "q24-years-in-madinah",
+        "question": "How long did he stay in Madīnah?",
+        "answer": "Ten years.",
+        "order": 24
+      },
+      {
+        "id": "q25-madinah-legislations",
+        "question": "What were the Islamic legislations that were prescribed when he was in Madīnah?",
+        "answer": "Zakah, fasting, Hajj, Jihad, the Adhān (call to prayer), and other Islamic legislations.",
+        "order": 25
+      },
+      {
+        "id": "q26-important-battles",
+        "question": "What are the most important battles of the Prophet (may Allah's peace and blessings be upon him)?",
+        "answer": "The Great Battle of Badr (2 AH), The Battle of 'Uhud (3 AH), The Battle of Ahzab (5 AH), and The Conquest of Makkah (8 AH).",
+        "order": 26
+      },
+      {
+        "id": "q27-last-revelation",
+        "question": "What is the last thing revealed of the Qur'an?",
+        "answer": "The verses: {And fear the Day when you will be brought back to Allah. Then, every soul will be rewarded in full...} [Surat al-Baqarah: 281]",
+        "order": 27
+      },
+      {
+        "id": "q28-prophets-death",
+        "question": "When did the Prophet (may Allah's peace and blessings be upon him) die? How old was he then?",
+        "answer": "He died in Rabī 'al-Awwal, in the eleventh year of Hijrah. He was sixty-three years old.",
+        "order": 28
+      },
+      {
+        "id": "q29-names-prophets-wives",
+        "question": "Mention the names of the Prophet's wives.",
+        "answer": "Khadījah bint Khuwaylid, Sawdah bint Zam'ah, 'A'ishah bint Abu Bakr, Hafsah bint 'Umar, Zaynab bint Khuzaymah, Umm Salamah Hind bint Abu Umayyah, Umm Habībah Ramlah bint Abu Sufyan, Juwayriyah bint al-Harith, Maymūnah bint al-Harith, Safiyyah bint Huyayy, and Zaynab bint Jahsh.",
+        "order": 29
+      },
+      {
+        "id": "q30-prophets-children",
+        "question": "Who are the Prophet's children?",
+        "answer": "Three sons: Al-Qāsim, 'Abdullah, and Ibrāhīm. Four daughters: Fatimah, Ruqayyah, Umm Kulthūm, and Zaynab. All from Khadījah except Ibrāhīm (Māriyah al-Qibtiyyah). All died before him except Fatimah.",
+        "order": 30
+      },
+      {
+        "id": "q31-physical-characteristics",
+        "question": "Mention some of the physical characteristics of the Prophet (may Allah's peace and blessings be upon him).",
+        "answer": "Average height, white reddish complexion, thick beard, big eyes, wide mouth, extremely black hair, broad shoulders, and a pleasant smell.",
+        "order": 31
+      },
+      {
+        "id": "q32-what-prophet-left-ummah",
+        "question": "What did the Prophet (may Allah's peace and blessings be upon him) leave his Ummah upon?",
+        "answer": "He left his Ummah upon the clear path, whose night is as clear as its day. He guided them to all goodness and warned them against all evil.",
+        "order": 32
+      }
+    ]
+  },
+  {
+    "id": "tafsir-section",
+    "title": "The Tafsir",
+    "description": "Knowledge related to the meanings of the Qur'anic verses including guidance in beliefs, worship, and morals.",
+    "order": 4,
+    "items": [
+      {
+        "id": "q1-explain-fatihah",
+        "question": "Recite Surat al-Fatihah and explain it.",
+        "answer": "{Bismillahir Rahmānir Rahīm}: I start seeking Allah's help. {Allah}: Truly worthy of worship. {Ar-Rahmān}: Extensive mercy. {Ar-Rahīm}: Mercy to believers. {Al-hamdullāhi Rabbil 'Ālamīn}: Praise belongs to Allah alone. {Māliki yawmid-dīn}: Day of Judgment. {Iyyāka na'budu...}: You alone we worship and seek help from. {Ihdinās sirātal mustaqīm}: Guidance to Islam and Sunnah. {Sirātal ladhīna an'amta 'alayhim...}: Path of the righteous, not Christians or Jews.",
+        "order": 1
+      },
+      {
+        "id": "q2-explain-zalzalah",
+        "question": "Recite Surat az-Zalzalah and explain it.",
+        "answer": "Describes the Day of Judgment when the earth quakes and brings out the dead. Earth speaks of deeds. People shown worldly deeds. Atom's weight of good or evil will be seen.",
+        "order": 2
+      },
+      {
+        "id": "q3-explain-adiyat",
+        "question": "Recite Surat al-'ādiyāt and explain it.",
+        "answer": "Allah swears by galloping horses that raid at dawn. Mentions man is ungrateful to his Lord and loves wealth extreme. Reminds that secrets of hearts and content of graves will be brought to light.",
+        "order": 3
+      },
+      {
+        "id": "q4-explain-qaria",
+        "question": "Recite Surat al-Qāri'ah and explain it.",
+        "answer": "The Striking Calamity (Day of Judgment). People like moths, mountains like carded wool. Heavy scales of good deeds lead to pleasant life (Paradise); light scales lead to abyss (Hellfire).",
+        "order": 4
+      },
+      {
+        "id": "q5-explain-takathur",
+        "question": "Recite Surat at-Takathur and explain it.",
+        "answer": "Competition for worldly gains distracts people until death. Warns that people will see Hellfire and be asked about worldly pleasures/blessings like health and wealth.",
+        "order": 5
+      },
+      {
+        "id": "q6-explain-asr",
+        "question": "Recite Surat al-'Asr and explain it.",
+        "answer": "Allah swears by time that all mankind is in loss except those who believe, do righteous deeds, and exhort one another to truth and patience.",
+        "order": 6
+      },
+      {
+        "id": "q7-explain-humuzah",
+        "question": "Recite Surat al-Humuzah and explain it.",
+        "answer": "Woe to backbiters, slanderers, and those who amass wealth thinking it makes them immortal. They will be cast into the Crushing/Kindled Fire of Allah.",
+        "order": 7
+      },
+      {
+        "id": "q8-explain-fil",
+        "question": "Recite Surat al-Fil and explain it.",
+        "answer": "How Allah dealt with the people of the Elephant (Abrahah) when they tried to demolish the Ka'bah, sending birds with clay stones to leave them like chewed chaff.",
+        "order": 8
+      },
+      {
+        "id": "q9-explain-quraysh",
+        "question": "Recite Surat Quraysh and explain it.",
+        "answer": "Reminds Quraysh of their secure winter and summer journeys. Urges them to worship the Lord of the Sacred House who fed them and made them secure.",
+        "order": 9
+      },
+      {
+        "id": "q10-explain-maun",
+        "question": "Recite Surat al-Mā'ūn and explain it.",
+        "answer": "Describes those who deny recompense: they repulse orphans, don't feed needy, and are heedless of prayer. Woe to those who only show off and withhold small kindnesses.",
+        "order": 10
+      },
+      {
+        "id": "q11-explain-kawthar",
+        "question": "Recite Surat al-Kawthar and explain it.",
+        "answer": "Allah gave the Prophet abundant goodness (Kawthar River). Urges him to pray and sacrifice to his Lord alone. Those who hate the Prophet are cut off from goodness.",
+        "order": 11
+      },
+      {
+        "id": "q12-explain-kafirun",
+        "question": "Recite Surat al-Kāfirūn and explain it.",
+        "answer": "Disavowal of what disbelievers worship. Statement of firm adherence to Allah alone: \"You have your religion and I have my religion.\"",
+        "order": 12
+      },
+      {
+        "id": "q13-explain-nasr",
+        "question": "Recite Surat an-Nasr and explain it.",
+        "answer": "Victory and conquest (of Makkah). Signal that people are entering Islam in multitudes and the Prophet's mission is ending. Urges glorification and seeking forgiveness.",
+        "order": 13
+      },
+      {
+        "id": "q14-explain-masad",
+        "question": "Recite Surat al-Masad and explain it.",
+        "answer": "Condemnation of Abu Lahab and his wife who abused the Prophet. They will burn in a Flaming Fire. His wife will have a rope of palm fiber around her neck.",
+        "order": 14
+      },
+      {
+        "id": "q15-explain-ikhlas",
+        "question": "Recite Surat al-Ikhlās and explain it.",
+        "answer": "Allah is One, Eternal Refuge. He neither begets nor is He begotten. None is comparable to Him.",
+        "order": 15
+      },
+      {
+        "id": "q16-explain-falaq",
+        "question": "Recite Surat al-Falaq and explain it.",
+        "answer": "Seeking refuge with the Lord of daybreak from: harm of creation, darkness of night, sorceresses, and enviers.",
+        "order": 16
+      },
+      {
+        "id": "q17-explain-nas",
+        "question": "Recite Surat an-Nās and explain it.",
+        "answer": "Seeking refuge with the Lord/Sovereign/God of mankind from the lurking whisperer (jinn or mankind) who whispers into hearts.",
+        "order": 17
+      }
+    ]
+  },
+  {
+    "id": "hadith-section",
+    "title": "The Hadith ",
+    "description": "Extracts and benefits from prophetic sayings attributed to Prophet Muhammad.",
+    "order": 5,
+    "items": [
+      {
+        "id": "q1-deeds-depend-on-intentions",
+        "question": "Complete the following Hadith: \"Indeed, the reward of deeds depends on the intentions...\", and mention some of its benefits.",
+        "answer": "Answer: \"...and each person will be rewarded according to what he intended. So, he whose migration is for the sake of Allah and His Messenger, then his migration will be for the sake of Allah and His Messenger, and he whose migration is to achieve some worldly gain or to take some woman in marriage, then his migration will be for that which he migrated for.\" Benefits: 1. Every deed requires intention. 2. Intention must be dedicated with full sincerity to Allah.",
+        "order": 1
+      },
+      {
+        "id": "q2-introduces-new-things-in-religion",
+        "question": "Complete the following Hadith: \"Whoever introduces in this matter of ours ...\" and mention some of its benefits.",
+        "answer": "Answer: \"...something that does not belong to it will be rejected.\" Benefits: 1. Prohibition of introducing new things in the religion. 2. Innovated actions are rejected.",
+        "order": 2
+      },
+      {
+        "id": "q3-hadith-jibril",
+        "question": "Complete the following Hadith: \"While we were sitting one day with the Messenger of Allah (may Allah's peace and blessings be upon him) ...\" and mention some of its benefits.",
+        "answer": "Answer: A man in white clothes came and asked about Islam (5 pillars), Iman (6 pillars), Ihsan (worship as if you see Him), and the Hour (signs: slave girl gives birth to mistress, shepherds making lofty buildings). The man was Jibril. Benefits: Defines pillars of Islam, Iman, and Ihsan.",
+        "order": 3
+      },
+      {
+        "id": "q4-most-perfect-believer-morals",
+        "question": "Complete the following Hadith: \"The most perfect of the believers in faith...\" and mention some of its benefits.",
+        "answer": "Answer: \"...is the one who has the most excellent morals.\" Benefits: 1. Encouraging good morals. 2. Morals are part of faith. 3. Iman increases and decreases.",
+        "order": 4
+      },
+      {
+        "id": "q5-swears-by-other-than-allah",
+        "question": "Complete the following Hadīth: \"Whoever swears by other than Allah...\" and mention some of its benefits.",
+        "answer": "Answer: \"...has indeed committed an act of disbelief or Shirk (polytheism).\" Benefits: Swearing by other than Allah is minor Shirk.",
+        "order": 5
+      },
+      {
+        "id": "q6-love-for-prophet",
+        "question": "Complete the following Hadith: \"None of you truly believes until I am dearer to him...\" and mention some of its benefits.",
+        "answer": "Answer: \"...than his father, his children, and all people.\" Benefits: Loving the Prophet more than all people is part of perfect Iman.",
+        "order": 6
+      },
+      {
+        "id": "q7-love-for-brother",
+        "question": "Complete the following Hadīth: \"None of you truly believes until he loves for his brother...\" and mention some of its benefits.",
+        "answer": "Answer: \"...what he loves for himself.\" Benefits: A believer loves for others the goodness he loves for himself.",
+        "order": 7
+      },
+      {
+        "id": "q8-surat-al-ikhlas-one-third",
+        "question": "Complete the following Hadīth: \"By the One in Whose Hand my soul is...\" and mention some of its benefits.",
+        "answer": "Answer: \"...it (surat al-Ikhlās) is equivalent to one-third of the Qur'an.\" Benefits: Merit of Surat al-Ikhlās.",
+        "order": 8
+      },
+      {
+        "id": "q9-no-might-nor-strength-except-allah",
+        "question": "Complete the following Hadith: \"There is no might and no strength except through Allah...\" and mention some of its benefits.",
+        "answer": "Answer: \"...is one of the treasures of Paradise.\" Benefits: 1. Merit of these words. 2. Abandoning personal power for reliance on Allah.",
+        "order": 9
+      },
+      {
+        "id": "q10-piece-of-flesh-heart",
+        "question": "Complete the following Hadīth: \"Indeed, there is a piece of flesh in the body...\" and mention some of its benefits.",
+        "answer": "Answer: \"...if it is upright then the entire body will be upright... indeed, it is the heart.\" Benefits: 1. Uprightness of heart ensures general uprightness. 2. Importance of heart's state.",
+        "order": 10
+      },
+      {
+        "id": "q11-last-words-la-ilaha-illallah",
+        "question": "Complete the following Hadith: \"One whose last words are: La ilaha illallāh...\" and mention some of its benefits.",
+        "answer": "Answer: \"...will enter Paradise.\" Benefits: Merit of the testimony of faith at death.",
+        "order": 11
+      },
+      {
+        "id": "q12-believer-not-slanderer",
+        "question": "Complete the following Hadith: \"A believer is neither a slanderer nor an invoker of curse...\" and mention some of its benefits.",
+        "answer": "Answer: \"...nor is he indecent or foulmouthed.\" Benefits: Prohibition of foul speech.",
+        "order": 12
+      },
+      {
+        "id": "q13-best-muslim-character-leave-concern",
+        "question": "Complete the following Hadīth: \"It is from the best of Muslim character...\" and mention some of its benefits.",
+        "answer": "Answer: \"...to leave that which is not of one's concern.\" Benefits: Not interfering in others' affairs is part of perfect Islam.",
+        "order": 13
+      },
+      {
+        "id": "q14-recites-letter-from-quran-reward",
+        "question": "Complete the following Hadith: \"Whoever recites a letter from the Book of Allah...\" and mention some of its benefits.",
+        "answer": "Answer: \"...will be credited with a good deed, and the good deed receives a ten-fold reward. I am not saying that Alif-Lām-Mīm is one letter, but Alif is a letter...\" Benefits: Merit of reciting Qur'an.",
+        "order": 14
+      }
+    ]
+  },
+  {
+    "id": "islamic-manners-section",
+    "title": "Islamic Manners",
+    "description": "Set of commendable behaviors and etiquettes towards Allah and His creatures.",
+    "order": 6,
+    "items": [
+      {
+        "id": "q1-courtesy-towards-allah",
+        "question": "How should one show courtesy to Allah Almighty?",
+        "answer": "1. Magnifying Him. 2. Worshiping Him alone. 3. Obeying Him. 4. Refraining from disobeying Him. 5. Showing gratitude and praising Him. 6. Showing patience regarding His decrees.",
+        "order": 1
+      },
+      {
+        "id": "q2-courtesy-towards-messenger",
+        "question": "How should one show courtesy to the Messenger of Allah (may Allah's peace and blessings be upon him)?",
+        "answer": "1. Following him as a role model. 2. Obeying him. 3. Refraining from disobeying him. 4. Believing his reports. 5. Not adding to his Sunnah. 6. Loving him more than oneself. 7. Revering and supporting him/his Sunnah.",
+        "order": 2
+      },
+      {
+        "id": "q3-courtesy-with-parents",
+        "question": "How should one show courtesy to one's parents?",
+        "answer": "1. Obeying them (if not sin). 2. Serving them. 3. Helping them. 4. Fulfilling needs. 5. Supplicating for them. 6. Polite speech (not even \"Uff\"). 7. Smiling. 8. Not raising voice or calling by name. 9. Asking permission to enter. 10. Kissing heads/hands.",
+        "order": 3
+      },
+      {
+        "id": "q4-kinship-ties",
+        "question": "How should one maintain kinship ties?",
+        "answer": "1. Visiting relatives. 2. Showing kindness in words/deeds. 3. Calling and checking on them. {The one who severs the ties of kinship will not enter Paradise.}",
+        "order": 4
+      },
+      {
+        "id": "q5-brotherhood-in-islam",
+        "question": "How should one act with one's brothers and friends?",
+        "answer": "1. Taking good friends. 2. Avoiding evil company. 3. Greeting/shaking hands. 4. Visiting sick. 5. Responding to sneezing. 6. Accepting invitations. 7. Offering advice. 8. Supporting when wronged. 9. Loving for them what one loves for oneself. 10. Helping. 11. Not harming. 12. Keeping secrets. 13. Not insulting/spying/cheating.",
+        "order": 5
+      },
+      {
+        "id": "q6-neighbors-etiquettes",
+        "question": "What are the etiquettes of neighbors?",
+        "answer": "1. Showing kindness. 2. Congratulating on happy occasions. 3. Visiting when sick. 4. Sharing food. 5. Not harming. 6. Not disturbing/spying. \"Whoever believes in Allah... should not harm his neighbor.\"",
+        "order": 6
+      },
+      {
+        "id": "q7-hospitality-etiquettes",
+        "question": "What are the etiquettes that the host and the guest must follow?",
+        "answer": "1. Accepting invitation. 2. Arranging appointments. 3. Asking permission before entering. 4. Not staying too long. 5. Lowering gaze. 6. Welcoming cheerfully. 7. Best seating. 8. Honoring with food/drink.",
+        "order": 7
+      },
+      {
+        "id": "q8-sickness-visiting-sick",
+        "question": "What are the etiquettes of sickness and visiting the sick?",
+        "answer": "1. Saying \"Bismillah\" and supplications for pain. 2. Patience with decree. 3. Hastening to visit and not staying long. 4. Doing Ruqyah. 5. Advising patience/purity. 6. Supplicating for the sick.",
+        "order": 8
+      },
+      {
+        "id": "q9-seeking-knowledge",
+        "question": "What are the etiquettes of seeking knowledge?",
+        "answer": "1. Sincerity to Allah. 2. Acting upon knowledge. 3. Respecting teachers. 4. Sitting politely. 5. Listening attentively. 6. Posing questions politely. 7. Not calling teacher by name.",
+        "order": 9
+      },
+      {
+        "id": "q10-assembly-etiquettes",
+        "question": "What are the assembly etiquettes?",
+        "answer": "1. Greeting the assembly. 2. Sitting in first empty place. 3. Making room for others. 4. Not interrupting. 5. Greeting before leaving. 6. Saying assembly expiation supplication: \"Subhānak allāhumma...\"",
+        "order": 10
+      },
+      {
+        "id": "q11-sleeping-etiquettes",
+        "question": "What are the sleeping etiquettes?",
+        "answer": "1. Sleeping early. 2. Ritual purity. 3. Not sleeping on belly. 4. Sleeping on right side. 5. Dusting bed. 6. Reciting bedtime supplications (Al-Kursi, Al-Ikhlās, Al-Falaq, An-Nās). 7. Waking for Fajr. 8. Waking supplication.",
+        "order": 11
+      },
+      {
+        "id": "q12-eating-etiquettes",
+        "question": "What are the eating etiquettes?",
+        "answer": "1. Intent for strength to obey Allah. 2. Washing hands. 3. Saying \"Bismillah\", using right hand, and eating what is near. 4. If forgotten, say \"Bismillāh awwaluhu wa ākhiruh\". 5. No criticizing food. 6. Not overeating. 7. Not blowing on food. 8. Eating together. 9. Not starting before elders. 10. Drinking etiquettes (sitting, 3 sips). 11. Praising Allah after.",
+        "order": 12
+      },
+      {
+        "id": "q13-dressing-etiquettes",
+        "question": "What are the etiquettes of dressing?",
+        "answer": "1. Starting with right hand and praising Allah. 2. Not lengthening garment below heels (boys). 3. No cross-dressing. 4. Not imitating disbelievers. 5. Mentioning Allah's name when undressing. 6. Starting with right for shoes, left for taking off.",
+        "order": 13
+      },
+      {
+        "id": "q14-riding-mount-car",
+        "question": "What are the etiquettes of riding a mount and driving a car?",
+        "answer": "1. Saying: \"Bismillāh, alhamdulillāh\" and the riding supplication: {Glory be to Him Who has subjected this for us...}. 2. Greeting Muslims when passing.",
+        "order": 14
+      },
+      {
+        "id": "q15-road-etiquettes",
+        "question": "What are the road etiquettes?",
+        "answer": "1. Moderate/humble walking. 2. Greeting those met. 3. Lowering gaze and not harming. 4. Enjoining good/forbidding evil. 5. Removing harm from path.",
+        "order": 15
+      },
+      {
+        "id": "q16-entering-leaving-house",
+        "question": "What are the etiquettes of entering and leaving the house?",
+        "answer": "Leaving: Exit with left foot and say: \"Bismillāh, tawakkaltu ‘alallāh...\". Entering: Enter with right foot and say: \"Bismillāhi walajna...\". Using Siwāk first, then greeting household.",
+        "order": 16
+      },
+      {
+        "id": "q17-call-of-nature",
+        "question": "What are the etiquettes of answering the call of nature?",
+        "answer": "1. Enter with left foot. 2. Supplication before entering. 3. No items with Allah's name. 4. Screening oneself. 5. No speaking. 6. Not facing/turning back to Qiblah. 7. Using left hand for cleaning. 8. Not in public paths/shade. 9. Washing hands. 10. Exit with right foot and say \"Ghufrānak\".",
+        "order": 17
+      },
+      {
+        "id": "q18-mosque-etiquettes",
+        "question": "What are the etiquettes of the mosque?",
+        "answer": "1. Enter with right foot and supplication. 2. Two Rak'ahs before sitting. 3. No passing in front of praying people, seeking lost objects, or trading. 4. Keeping it clean/perfumed. 5. Exit with left foot and supplication.",
+        "order": 18
+      },
+      {
+        "id": "q19-greeting-etiquettes",
+        "question": "What are the greeting etiquettes?",
+        "answer": "1. Say: \"Assalāmu ‘alaykum...\". 2. Smiling. 3. Shaking hands (right hand). 4. Return with better/similar greeting. 5. Not initiating greeting to disbelievers (return with \"Wa ‘alaykum\"). 6. Order of greeting (young to old, riding to walking, etc.). 7. Not shaking hands with non-Mahram woman.",
+        "order": 19
+      },
+      {
+        "id": "q20-seeking-permission",
+        "question": "What are the etiquettes of seeking permission?",
+        "answer": "1. Before entering. 2. Three times max. 3. Knocking gently and standing to side (not facing door). 4. Specific times of privacy (before dawn, noon, after 'Ishā'). 5. No permission needed for public places.",
+        "order": 20
+      },
+      {
+        "id": "q21-animal-welfare",
+        "question": "What are the etiquettes of animal welfare?",
+        "answer": "1. Providing food/drink. 2. Mercy/compassion and not burdening. 3. No torturing or branding on the face.",
+        "order": 21
+      },
+      {
+        "id": "q22-sports-etiquettes",
+        "question": "What are the sports etiquettes?",
+        "answer": "1. Intending for strength to obey Allah. 2. Not during prayer times. 3. Boys not with girls. 4. Covering 'Awrah. 5. No forbidden sports (beating face).",
+        "order": 22
+      },
+      {
+        "id": "q23-joking-etiquettes",
+        "question": "What are the joking etiquettes?",
+        "answer": "1. Truthfulness (no lying). 2. No mockery/ridicule/harm/frightening. 3. Not frequent/excessive laughing.",
+        "order": 23
+      },
+      {
+        "id": "q24-sneezing-etiquettes",
+        "question": "What are the etiquettes of sneezing?",
+        "answer": "1. Cover mouth. 2. Sneezer says: \"Alhamdulillāh\". 3. Companion says: \"Yarhamukallāh\". 4. Sneezer replies: \"Yahdīkumullāh wa yuslih bālakum\".",
+        "order": 24
+      },
+      {
+        "id": "q25-yawning-etiquettes",
+        "question": "What are the etiquettes of yawning?",
+        "answer": "1. Try to suppress. 2. No raising voice (\"Aah\"). 3. Put hand on mouth.",
+        "order": 25
+      },
+      {
+        "id": "q26-dua-etiquettes",
+        "question": "What are the etiquettes of Du‘ā’?",
+        "answer": "1. Start by praising Allah. 2. Invoking blessings on Prophet. 3. Raising hands. 4. Repenting/admitting sins. 5. Persisting. 6. No hastiness for result. 7. No sinful requests. 8. Lowering voice. 9. Attentive heart. 10. Sincerity (Allah alone). 11. Using Beautiful Names. 12. Facing Qiblah. 13. Lawful food/clothes.",
+        "order": 26
+      },
+      {
+        "id": "q27-reciting-quran-etiquettes",
+        "question": "What are the etiquettes of reciting the Qur’an?",
+        "answer": "1. Ritual purity (ablution). 2. Sitting politely. 3. Seeking refuge from devil. 4. Reciting with reflection.",
+        "order": 27
+      }
+    ]
+  },
+  {
+    "id": "morals-section",
+    "title": "The Morals ",
+    "description": "Knowledge defining good and evil in dealing with Allah and His creation.",
+    "order": 7,
+    "items": [
+      {
+        "id": "q1-merit-of-good-morals",
+        "question": "What is the merit of good morals?",
+        "answer": "The Prophet said: \"The most perfect believer in faith is the one who has the most excellent morals.\"",
+        "order": 1
+      },
+      {
+        "id": "q2-why-adhere-to-islamic-morals",
+        "question": "Why should we adhere to the Islamic morals?",
+        "answer": "1. Leads to Allah's love. 2. Leads to people's love. 3. Heaviest thing on the Scale. 4. Multiplying reward. 5. Sign of perfect faith.",
+        "order": 2
+      },
+      {
+        "id": "q3-source-of-morals",
+        "question": "From where should we take our morals?",
+        "answer": "From the Noble Qur’an (\"guides to what is most upright\") and from the Prophetic Sunnah (\"commissioned to make perfect good morals\").",
+        "order": 3
+      },
+      {
+        "id": "q4-ihsan-perfection-examples",
+        "question": "What is the quality of Ihsān (perfection/benevolence) and its examples?",
+        "answer": "Ihsān means being heedful of Allah and acting kindly towards creatures. Examples: perfection in worship, benevolence to parents, kindred, neighbors, orphans, needy, offenders, and animals.",
+        "order": 4
+      },
+      {
+        "id": "q5-opposite-of-ihsan",
+        "question": "What is the opposite of Ihsān (benevolence)?",
+        "answer": "Isā’ah (offense). Examples: insincerity in worship, undutifulness to parents, severing kinship, bad neighborliness, and unkindness.",
+        "order": 5
+      },
+      {
+        "id": "q6-amanah-integrity-examples",
+        "question": "What are the types and examples of Amānah (integrity)?",
+        "answer": "1. Integrity in rights of Allah (performing acts of worship). 2. Integrity in others' rights (preserving honor, property, lives, secrets).",
+        "order": 6
+      },
+      {
+        "id": "q7-opposite-of-integrity",
+        "question": "What is the opposite of integrity?",
+        "answer": "Khiyānah (betrayal), meaning wasting the rights of Allah and people.",
+        "order": 7
+      },
+      {
+        "id": "q8-what-is-truthfulness",
+        "question": "What is truthfulness?",
+        "answer": "Saying what conforms with reality. Examples: truthfulness in talking, promises, and every word/deed. Leads to righteousness and Paradise.",
+        "order": 8
+      },
+      {
+        "id": "q9-opposite-of-truthfulness",
+        "question": "What is the opposite of truthfulness?",
+        "answer": "Lying. Examples: lying to people, breaking promises, false testimony. Leads to wickedness and Hellfire.",
+        "order": 9
+      },
+      {
+        "id": "q10-types-of-patience",
+        "question": "What are the types of patience?",
+        "answer": "Patience in: 1. Obeying Allah. 2. Refraining from sins. 3. Dealing with painful divine decrees.",
+        "order": 10
+      },
+      {
+        "id": "q11-opposite-of-patience",
+        "question": "What is the opposite of patience?",
+        "answer": "Impatience (discontent at divine decree). Examples: wishing for death, slapping cheeks, tearing clothes, and disheveling hair.",
+        "order": 11
+      },
+      {
+        "id": "q12-trait-of-cooperation",
+        "question": "What is the trait of cooperation?",
+        "answer": "Cooperation in truth and goodness (restoring rights, repelling oppressors, fulfilling needs). Non-cooperation in sin and harm.",
+        "order": 12
+      },
+      {
+        "id": "q13-types-of-haya",
+        "question": "What are the types of Hayā’ (modesty)?",
+        "answer": "1. Modesty towards Allah (not disobeying). 2. Modesty towards people (refraining from foul speech, covering 'Awrah).",
+        "order": 13
+      },
+      {
+        "id": "q14-forms-of-mercy",
+        "question": "What are the forms of the trait of mercy?",
+        "answer": "Being merciful to: old people, young people, the poor/needy, and animals. \"Be merciful to those on earth and the One in the heaven will be merciful to you.\"",
+        "order": 14
+      },
+      {
+        "id": "q15-types-of-love",
+        "question": "What are the types of love?",
+        "answer": "1. Love for Allah. 2. Love for the Messenger. 3. Love for the believers.",
+        "order": 15
+      },
+      {
+        "id": "q16-what-is-cheerfulness",
+        "question": "What is cheerfulness?",
+        "answer": "Having a cheerful face, smiling, and being friendly. Opposite of frowning. \"Smiling at your brother is counted as a charity.\"",
+        "order": 16
+      },
+      {
+        "id": "q17-what-is-envy",
+        "question": "What is envy?",
+        "answer": "Wishing that the blessing of others would cease to exist or hating to see them enjoy it. Forbidden by Allah: {And from the harm of the envier when he envies.}",
+        "order": 17
+      },
+      {
+        "id": "q18-what-is-mockery",
+        "question": "What is mockery?",
+        "answer": "Ridiculing and despising one's Muslim brother. Forbidden in Surat al-Hujura t: {let not some men ridicule others... nor call one another by [offensive] nicknames.}",
+        "order": 18
+      },
+      {
+        "id": "q19-what-is-humility",
+        "question": "What is humility?",
+        "answer": "Not thinking that one is better than others; not despising people or rejecting truth. {The slaves of the Most Compassionate are those who walk on earth humbly.}",
+        "order": 19
+      },
+      {
+        "id": "q20-types-of-forbidden-arrogance",
+        "question": "What are the types of the forbidden arrogance?",
+        "answer": "1. Arrogance with truth (rejecting it). 2. Arrogance with people (looking down on them). Wearing good clothes/shoes is not arrogance.",
+        "order": 20
+      },
+      {
+        "id": "q21-types-of-forbidden-cheating",
+        "question": "What are some of the types of forbidden cheating?",
+        "answer": "Cheating in: selling/buying (hiding defects), learning (exams), speaking (false testimony/lying), and breaching agreements.",
+        "order": 21
+      },
+      {
+        "id": "q22-what-is-backbiting",
+        "question": "What is backbiting?",
+        "answer": "Mentioning one's Muslim brother with what he dislikes in his absence. Likened to eating the flesh of a dead brother.",
+        "order": 22
+      },
+      {
+        "id": "q23-what-is-talebearing",
+        "question": "What is talebearing?",
+        "answer": "Spreading words between people with intent of causing mistrust/dissension. \"No talebearer will enter Paradise.\"",
+        "order": 23
+      },
+      {
+        "id": "q24-what-is-indolence",
+        "question": "What is indolence?",
+        "answer": "Slackening in performing acts of goodness and duties. Characteristic of hypocrites: {Whenever they stand up for prayer, they stand up reluctantly.}",
+        "order": 24
+      },
+      {
+        "id": "q25-types-of-anger",
+        "question": "What are the types of anger?",
+        "answer": "1. Praiseworthy anger (for sake of Allah). 2. Dispraised anger (drives to improper speech/deeds). Treatment: ablution, changing posture (sit/lie down), silence, and seeking refuge from devil.",
+        "order": 25
+      },
+      {
+        "id": "q26-what-is-spying",
+        "question": "What is spying?",
+        "answer": "Pursuing and exposing people's faults and hidden affairs (private homes, eavesdropping). Forbidden: {Do not spy on one another...}",
+        "order": 26
+      },
+      {
+        "id": "q27-wastefulness-stinginess-generosity",
+        "question": "What is wastefulness? What is stinginess? What is generosity?",
+        "answer": "Wastefulness: Spending money inefficiently. Stinginess: Withholding money from rightful spending. Generosity: Moderate way between the two.",
+        "order": 27
+      },
+      {
+        "id": "q28-cowardice-and-bravery",
+        "question": "What is cowardice? What is bravery?",
+        "answer": "Cowardice: Fearing what one should not (fearing truth). Bravery: Prowess upon the truth (defending Islam).",
+        "order": 28
+      },
+      {
+        "id": "q29-prohibited-utterances",
+        "question": "What are some of the prohibited utterances?",
+        "answer": "Curses, insults, obscene/indecent words, and comparing people to animals.",
+        "order": 29
+      },
+      {
+        "id": "q30-means-to-adhere-to-morals",
+        "question": "What are the means that may help a Muslim adhere to good morals?",
+        "answer": "1. Supplication. 2. Heedfulness of Allah. 3. Remembering reward (Paradise). 4. Remembering consequences (Hellfire). 5. Winning love of Allah/creatures. 6. Reading Prophet's biography. 7. Good companions.",
+        "order": 30
+      }
+    ]
+  },
+  {
+    "id": "supplications-and-dhikrs-section",
+    "title": "Supplications and Dhikrs",
+    "description": "Remembrance of Allah through tongue, heart, and regular prescribed supplications for various occasions.",
+    "order": 8,
+    "items": [
+      {
+        "id": "q1-merit-of-dhikr",
+        "question": "What is the merit of Dhikr (remembrance of Allah)?",
+        "answer": "The Prophet said: \"The example of the one who remembers his Lord and the one who does not... is like the example of a living and a dead person.\"",
+        "order": 1
+      },
+      {
+        "id": "q2-benefits-of-dhikr",
+        "question": "Mention some of the benefits of Dhikr.",
+        "answer": "1. Pleases the Most Compassionate. 2. Expels the devil. 3. Protects against evil. 4. Brings about recompense.",
+        "order": 2
+      },
+      {
+        "id": "q3-best-dhikr",
+        "question": "What is the best Dhikr?",
+        "answer": "The best Dhikr is: \"La ilāha illallāh\" (there is no god but Allah).",
+        "order": 3
+      },
+      {
+        "id": "q4-waking-up-dhikr",
+        "question": "What should one say upon waking up?",
+        "answer": "\"Alhamdulillāhi alladhī ahyāna ba‘damā amātanā wa ilayhi an-nushūr\".",
+        "order": 4
+      },
+      {
+        "id": "q5-garment-dhikr",
+        "question": "What should one say when putting on a garment?",
+        "answer": "\"Alhamdulillāhi alladhī kasānī hadha ath thawba wa razaqanīhi min ghayri hawlin minnī wa la quwwah\".",
+        "order": 5
+      },
+      {
+        "id": "q6-undressing-dhikr",
+        "question": "What should one say when getting undressed?",
+        "answer": "\"Bismillāh\".",
+        "order": 6
+      },
+      {
+        "id": "q7-new-garment-dhikr",
+        "question": "What supplication should be said upon wearing a new garment?",
+        "answer": "\"Allāhumma lakal hamdu anta kasawtanīhi as’aluka khayrahu...\"",
+        "order": 7
+      },
+      {
+        "id": "q8-seeing-new-garment-on-another",
+        "question": "What supplication should be said when seeing someone wearing a new garment?",
+        "answer": "\"Tublī wa yukhlifullāhu ta‘āla\" (May you wear it out and may Allah Almighty grant you another instead).",
+        "order": 8
+      },
+      {
+        "id": "q9-entering-bathroom-dhikr",
+        "question": "What is the supplication to be said when entering the bathroom?",
+        "answer": "\"Allāhumma innī a‘ūdhu bika min al khubuthi wal khabā’ith\".",
+        "order": 9
+      },
+      {
+        "id": "q10-leaving-toilet-dhikr",
+        "question": "What supplication should be said when coming out of the toilet?",
+        "answer": "\"Ghufrānak\" (I seek Your forgiveness).",
+        "order": 10
+      },
+      {
+        "id": "q11-before-ablution",
+        "question": "What should be said before performing ablution?",
+        "answer": "\"Bismillāh\".",
+        "order": 11
+      },
+      {
+        "id": "q12-after-ablution",
+        "question": "What Dhikr should be said after performing ablution?",
+        "answer": "\"Ash-hadu allā ilāha illallāh wahdahu la sharīka lah wa ash-hadu anna Muahmmadan ‘abduhu wa rasūluh\".",
+        "order": 12
+      },
+      {
+        "id": "q13-leaving-house-dhikr",
+        "question": "What Dhikr should be said on leaving the house?",
+        "answer": "\"Bismillāhi tawakkaltu ‘alallāh wala hawala wala quwwata illā billāh\".",
+        "order": 13
+      },
+      {
+        "id": "q14-entering-house-dhikr",
+        "question": "What Dhikr should be said on entering the house?",
+        "answer": "\"Bismillāhi walajnā wa bismillāhi kharajnā wa ‘alallāhi rabbinā tawakkalnā\", then greet family.",
+        "order": 14
+      },
+      {
+        "id": "q15-entering-mosque-dua",
+        "question": "What is the supplication of entering the mosque?",
+        "answer": "\"Allāhumma iftah li abwāba rahmatik\".",
+        "order": 15
+      },
+      {
+        "id": "q16-leaving-mosque-dua",
+        "question": "What is the supplication when leaving the mosque?",
+        "answer": "\"Allāhumma inni as’aluka min fadlik\".",
+        "order": 16
+      },
+      {
+        "id": "q17-hearing-adhan",
+        "question": "What should be said on hearing the Adhān (prayer call)?",
+        "answer": "Repeat what muezzin says, except for Hayy ‘ala... say: \"La hawla wala quwwata illā billāh\".",
+        "order": 17
+      },
+      {
+        "id": "q18-after-adhan-supplication",
+        "question": "What should be said after the Adhān?",
+        "answer": "Invoke blessings on Prophet. Say: \"Allāhumma rabba hādhihi ad-da‘watit tāmmah... Muhammadan al-wasīlata wal fadīlah...\" Supplicate between Adhān and Iqāmah.",
+        "order": 18
+      },
+      {
+        "id": "q19-morning-evening-adhkar",
+        "question": "What are the morning and evening Adhkār (prescribed set of regular supplications)?",
+        "answer": "1. Reciting Āyat al-Kursi. 2. Reciting Surat al-Ikhlās, Al-Falaq, and An-Nās (3 times each). 3. Sayyid al-Istighfār: \"Allāhumma anta rabbī lā ilāha illa anta...\"",
+        "order": 19
+      },
+      {
+        "id": "q20-before-sleeping-dhikr",
+        "question": "What should be said before sleeping?",
+        "answer": "\"Bismika allāhumma amūtu wa ahyā\".",
+        "order": 20
+      },
+      {
+        "id": "q21-before-eating-dhikr",
+        "question": "What should be said before eating?",
+        "answer": "\"Bismillāh\". If forgotten, say: \"Bismillāhi fī awwalihi wa ākhirih\".",
+        "order": 21
+      },
+      {
+        "id": "q22-after-eating-dhikr",
+        "question": "What should be said after eating?",
+        "answer": "\"Alhamdullillāhi al-ladhī at‘amanī hādha...\"",
+        "order": 22
+      },
+      {
+        "id": "q23-guest-supplication-host",
+        "question": "What should the guest say in supplicating for the host?",
+        "answer": "\"Allāhumma bārik lahum fīmā razaqtahum waghfir lahum warhamuhum\".",
+        "order": 23
+      },
+      {
+        "id": "q24-sneezing-dua",
+        "question": "What should one say when sneezing?",
+        "answer": "Sneezer: \"Alhamdulillāh\". Companion: \"Yarhamukallāh\". Sneezer reply: \"Yahdīkumullāh wa yuslih bālakum\".",
+        "order": 24
+      },
+      {
+        "id": "q25-expiation-of-assembly",
+        "question": "What should one say when leaving an assembly, i.e., the \"Expiation of assembly supplication\"?",
+        "answer": "\"Subhānak allāhumma wa bihamdik, ash hadu allā ilāha illā ant, astaghfiruka wa atūbu ilayk\".",
+        "order": 25
+      },
+      {
+        "id": "q26-riding-supplication",
+        "question": "What is the riding supplication?",
+        "answer": "\"Bismillāh walhamdulillāh\", {Subhāna al-ladhī sakhkhara lana hādha...}, \"Alhamdulillāh\" (3 times), \"Allāhu Akbar\" (3 times), \"subhānaka allāhumma inni zhalamtu nafsi faghfir li...\".",
+        "order": 26
+      },
+      {
+        "id": "q27-travel-supplication",
+        "question": "What is the travel supplication?",
+        "answer": "Say \"Allāhu akbar\" (3 times), the riding verse, and \"Allāhumma inna nas'aluka fi safarina hādha al-birra wat-taqwa...\". On returning add: \"Āyibūn tā’ibūn ‘ābidūn lirabbinā hāmidūn\".",
+        "order": 27
+      },
+      {
+        "id": "q28-traveler-dua-resident",
+        "question": "What supplication should the traveler make for the resident?",
+        "answer": "\"Astawdi‘ukumllāh al-ladhī lā tadī‘u wadā’i‘h\" (I entrust you to Allah Whose trusts are never lost).",
+        "order": 28
+      },
+      {
+        "id": "q29-resident-dua-traveler",
+        "question": "What supplication should the resident make for the traveler?",
+        "answer": "\"Astawdi‘ullāha dīnak wa amānatak wa khawātīma ‘amalik\".",
+        "order": 29
+      },
+      {
+        "id": "q30-market-supplication",
+        "question": "What supplication should be made upon entering the market?",
+        "answer": "\"Lā ilāha illallāh wahdahu lā sharīka lah... yuhyī wa yumīt biyadihi al-khayr wahuwa ‘ala kulli shay’in qadīr\".",
+        "order": 30
+      },
+      {
+        "id": "q31-anger-supplication",
+        "question": "What is the supplication that should be said in times of anger?",
+        "answer": "\"A‘ūdhu billāhi min ash-shaytān ar-rajīm\".",
+        "order": 31
+      },
+      {
+        "id": "q32-favor-response",
+        "question": "What should one say to someone who did him a favor?",
+        "answer": "\"Jazākallāhu khayran\" (may Allah reward you).",
+        "order": 32
+      },
+      {
+        "id": "q33-riding-animal-trips",
+        "question": "What supplication should be said when one's riding animal trips?",
+        "answer": "\"Bismillāh\".",
+        "order": 33
+      },
+      {
+        "id": "q34-something-good-happens",
+        "question": "What should one say when something good happens to him?",
+        "answer": "\"Alhamdulillāhi al-ladhī bini‘matihi tatimmu as sālihāt\".",
+        "order": 34
+      },
+      {
+        "id": "q35-something-bad-happens",
+        "question": "What should one say when something bad happens to him?",
+        "answer": "\"Alhamdulillāh ‘ala kulli hāl\".",
+        "order": 35
+      },
+      {
+        "id": "q36-greeting-returning-greeting",
+        "question": "What is the way of greeting and returning the greeting?",
+        "answer": "Muslim: \"As-salāmu ‘alaykum warahmatullāhi wa barakātuh\". Response: \"Wa ‘alaykum as-salām warahmatullāhi wa barakātuh\".",
+        "order": 36
+      },
+      {
+        "id": "q37-rain-supplication",
+        "question": "What supplication should be said when it rains?",
+        "answer": "\"Allāhumma sayyiban nāfi‘an\".",
+        "order": 37
+      },
+      {
+        "id": "q38-after-rain-supplication",
+        "question": "What supplication should be said after rainfall?",
+        "answer": "\"Mutirnā bifadlillāhi wa rahmatih\".",
+        "order": 38
+      },
+      {
+        "id": "q39-wind-blows-supplication",
+        "question": "What is the supplication when the wind blows?",
+        "answer": "\"Allāhumma innī as’aluka khayrahā wa a‘ūdhu bika min sharrihā\".",
+        "order": 39
+      },
+      {
+        "id": "q40-thunder-supplication",
+        "question": "What is the supplication while hearing thunder?",
+        "answer": "\"Subhāna al-ladhī yusabbihu ar-ra‘du bihamdihi wal malā’ikatu min khīfatih\".",
+        "order": 40
+      },
+      {
+        "id": "q41-seeing-afflicted-person",
+        "question": "What supplication should be said (to oneself) on seeing an afflicted person?",
+        "answer": "\"Alhamdulillāhi al-ladhi ‘āfānī mimma ibtalāka bihi wa faddalani ‘ala kathīrin mimman khalaqa tafdīla\".",
+        "order": 41
+      },
+      {
+        "id": "q42-fear-of-evil-eye",
+        "question": "What supplication should be said on fearing to affect something with one's evil eye?",
+        "answer": "Invoke blessings for it (the amazing thing), as the evil eye is true.",
+        "order": 42
+      },
+      {
+        "id": "q43-invoking-blessings-on-prophet",
+        "question": "How should one invoke blessings upon the Prophet (may Allah's peace and blessings be upon him)?",
+        "answer": "\"Allāhumma salli 'ala Muhammadin wa 'ala āli Muhammadin kama sallayta 'ala Ibrāhīm...\"",
+        "order": 43
+      }
+    ]
+  },
+  {
+    "id": "miscellaneous-section",
+    "title": "Miscellaneous",
+    "description": "Important questions and answers related to several Islamic sciences.",
+    "order": 9,
+    "items": [
+      {
+        "id": "q1-five-assignment-rulings",
+        "question": "What are the five assignment rulings?",
+        "answer": "1. Wājib (obligatory). 2. Mustahabb (recommended). 3. Muharram (prohibited). 4. Makrūh (disliked). 5. Mubāh (permissible).",
+        "order": 1
+      },
+      {
+        "id": "q2-explain-five-rulings",
+        "question": "Explain these five rulings.",
+        "answer": "Wājib: Obligatory (rewarded, punished if abandoned). Mustahabb: Recommended (rewarded, not punished if abandoned). Muharram: Prohibited (rewarded for avoiding, punished if committed). Makrūh: Disliked (rewarded for avoiding, not punished if done). Mubāh: Permissible (not rewarded or punished).",
+        "order": 2
+      },
+      {
+        "id": "q3-fruit-of-religious-knowledge",
+        "question": "What is the fruit of learning religious knowledge and the merit of knowledge of the religion?",
+        "answer": "Soundness of words, deeds, and beliefs leading to happiness. \"Whoever Allah wills good for him, He makes him well-versed in the religion.\"",
+        "order": 3
+      },
+      {
+        "id": "q4-ruling-sales-transactions",
+        "question": "What is the ruling on sales and transactions?",
+        "answer": "In principle, all are permissible, except types prohibited by Allah. {But Allah has permitted trade and forbidden usury.}",
+        "order": 4
+      },
+      {
+        "id": "q5-prohibited-sales-transactions",
+        "question": "What are some of the prohibited types of sales and transactions?",
+        "answer": "1. Cheating (hiding defects). 2. Riba (usury/interest). 3. Gharar (uncertainty) and Jahālah (ignorance).",
+        "order": 5
+      },
+      {
+        "id": "q6-mention-blessings",
+        "question": "Mention some of the blessings that Allah has bestowed on you.",
+        "answer": "1. Being a Muslim. 2. Adhering to Sunnah. 3. Health/wellbeing (hearing, seeing). 4. Food, drink, and clothes. Countless favors.",
+        "order": 6
+      },
+      {
+        "id": "q7-duty-towards-favors",
+        "question": "What is our duty towards favors? How should we show gratitude?",
+        "answer": "Gratitude by praising Allah with the tongue, attributing all favors to Him, and using them in ways pleasing to Him (not in disobedience).",
+        "order": 7
+      },
+      {
+        "id": "q8-muslims-festivals",
+        "question": "What are the Muslims' festivals?",
+        "answer": "Eid al-Fitr and Eid al-Ad'ha. All others are religious innovations.",
+        "order": 8
+      },
+      {
+        "id": "q9-best-month",
+        "question": "What is the best month?",
+        "answer": "The month of Ramadān.",
+        "order": 9
+      },
+      {
+        "id": "q10-best-day",
+        "question": "What is the best day?",
+        "answer": "Friday.",
+        "order": 10
+      },
+      {
+        "id": "q11-best-day-of-year",
+        "question": "What is the best day of the year?",
+        "answer": "The Day of Nahr (10th of Dhul-Hijjah) or Day of ‘Arafah (9th of Dhul-Hijjah).",
+        "order": 11
+      },
+      {
+        "id": "q12-best-night-of-year",
+        "question": "What is the best night of the year?",
+        "answer": "Laylat al-Qadr (the Night of Decree).",
+        "order": 12
+      },
+      {
+        "id": "q13-non-mahram-woman",
+        "question": "What should one do on seeing a non-Mahram woman?",
+        "answer": "Lower the gaze. {Tell the believing men to lower their gazes.}",
+        "order": 13
+      },
+      {
+        "id": "q14-hijab-requirements",
+        "question": "What are the requirements of the Muslim woman's Hijāb?",
+        "answer": "Cover whole body, free from adornment, not transparent, wide/not tight, not perfumed, not resemble men's or disbelieving women's clothes.",
+        "order": 14
+      },
+      {
+        "id": "q15-man-enemies",
+        "question": "Who are man's enemies?",
+        "answer": "1. Human soul (prompts to evil). 2. Shaytān (the devil/sworn enemy). 3. Evil companions.",
+        "order": 15
+      },
+      {
+        "id": "q16-what-is-taqwa",
+        "question": "What is Taqwa (piety/righteousness)?",
+        "answer": "Performing acts of obedience and abandoning sins.",
+        "order": 16
+      },
+      {
+        "id": "q17-what-is-repentance",
+        "question": "What is repentance?",
+        "answer": "Abandoning sins and obeying Allah Almighty. Staying on the right path.",
+        "order": 17
+      },
+      {
+        "id": "q18-sound-repentance-conditions",
+        "question": "What are the conditions of sound repentance?",
+        "answer": "1. Abandoning sin. 2. Remorse. 3. Resolve not to return. 4. Restoring rights to owners.",
+        "order": 18
+      },
+      {
+        "id": "q19-path-to-might-victory",
+        "question": "What is the path that leads Muslims to might and victory?",
+        "answer": "Acting upon principles of Islam and abandoning sins. Changing own attitude/conduct to improve condition.",
+        "order": 19
+      },
+      {
+        "id": "q20-importance-of-dua",
+        "question": "What is the importance of Du‘ā’ (supplication)?",
+        "answer": "One of greatest acts of obedience. {Call upon Me; I will respond to you.} \"Verily, supplication is worship.\"",
+        "order": 20
+      },
+      {
+        "id": "q21-invoking-blessings-meaning",
+        "question": "What is the meaning of invoking blessings upon the Prophet (may Allah's peace and blessings be upon him)?",
+        "answer": "Supplicating to Allah to exalt his mention in the highest assembly.",
+        "order": 21
+      },
+      {
+        "id": "q22-meaning-subhanallah",
+        "question": "What is the meaning of \"Subhānallāh\"?",
+        "answer": "Exalting Allah Almighty above any deficiency, defect, or evil.",
+        "order": 22
+      },
+      {
+        "id": "q23-meaning-alhamdulillah",
+        "question": "What is the meaning of \"Alhamdulillāh\"?",
+        "answer": "Praising Allah and describing Him with all attributes of perfection.",
+        "order": 23
+      },
+      {
+        "id": "q24-meaning-allahu-akbar",
+        "question": "What is the meaning of \"Allāhu Akbar\"?",
+        "answer": "Allah is the Most Great, Magnificent, and Mighty among all other things.",
+        "order": 24
+      },
+      {
+        "id": "q25-meaning-la-hawla-wala-quwwata",
+        "question": "What is the meaning of \"La hawla wala quwwata illa billāh\"?",
+        "answer": "A person cannot change from one state to another except by the strength and power of Allah.",
+        "order": 25
+      },
+      {
+        "id": "q26-meaning-astaghfirullah",
+        "question": "What is the meaning of \"Astaghfirullāh\"?",
+        "answer": "Asking Allah Almighty to erase one's sins and cover one's flaws.",
+        "order": 26
+      }
+    ]
+  }
+]

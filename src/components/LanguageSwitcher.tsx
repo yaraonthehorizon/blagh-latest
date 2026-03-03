@@ -13,7 +13,7 @@ export function LanguageSwitcher() {
   return (
     <button
       onClick={toggleLanguage}
-      className="rounded-full bg-black/20 p-2 text-white backdrop-blur-sm transition-colors hover:bg-black/30"
+      className="rounded-full bg-primary/80 p-2 text-white backdrop-blur-xs transition-colors hover:bg-primary/70"
       aria-label="Switch language"
     >
       <Languages className="h-5 w-5" />

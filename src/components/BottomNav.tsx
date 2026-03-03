@@ -20,13 +20,14 @@ const BottomNav = () => {
   const tabs = [
     { path: "/", label: t("routes.home"), icon: Home },
     { path: "/quran", label: t("routes.quran"), icon: BookOpen },
-    { path: "/hadeeth", label: t("routes.hadeeth"), icon: GraduationCap },
+    { path: "/hadith", label: t("routes.hadith"), icon: GraduationCap },
     { path: "/knowledge", label: t("routes.knowledge"), icon: GraduationCap },
+    { path: "/children", label: t("routes.children"), icon: Gift },
   ];
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-50 border-t border-border bg-card/95 backdrop-blur-lg">
-      <div className="mx-auto flex max-w-lg items-center justify-around py-2">
+    <nav className="fixed bottom-0 left-0 right-0 z-50  border-border bg-transparent ">
+      <div className="mx-auto flex max-w-lg items-center justify-around py-2 backdrop-blur-lg rounded-full">
         {tabs.map((tab) => {
           const isActive = location.pathname === tab.path;
           return (

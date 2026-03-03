@@ -13,10 +13,13 @@ import NotFound from "./pages/NotFound";
 import { Quran } from "./pages/Quran";
 import { Athkar } from "./pages/Athkar";
 import { Children } from "./pages/Children";
+import Hadith from "./pages/Hadith";
 import { useState } from "react";
 import { SplashScreen } from "@/components/SplashScreen";
 import Profile from "./pages/Profile";
 import { FloatingActionButton } from "@/components/FloatingActionButton";
+import Search from "./pages/Search";
+import ChildrenCategory from "./pages/ChildrenCategory";
 
 const queryClient = new QueryClient();
 
@@ -38,11 +41,17 @@ const App = () => {
                   <Routes>
                     <Route path="/" element={<Index />} />
                     <Route path="/quran" element={<Quran />} />
+                    <Route path="/hadith" element={<Hadith />} />
                     <Route path="/athkar" element={<Athkar />} />
                     <Route path="/knowledge" element={<Knowledge />} />
                     <Route path="/baligh" element={<Baligh />} />
                     <Route path="/children" element={<Children />} />
+                    <Route
+                      path="/children/:categoryId"
+                      element={<ChildrenCategory />}
+                    />
                     <Route path="/profile" element={<Profile />} />
+                    <Route path="/search" element={<Search />} />
                     <Route path="*" element={<NotFound />} />
                   </Routes>
                   <FloatingActionButton />

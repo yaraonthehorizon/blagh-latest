@@ -12,33 +12,12 @@ import { getGreetingKey, getSpecialGreetingKey } from "@/helpers/getGreeting";
 import { usePrayerTimes } from "@/hooks/use-prayer-times";
 import { ProfileButton } from "@/components/ProfileButton";
 import { Heart, Book, Footprints, MessageCircle } from "lucide-react";
+import { Head } from "react-day-picker";
+import { Header } from "@/components/Header";
 
-const Index = () => {
+export default function Index() {
   const { t } = useTranslation();
   const { nextPrayer, timeRemaining } = usePrayerTimes();
-
-  const childrenCards = [
-    {
-      title: t("content.home.children_section.aqidah"),
-      icon: Heart,
-      color: "border-pink-200 bg-pink-50 text-pink-600",
-    },
-    {
-      title: t("content.home.children_section.fiqh"),
-      icon: Book,
-      color: "border-sky-200 bg-sky-50 text-sky-600",
-    },
-    {
-      title: t("content.home.children_section.seerah"),
-      icon: Footprints,
-      color: "border-emerald-200 bg-emerald-50 text-emerald-600",
-    },
-    {
-      title: t("content.home.children_section.hadith"),
-      icon: MessageCircle,
-      color: "border-amber-200 bg-amber-50 text-amber-600",
-    },
-  ];
 
   return (
     <div className="min-h-screen bg-background pb-20">
@@ -47,19 +26,11 @@ const Index = () => {
         <img
           src={heroPattern}
           alt=""
-          className="absolute inset-0 h-full w-full object-cover opacity-30"
+          className="absolute inset-3 h-full w-full object-cover opacity-10"
         />
         <div className="gradient-hero absolute inset-0 opacity-90" />
-        <div className="relative px-6 pb-8 pt-12 max-w-lg mx-auto">
-          <div className="absolute end-4 top-4 flex gap-2">
-            <ProfileButton />
-            <LanguageSwitcher />
-            <ThemeToggle />
-          </div>
-
-          <p className="text-4xl mb-5  font-medium text-primary-foreground">
-            {t("page_title.home")}
-          </p>
+        <div className="relative px-6 pb-8 max-w-lg mx-auto">
+          <Header headerTitleKey="page_title.home" />
           <div className="flex items-center gap-5 justify-between w-full ">
             <CurrentDateCard />
             <div className="flex flex-col gap-5">
@@ -83,14 +54,14 @@ const Index = () => {
           </span>
         </div>
         <div>
-          <h1 className="font-display text-2xl font-bold text-primary mb-1">
+          <h1 className=" text-2xl font-bold text-primary mb-1">
             {t("headers.home.prayer_times")}
           </h1>
 
           <PrayerTimes />
         </div>
         <div>
-          <h1 className="font-display text-2xl font-bold text-primary mb-1">
+          <h1 className=" text-2xl font-bold text-primary mb-1">
             {t("headers.home.daily_apps")}
           </h1>
 
@@ -107,31 +78,11 @@ const Index = () => {
           <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">
             {t("content.home.daily_reflection")}
           </p>
-          <p className="font-display text-sm italic text-foreground leading-relaxed">
+          <p className=" text-sm italic text-foreground leading-relaxed">
             "{t("content.home.daily_reflection_prompt")}"
           </p>
-        </div>
-        <div>
-          <h1 className="font-display text-2xl font-bold text-primary mb-3">
-            {t("content.home.children_section.title")}
-          </h1>
-          <div className="grid grid-cols-2 gap-3">
-            {childrenCards.map((card, index) => (
-              <button
-                key={index}
-                className={`flex flex-col items-center justify-center rounded-2xl border-2 p-4 shadow-sm transition-transform hover:scale-105 active:scale-95 ${card.color}`}
-              >
-                <card.icon className="h-8 w-8 mb-2" />
-                <span className="font-display font-bold text-sm text-center">
-                  {card.title}
-                </span>
-              </button>
-            ))}
-          </div>
         </div>
       </div>
     </div>
   );
-};
-
-export default Index;
+}

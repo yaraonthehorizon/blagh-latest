@@ -24,6 +24,10 @@ export default {
         display: ["Playfair Display", "serif"],
         arabic: ["Amiri", "serif"],
       },
+      fontSize: {
+        xxs: "0.625rem",
+        xxxs: "0.5rem",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
