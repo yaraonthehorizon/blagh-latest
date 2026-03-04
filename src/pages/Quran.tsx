@@ -1,8 +1,10 @@
 import { Header } from "@/components/Header";
 import SearchBar from "@/components/SearchBar";
 import { surahs } from "@/lib/data";
+import { useNavigate } from "react-router-dom";
 
 export function Quran() {
+  const navigate = useNavigate();
   const scrollToSurah = (id: number) => {
     const element = document.getElementById(`surah-${id}`);
     if (element) {
@@ -31,6 +33,7 @@ export function Quran() {
             <button
               key={surah.number}
               id={`surah-${surah.number}`}
+              onClick={() => navigate(`/quran/${surah.number}`)}
               className="flex w-full items-center justify-between rounded-xl bg-card p-4 shadow-card transition-transform hover:scale-[1.01] active:scale-[0.99]"
             >
               <div className="flex items-center gap-5">

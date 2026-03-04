@@ -11,7 +11,7 @@ export function QuickActions() {
       label: t("quick_action.quran"),
       icon: BookOpen,
       path: "/quran",
-      color: "bg-secondary/10 text-primary",
+      color: "bg-accent/20 text-accent-foreground",
     },
     {
       label: t("quick_action.athkar"),
@@ -23,39 +23,39 @@ export function QuickActions() {
       label: t("quick_action.prayer"),
       icon: Prayer,
       path: "/prayer",
-      color: "bg-secondary/10 text-primary",
+      color: "bg-accent/20 text-accent-foreground",
     },
     {
       label: t("quick_action.qibla"),
       icon: Compass,
       path: "/qibla",
-      color: "bg-secondary/10 text-secondary",
+      color: "bg-accent/20 text-accent-foreground",
     },
     {
       label: t("quick_action.duaa"),
       icon: HandHeart,
       path: "/duaa",
-      color: "bg-primary/10 text-primary",
+      color: "bg-accent/20 text-accent-foreground",
     },
     {
       label: t("quick_action.tsbeeh"),
       icon: PrayerBeads,
       path: "/tsbeeh",
-      color: "bg-primary/10 text-primary",
+      color: "bg-accent/20 text-accent-foreground",
     },
 
     {
       label: t("quick_action.calander"),
       icon: Compass,
       path: "/calander",
-      color: "bg-secondary/10 text-primary",
+      color: "bg-accent/20 text-accent-foreground",
     },
 
     {
       label: t("quick_action.hadith"),
       icon: Scroll,
       path: "/hadith",
-      color: "bg-primary/10 text-primary",
+      color: "bg-accent/20 text-accent-foreground",
     },
   ];
   const navigate = useNavigate();

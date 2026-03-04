@@ -165,8 +165,33 @@
         "dawah": "Da‘wah and Hisbah",
         "seerah": "Seerah and History"
       }
+    },
+    "auth": {
+      "login": {
+        "title": "Welcome Back",
+        "email_label": "Email",
+        "password_label": "Password",
+        "submit": "Login",
+        "no_account": "Don't have an account?",
+        "sign_up_link": "Sign Up"
+      },
+      "signup": {
+        "title": "Create an Account",
+        "name_label": "Full Name",
+        "phone_label": "Phone Number",
+        "email_label": "Email",
+        "password_label": "Password",
+        "submit": "Sign Up",
+        "has_account": "Already have an account?",
+        "login_link": "Login"
+      },
+      "otp": {
+        "title": "Verify OTP",
+        "description": "Enter the 6-digit code sent to your device",
+        "submit": "Verify",
+        "resend": "Resend Code"
+      }
     }
   },
-
   "basmala": "In the name of Allah, the Most Gracious, the Most Merciful"
 }

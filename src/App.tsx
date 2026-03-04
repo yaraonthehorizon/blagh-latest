@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Outlet } from "react-router-dom";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import BottomNav from "@/components/BottomNav";
@@ -18,11 +18,24 @@ import { useState } from "react";
 import { SplashScreen } from "@/components/SplashScreen";
 import Profile from "./pages/Profile";
 import { FloatingActionButton } from "@/components/FloatingActionButton";
-import Search from "./components/SearchBar";
 import ChildrenCategory from "./pages/ChildrenCategory";
+import SurahDetail from "./pages/SurahDetails";
+import Login from "./pages/auth/LogIn";
+import SignUp from "./pages/auth/SignUp";
+import OTP from "./pages/auth/OTP";
 import "@/lib/i18n/init";
 
 const queryClient = new QueryClient();
+
+const MainLayout = () => {
+  return (
+    <>
+      <Outlet />
+      <FloatingActionButton />
+      <BottomNav />
+    </>
+  );
+};
 
 const App = () => {
   const [showSplash, setShowSplash] = useState(true);
@@ -40,22 +53,29 @@ const App = () => {
               <AuthProvider>
                 <BrowserRouter basename={import.meta.env.VITE_BASE_PATH}>
                   <Routes>
-                    <Route path="/" element={<Index />} />
-                    <Route path="/quran" element={<Quran />} />
-                    <Route path="/hadith" element={<Hadith />} />
-                    <Route path="/athkar" element={<Athkar />} />
-                    <Route path="/knowledge" element={<Knowledge />} />
-                    <Route path="/baligh" element={<Baligh />} />
-                    <Route path="/children" element={<Children />} />
-                    <Route
-                      path="/children/:categoryId"
-                      element={<ChildrenCategory />}
-                    />
-                    <Route path="/profile" element={<Profile />} />
+                    <Route element={<MainLayout />}>
+                      <Route path="/" element={<Index />} />
+                      <Route path="/quran" element={<Quran />} />
+                      <Route
+                        path="/quran/:surahNumber"
+                        element={<SurahDetail />}
+                      />
+                      <Route path="/hadith" element={<Hadith />} />
+                      <Route path="/athkar" element={<Athkar />} />
+                      <Route path="/knowledge" element={<Knowledge />} />
+                      <Route path="/baligh" element={<Baligh />} />
+                      <Route path="/children" element={<Children />} />
+                      <Route
+                        path="/children/:categoryId"
+                        element={<ChildrenCategory />}
+                      />
+                      <Route path="/profile" element={<Profile />} />
+                    </Route>
+                    <Route path="/auth/login" element={<Login />} />
+                    <Route path="/auth/signup" element={<SignUp />} />
+                    <Route path="/auth/otp" element={<OTP />} />
                     <Route path="*" element={<NotFound />} />
                   </Routes>
-                  <FloatingActionButton />
-                  <BottomNav />
                 </BrowserRouter>
               </AuthProvider>
             </>

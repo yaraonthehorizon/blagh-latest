@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-import { MoreVertical, Search, User, Languages, Sun, Moon } from "lucide-react";
+import { MoreVertical, User, Languages, Sun, Moon } from "lucide-react";
 import { useTheme } from "@/hooks/use-theme";
 import {
   DropdownMenu,
@@ -54,7 +54,19 @@ export function Header({
                 <Sun className="absolute h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
                 <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
               </div>
-              <span>{theme === "dark" ? "Light Mode" : "Dark Mode"}</span>
+              <span>
+                {i18n.language === "en"
+                  ? theme === "dark"
+                    ? "Light Mode"
+                    : "Dark Mode"
+                  : theme === "dark"
+                    ? "الوضع النهاري"
+                    : "الوضع الليلي"}
+              </span>
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={() => navigate("/auth/signup")}>
+              <User className="mr-2 h-4 w-4" />
+              <span>{t("content.auth.signup.title")}</span>
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

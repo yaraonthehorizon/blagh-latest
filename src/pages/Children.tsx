@@ -1,12 +1,12 @@
-import adab from "@/assets/categories/adab.png";
-import adeiah from "@/assets/categories/adeiah.png";
-import akhlaq from "@/assets/categories/akhlaq.png";
-import aqeeda from "@/assets/categories/aqeeda.png";
-import fiqh from "@/assets/categories/fiqh.png";
-import hadeeth from "@/assets/categories/hadeeth.png";
-import misc from "@/assets/categories/misc-small.png";
-import seera from "@/assets/categories/seera-small.png";
-import tafseer from "@/assets/categories/tafseer.png";
+import adab from "@/assets/icons/adab.svg";
+import adeiah from "@/assets/icons/adab.svg";
+import akhlaq from "@/assets/icons/akhlaq.svg";
+import aqeeda from "@/assets/icons/aqeeda.svg";
+import fiqh from "@/assets/icons/fiqh.svg";
+import hadeeth from "@/assets/icons/hadeeth.svg";
+import misc from "@/assets/icons/hadeeth.svg";
+import seera from "@/assets/icons/akhlaq.svg";
+import tafseer from "@/assets/icons/tafseer.svg";
 import { useQna } from "@/hooks/use-qna";
 import { useNavigate } from "react-router-dom";
 import { Header } from "@/components/Header";
@@ -17,24 +17,15 @@ export function Children() {
   const navigate = useNavigate();
 
   const styles = [
-    { icon: aqeeda, color: "border-sky-200 bg-primary/80 text-background" },
-    { icon: fiqh, color: "border-sky-200 bg-sky-600 text-background" },
-    {
-      icon: seera,
-      color: "border-sky-200 bg-amber-500  text-background",
-    },
-    {
-      icon: tafseer,
-      color: "border-sky-200 bg-red-500/90 text-background",
-    },
-    {
-      icon: hadeeth,
-      color: "border-sky-200 bg-purple-500 text-background",
-    },
-    { icon: adab, color: "border-sky-200 bg-indigo-500 text-background" },
-    { icon: akhlaq, color: "border-sky-200 bg-blue-500 text-background" },
-    { icon: adeiah, color: "border-sky-200 bg-orange-500 text-background" },
-    { icon: misc, color: "border-sky-200 bg-gray-500 text-background" },
+    { icon: aqeeda, color: "bg-emerald-500 text-emerald-700" },
+    { icon: fiqh, color: "bg-sky-500 text-sky-300" },
+    { icon: seera, color: "bg-orange-600 text-amber-700" },
+    { icon: tafseer, color: "bg-red-600 text-red-700" },
+    { icon: hadeeth, color: "bg-purple-500 text-purple-700" },
+    { icon: adab, color: "bg-indigo-500 text-indigo-700" },
+    { icon: akhlaq, color: "bg-blue-500 text-blue-700" },
+    { icon: adeiah, color: "bg-amber-500 text-orange-700" },
+    { icon: misc, color: "bg-gray-500 text-gray-700" },
   ];
 
   return (
@@ -42,24 +33,23 @@ export function Children() {
       <div className="relative px-2 pb-8 max-w-lg mx-auto">
         <Header headerTitleKey="page_title.children" />
         <SearchBar />
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-3 gap-3">
           {categories.map((category, index) => {
-            const lastIndex = categories.length - 1;
             const style = styles[index];
             return (
               <button
                 key={category.id}
                 onClick={() => navigate(`/children/${category.id}`)}
-                className={`${
-                  index === lastIndex ? "col-span-2" : ""
-                } flex flex-col items-center justify-center gap-4 rounded-2xl border-2 p-4 shadow-sm transition-transform hover:scale-105 active:scale-95 ${style.color}`}
+                className="flex flex-col items-center gap-2 p-2 shadow-card transition-transform hover:scale-105 active:scale-95 rounded-xl"
               >
-                <img
-                  src={style.icon}
-                  alt={category.title}
-                  className="h-16 w-16 object-contain"
-                />
-                <span className="font-bold text-base text-center leading-tight">
+                <div className={`rounded-full p-2.5 ${style.color}`}>
+                  <img
+                    src={style.icon}
+                    alt={category.title}
+                    className="h-8 w-8 object-contain  mix-blend-screen"
+                  />
+                </div>
+                <span className="text-xs font-medium text-primary text-center leading-tight">
                   {category.title}
                 </span>
               </button>

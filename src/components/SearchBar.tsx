@@ -23,7 +23,7 @@ export default function SearchBar() {
               // Add your search submission logic here
             }
           }}
-          className="flex-1 bg-transparent text-sm text-foreground placeholder:text-muted-foreground focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 outline-none"
+          className="flex-1 border-none bg-transparent text-sm text-foreground placeholder:text-muted-foreground focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 outline-none"
         />
       </div>
     </div>
