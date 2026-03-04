@@ -8,7 +8,7 @@ import {
   InputOTPSlot,
 } from "@/components/ui/input-otp";
 
-export default function OTP() {
+export function OTP() {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const [value, setValue] = useState("");

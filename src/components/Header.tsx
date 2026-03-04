@@ -9,15 +9,18 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
+import { BackButton } from "./ui/back-button";
 
 export function Header({
   headerTitleKey,
   translationValues,
   className,
+  backButton = false,
 }: {
   headerTitleKey: string;
   translationValues?: Record<string, string | number>;
   className?: string;
+  backButton?: boolean;
 }) {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
@@ -30,8 +33,8 @@ export function Header({
   };
 
   return (
-    <div className="flex items-center justify-between mt-10 relative w-full">
-      <div className="absolute end-2 flex gap-2">
+    <div className="flex justify-between mt-10 relative w-full">
+      <div className="absolute end-0 flex gap-2">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <button className="rounded-full bg-primary/80 p-2 text-white backdrop-blur-xs transition-colors hover:bg-primary/70">
@@ -64,19 +67,22 @@ export function Header({
                     : "الوضع الليلي"}
               </span>
             </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => navigate("/auth/signup")}>
+            {/* <DropdownMenuItem onClick={() => navigate("/auth/signup")}>
               <User className="mr-2 h-4 w-4" />
               <span>{t("content.auth.signup.title")}</span>
-            </DropdownMenuItem>
+            </DropdownMenuItem> */}
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
-      <h1 className={cn("text-primary text-3xl font-bold mb-4", className)}>
-        {t(headerTitleKey, {
-          defaultValue: headerTitleKey,
-          ...translationValues,
-        })}
-      </h1>
+      <div className="flex gap-4">
+        {backButton && <BackButton />}
+        <h1 className={cn("text-primary text-3xl font-bold ", className)}>
+          {t(headerTitleKey, {
+            defaultValue: headerTitleKey,
+            ...translationValues,
+          })}
+        </h1>
+      </div>
     </div>
   );
 }

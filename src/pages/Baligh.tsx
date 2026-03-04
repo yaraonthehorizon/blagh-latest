@@ -124,7 +124,7 @@ const Baligh = () => {
   const hasMessages = messages.length > 0;
 
   return (
-    <div className="flex min-h-screen flex-col bg-background pb-24 pt-12">
+    <div className="page-container">
       <div className="px-5">
         <h1 className="font-display text-2xl font-bold text-foreground mb-1">
           Baligh

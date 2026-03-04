@@ -54,7 +54,7 @@ export default function Hadith() {
   ];
 
   return (
-    <div className="min-h-screen bg-background px-4 pb-24">
+    <div className="page-container">
       <div className="relative px-2 pb-8  max-w-lg mx-auto">
         <Header headerTitleKey="page_title.hadith" className="" />
         <SearchBar />

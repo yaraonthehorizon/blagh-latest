@@ -1,12 +1,21 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { surahs } from "@/lib/data";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Play, Share2, Bookmark } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
+import { toast } from "sonner";
+import {
+  ContextMenu,
+  ContextMenuContent,
+  ContextMenuItem,
+  ContextMenuTrigger,
+} from "@/components/ui/context-menu";
 
-export default function SurahDetail() {
+export function SurahDetail() {
   const { surahNumber } = useParams();
   const navigate = useNavigate();
   const { i18n } = useTranslation();
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const surah = surahs.find((s) => s.number === Number(surahNumber));
 
@@ -36,8 +45,20 @@ export default function SurahDetail() {
       ? fatihaVerses
       : Array.from({ length: surah.ayahs }).map(() => mockVerseText);
 
+  function handleShare(text: string) {
+    if (navigator.share) {
+      navigator.share({
+        title: `Surah ${surah.name}`,
+        text: text,
+        url: window.location.href,
+      });
+    } else {
+      toast.error("Sharing not supported on this device");
+    }
+  }
+
   return (
-    <div className="min-h-screen bg-background px-4 pb-24 pt-12">
+    <div className="page-container">
       <div className="relative max-w-3xl mx-auto">
         <div className="mb-6 flex items-center gap-4">
           <button
@@ -66,21 +87,41 @@ export default function SurahDetail() {
           <div className="p-6 sm:p-8" dir="rtl">
             <div className="font-arabic text-2xl  leading-[2.3] text-justify text-foreground">
               {verses.map((verse, i) => (
-                <span
-                  key={i}
-                  className="inline hover:bg-primary/10 rounded px-1 transition-colors cursor-pointer select-none"
-                  // Placeholder for interaction triggers (e.g., onHold)
-                  onClick={() => console.log(`Clicked verse ${i + 1}`)}
-                  onContextMenu={(e) => {
-                    e.preventDefault();
-                    console.log(`Long press on verse ${i + 1}`);
-                  }}
-                >
-                  {verse}{" "}
-                  <span className="inline-flex items-center justify-center h-8 w-8 text-sm border border-primary/40 rounded-full text-primary mx-1 align-middle bg-background">
-                    {(i + 1).toLocaleString("ar-EG")}
-                  </span>{" "}
-                </span>
+                <ContextMenu key={i}>
+                  <ContextMenuTrigger asChild>
+                    <span
+                      className={` rounded px-1 transition-colors cursor-pointer select-none ${selectedIndex === i ? "bg-primary/20" : "hover:bg-primary/10"}`}
+                      onClick={() =>
+                        setSelectedIndex(selectedIndex === i ? null : i)
+                      }
+                    >
+                      {verse}{" "}
+                      <span className="inline-flex items-center justify-center h-8 w-8 text-sm border border-primary/40 rounded-full text-primary mx-1 align-middle bg-background">
+                        {(i + 1).toLocaleString("ar-EG")}
+                      </span>{" "}
+                    </span>
+                  </ContextMenuTrigger>
+                  <ContextMenuContent className="flex flex-row w-auto min-w-0 p-1">
+                    <ContextMenuItem
+                      onClick={() => toast.info("Playing audio...")}
+                      className="justify-center flex-1"
+                    >
+                      <Play className="h-6 w-6" />
+                    </ContextMenuItem>
+                    <ContextMenuItem
+                      onClick={() => handleShare(verse)}
+                      className="justify-center flex-1"
+                    >
+                      <Share2 className="h-6 w-6" />
+                    </ContextMenuItem>
+                    <ContextMenuItem
+                      onClick={() => toast.success("Verse saved to bookmarks")}
+                      className="justify-center flex-1"
+                    >
+                      <Bookmark className="h-6 w-6" />
+                    </ContextMenuItem>
+                  </ContextMenuContent>
+                </ContextMenu>
               ))}
             </div>
           </div>

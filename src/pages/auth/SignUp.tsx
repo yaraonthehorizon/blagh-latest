@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { User } from "lucide-react";
 import { Input } from "@/components/ui/input";
 
-export default function SignUp() {
+export function SignUp() {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const [name, setName] = useState("");

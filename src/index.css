@@ -134,6 +134,16 @@
 }
 
 @layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .page-container {
+    @apply min-h-screen bg-background px-4 pb-24 pt-5;
+  }
   .font-display {
     font-family: "Playfair Display", serif;
   }

@@ -7,11 +7,15 @@ import {
   Settings,
   Gift,
   CreditCard,
+  ChevronLeft,
+  Users,
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
-const MySpace = () => {
-  const { t } = useTranslation();
+export function Profile() {
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
 
   const stats = [
     {
@@ -37,18 +41,46 @@ const MySpace = () => {
   ];
 
   const services = [
-    { label: t("content.profile.services.send_gift"), icon: Gift },
-    { label: t("content.profile.services.gift_card"), icon: CreditCard },
-    { label: t("content.profile.services.quran_card"), icon: BookOpen },
+    {
+      label: t("content.profile.services.send_gift"),
+      subtext: t("content.profile.services.send_gift_subtext"),
+      icon: Gift,
+      path: "/send-gift",
+    },
+    {
+      label: t("content.profile.services.gift_card"),
+      subtext: t("content.profile.services.gift_card_subtext"),
+      icon: CreditCard,
+      path: "/send-greeting",
+    },
+    {
+      label: t("content.profile.services.quran_card"),
+      subtext: t("content.profile.services.quran_card_subtext"),
+      icon: BookOpen,
+      path: "/send-quran-card",
+    },
+    {
+      label: t("content.profile.services.companionship"),
+      subtext: t("content.profile.services.companionship_subtext"),
+      icon: Users,
+      path: "/companionship",
+    },
   ];
 
   return (
-    <div className="min-h-screen bg-background px-5 pb-24 ">
-      <div className="relative px-6 pb-8  max-w-lg mx-auto">
-        <Header headerTitleKey="page_title.profile" className="text-primary" />
+    <div className="page-container">
+      <div className="relative max-w-lg mx-auto">
+        <Header
+          headerTitleKey="page_title.profile"
+          className="text-primary"
+          backButton
+        />
         <div className="grid grid-cols-2 gap-3 mb-6">
           {stats.map((s) => (
-            <div key={s.label} className="rounded-xl bg-card p-4 shadow-card">
+            <div
+              key={s.label}
+              className="rounded-xl bg-card p-4 mt-5 shadow-card"
+            >
               <s.icon className="mb-2 h-5 w-5 text-secondary" />
               <p className=" text-xl font-bold text-foreground">{s.value}</p>
               <p className="text-xs text-muted-foreground">{s.label}</p>
@@ -57,21 +89,30 @@ const MySpace = () => {
         </div>
 
         <div className="mb-6">
-          <h2 className=" text-lg font-bold text-foreground mb-3">
+          <h2 className=" text-xl font-bold text-foreground mb-3">
             {t("content.profile.services.title")}
           </h2>
-          <div className="grid grid-cols-3 gap-3">
+          <div className="flex sm:flex-col overflow-x-auto  gap-3 pb-4 -mx-6 px-6 no-scrollbar">
             {services.map((s) => (
               <button
                 key={s.label}
-                className="flex flex-col items-center justify-center rounded-xl bg-card p-3 shadow-card transition-transform hover:scale-[1.02] active:scale-[0.98]"
+                onClick={() => navigate(s.path)}
+                className="flex shrink-0 w-full items-center justify-between rounded-xl bg-card p-4 shadow-card transition-transform hover:scale-[1.01] active:scale-[0.99]"
               >
-                <div className="mb-2 rounded-full bg-primary/10 p-2.5 text-primary">
-                  <s.icon className="h-5 w-5" />
+                <div className="flex items-center gap-4">
+                  <div className="rounded-full bg-primary/10 p-3 text-primary">
+                    <s.icon className="h-6 w-6" />
+                  </div>
+                  <div className="text-start">
+                    <p className="text-lg font-bold text-foreground">
+                      {s.label}
+                    </p>
+                    <p className="text-xs text-muted-foreground">{s.subtext}</p>
+                  </div>
                 </div>
-                <span className="text-xs font-medium text-foreground text-center leading-tight">
-                  {s.label}
-                </span>
+                <ChevronLeft
+                  className={`h-5 w-5 text-muted-foreground ${i18n.dir() === "rtl" ? "" : "rotate-180"}`}
+                />
               </button>
             ))}
           </div>
@@ -106,6 +147,4 @@ const MySpace = () => {
       </div>
     </div>
   );
-};
-
-export default MySpace;
+}

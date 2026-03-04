@@ -9,7 +9,11 @@
     "knowledge": "المعرفة",
     "children": "الأطفال",
     "search": "بحث",
-    "profile": "المساحة الشخصية"
+    "profile": "المساحة الشخصية",
+    "send_greeting": "إرسل تهنئة",
+    "send_gift": "إرسل هديةالمعرفة",
+    "send_quran_card": "هدية القرآن",
+    "companionship": "مصاحبة قرآنية"
   },
   "routes": {
     "home": "الرئيسية",
@@ -156,8 +160,6 @@
       }
     },
     "profile": {
-      "title": "مساحتي",
-      "subtitle": "رحلتك الروحية",
       "stats": {
         "reading_streak": "تتابع القراءة",
         "pages_read": "صفحات مقروءة",
@@ -167,9 +169,14 @@
 
       "services": {
         "title": "الخدمات",
-        "send_gift": "أرسل هدية",
-        "gift_card": "بطاقة هدية",
-        "quran_card": "بطاقة قرآن"
+        "send_gift": "اهد هدية",
+        "send_gift_subtext": "فاجئ من تحب",
+        "gift_card": "بطاقات التهنئة",
+        "gift_card_subtext": "شارك البركة",
+        "companionship": "مصاحبة قرآنية",
+        "companionship_subtext": "ادعو رفيقا للقراءة",
+        "quran_card": "بطاقة قرآن",
+        "quran_card_subtext": "أهدِ ختمة"
       },
       "khatmah_progress": "تقدم الختمة",
       "juz_progress": "الجزء 5 من 30",
@@ -187,6 +194,30 @@
         "quran": "ابحث في القرآن باسم السورة، رقمها، أو موضوعها.",
         "hadith": "ابحث في مجموعة الحديث بالكلمات المفتاحية أو الفئات."
       }
+    },
+    "send_greeting": {
+      "greeting_card": {
+        "title": "رمضان كريم",
+        "subtitle": "تقبل الله منا ومنكم الصيام والقيام وصالح الأعمال."
+      },
+      "share_button": "شارك التهنئة",
+      "share_text": "رمضان كريم! أتمنى لكم شهراً مباركاً مليئاً بالنور والهداية."
+    },
+    "send_quran_card": {
+      "share_button": "شارك الاجر",
+      "share_text": "شاركني الجزاء!. دعونا نكمل هذا العمل الصالح معًا."
+    },
+    "companionship": {
+      "title": "ابحث عن رفيق للتعلم",
+      "description": "ادعُ صديقاً لمشاركتك رحلتك الروحية. التعلم الجماعي يجلب المزيد من البركة.",
+      "form": {
+        "name_label": "اسم الصديق",
+        "name_placeholder": "أدخل الاسم",
+        "email_label": "البريد الإلكتروني للصديق",
+        "email_placeholder": "أدخل عنوان البريد الإلكتروني",
+        "submit": "إرسال الدعوة"
+      },
+      "success_message": "تم إرسال الدعوة بنجاح!"
     }
   },
 

@@ -9,11 +9,11 @@ import {
 } from "@/components/ui/accordion";
 import { ArrowLeft } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { BackButton } from "@/components/ui/back-button";
+import { Header } from "@/components/Header";
 
-export default function ChildrenCategory() {
+export function ChildrenCategory() {
   const { categoryId } = useParams();
-  const navigate = useNavigate();
-  const { i18n } = useTranslation();
   const data = useQna();
   const category = data.find((c) => c.id === categoryId);
 
@@ -26,19 +26,9 @@ export default function ChildrenCategory() {
   }
 
   return (
-    <div className="min-h-screen bg-background px-5 pb-24 pt-12">
+    <div className="page-container ">
       <div className="relative max-w-lg mx-auto">
-        <div className="mb-6 flex items-center gap-4">
-          <button
-            onClick={() => navigate(-1)}
-            className="rounded-full bg-card p-2 text-foreground shadow-sm transition-colors hover:bg-muted"
-          >
-            <ArrowLeft
-              className={`h-5 w-5 ${i18n.dir() === "rtl" ? "rotate-180" : ""}`}
-            />
-          </button>
-          <h1 className=" text-2xl font-bold text-primary">{category.title}</h1>
-        </div>
+        <Header headerTitleKey={category.title} backButton />
 
         <div className="rounded-xl bg-card p-4 shadow-card">
           <p className="mb-6  text-sm text-muted-foreground">

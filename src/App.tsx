@@ -10,20 +10,22 @@ import Index from "./pages/Index";
 import Knowledge from "./pages/Knowledge";
 import Baligh from "./pages/Baligh";
 import NotFound from "./pages/NotFound";
-import { Quran } from "./pages/Quran";
 import { Athkar } from "./pages/Athkar";
-import { Children } from "./pages/Children";
 import Hadith from "./pages/Hadith";
 import { useState } from "react";
 import { SplashScreen } from "@/components/SplashScreen";
-import Profile from "./pages/Profile";
+import { Profile } from "./pages/Profile";
 import { FloatingActionButton } from "@/components/FloatingActionButton";
-import ChildrenCategory from "./pages/ChildrenCategory";
-import SurahDetail from "./pages/SurahDetails";
-import Login from "./pages/auth/LogIn";
-import SignUp from "./pages/auth/SignUp";
-import OTP from "./pages/auth/OTP";
+import { Children, ChildrenCategory } from "./pages/Children/index";
+import { Quran, SurahDetail } from "./pages/Quran/";
+import { Login, SignUp, OTP } from "./pages/auth/index";
 import "@/lib/i18n/init";
+import {
+  SendGift,
+  SendGreetingCard,
+  SendQuranCard,
+  Companionship,
+} from "./pages/Profile/Services/index";
 
 const queryClient = new QueryClient();
 
@@ -70,6 +72,19 @@ const App = () => {
                         element={<ChildrenCategory />}
                       />
                       <Route path="/profile" element={<Profile />} />
+                      <Route path="/send-gift" element={<SendGift />} />
+                      <Route
+                        path="/send-greeting"
+                        element={<SendGreetingCard />}
+                      />
+                      <Route
+                        path="/send-quran-card"
+                        element={<SendQuranCard />}
+                      />
+                      <Route
+                        path="/companionship"
+                        element={<Companionship />}
+                      />
                     </Route>
                     <Route path="/auth/login" element={<Login />} />
                     <Route path="/auth/signup" element={<SignUp />} />

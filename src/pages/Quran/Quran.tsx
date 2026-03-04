@@ -13,7 +13,7 @@ export function Quran() {
   };
 
   return (
-    <div className="min-h-screen bg-background px-4 pb-24">
+    <div className="page-container">
       <div className="fixed end-1 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-0.5 items-center py-2 px-0.5 rounded-full bg-card/30 backdrop-blur-md border border-border/20 shadow-sm max-h-[60vh] overflow-y-auto no-scrollbar w-5">
         {surahs.map((s) => (
           <button

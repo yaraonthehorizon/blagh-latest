@@ -13,12 +13,12 @@ export default function Index() {
   const { t } = useTranslation();
 
   return (
-    <div className="min-h-screen bg-background pb-20">
+    <div>
       {/* Hero */}
-      <div className="relative overflow-hidden rounded-b-3xl">
-        <div className="gradient-hero absolute inset-0" />
-        <div className="relative px-6 pb-8 max-w-lg mx-auto">
-          <div className="flex flex-col justify-center items-start ">
+      <div className="relative overflow-hidden rounded-b-3xl ">
+        <div className="gradient-hero absolute inset-0 " />
+        <div className="relative px-5 pb-8 max-w-lg mx-auto">
+          <div className="flex flex-col justify-center items-start mt-5 ">
             <Header
               headerTitleKey="content.home.welcome"
               translationValues={{ name: "Muslim" }}
