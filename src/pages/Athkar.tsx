@@ -10,6 +10,7 @@ import {
   Star,
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { AppCard } from "@/components/AppCard";
 
 export function Athkar() {
   const { t } = useTranslation();
@@ -52,12 +53,11 @@ export function Athkar() {
   ];
   return (
     <div className="page-container">
-      <div className="relative px-2 pb-8 max-w-lg mx-auto">
-        <Header headerTitleKey="page_title.athkar" />
-        <SearchBar />
-        <div className="grid grid-cols-2 gap-3">
+      <div className="page-content ">
+        <Header headerTitleKey="page_title.athkar" backButton />
+        <div className="grid grid-cols-2 gap-3 mt-10">
           {tools.map((tool) => (
-            <button
+            <AppCard
               key={tool.id}
               className="flex flex-col w-full items-center justify-center gap-4 rounded-xl bg-card p-4 shadow-card transition-transform hover:scale-[1.01] active:scale-[0.99]"
             >
@@ -74,7 +74,7 @@ export function Athkar() {
                   {t(`content.athkar.tools.${tool.id}.desc`)}
                 </p>
               </div>
-            </button>
+            </AppCard>
           ))}
         </div>
       </div>

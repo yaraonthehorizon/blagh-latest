@@ -12,7 +12,7 @@ export function BackButton() {
         className="rounded-full bg-card p-2 text-foreground shadow-sm transition-colors hover:bg-muted"
       >
         <ArrowLeft
-          className={`h-5 w-5 ${i18n.dir() === "rtl" ? "rotate-180" : ""}`}
+          className={`h-6 w-6 ${i18n.dir() === "rtl" ? "rotate-180" : ""}`}
         />
       </button>
     </div>

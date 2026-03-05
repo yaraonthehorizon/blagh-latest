@@ -10,6 +10,7 @@ import {
   ContextMenuItem,
   ContextMenuTrigger,
 } from "@/components/ui/context-menu";
+import { AppCard } from "@/components/AppCard";
 
 export function SurahDetail() {
   const { surahNumber } = useParams();
@@ -84,8 +85,11 @@ export function SurahDetail() {
           </div>
 
           {/* Verses Container */}
-          <div className="p-6 sm:p-8" dir="rtl">
-            <div className="font-arabic text-2xl  leading-[2.3] text-justify text-foreground">
+          <AppCard className="p-6 sm:p-8">
+            <div
+              className="font-arabic text-2xl  leading-[2.3] text-justify text-foreground"
+              dir="rtl"
+            >
               {verses.map((verse, i) => (
                 <ContextMenu key={i}>
                   <ContextMenuTrigger asChild>
@@ -124,7 +128,7 @@ export function SurahDetail() {
                 </ContextMenu>
               ))}
             </div>
-          </div>
+          </AppCard>
         </div>
       </div>
     </div>

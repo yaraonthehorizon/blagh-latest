@@ -27,7 +27,7 @@ export function ChildrenCategory() {
 
   return (
     <div className="page-container ">
-      <div className="relative max-w-lg mx-auto">
+      <div className="page-content">
         <Header headerTitleKey={category.title} backButton />
 
         <div className="rounded-xl bg-card p-4 shadow-card">

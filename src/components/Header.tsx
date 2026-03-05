@@ -1,6 +1,14 @@
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-import { MoreVertical, User, Languages, Sun, Moon } from "lucide-react";
+import {
+  MoreVertical,
+  User,
+  Languages,
+  Sun,
+  Moon,
+  Search,
+  Bell,
+} from "lucide-react";
 import { useTheme } from "@/hooks/use-theme";
 import {
   DropdownMenu,
@@ -33,13 +41,41 @@ export function Header({
   };
 
   return (
-    <div className="flex justify-between mt-10 relative w-full">
-      <div className="absolute end-0 flex gap-2">
+    <header className="flex  justify-between w-full mt-10">
+      <div className="flex  gap-2 ">
+        {backButton && (
+          <div className="flex justify-center ">
+            <BackButton />
+          </div>
+        )}
+        <h1
+          className={cn(
+            "text-primary text-2xl font-bold mt-2 md:mt-0 ",
+            className,
+          )}
+        >
+          {t(headerTitleKey, {
+            defaultValue: headerTitleKey,
+            ...translationValues,
+          })}
+        </h1>
+      </div>
+      <div className="flex gap-[9px] ">
+        <button className="w-[38px] h-[38px] rounded-full bg-icn-bg border border-icn-bdr flex items-center justify-center cursor-pointer transition-transform active:scale-90 text-icn-cl shadow-sm">
+          <Search className="h-4 w-4" />
+        </button>
+        <button className="w-[38px] h-[38px] rounded-full bg-icn-bg border border-icn-bdr flex items-center justify-center cursor-pointer transition-transform active:scale-90 text-icn-cl shadow-sm">
+          <Bell className="h-4 w-4" />
+        </button>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <button className="rounded-full bg-primary/80 p-2 text-white backdrop-blur-xs transition-colors hover:bg-primary/70">
-              <MoreVertical className="h-5 w-5" />
-            </button>
+            <div className="w-[42px] h-[42px] rounded-full border-2 border-primary2 overflow-hidden bg-surface3">
+              <img
+                src="https://api.dicebear.com/7.x/avataaars/svg?seed=Ahmed&backgroundColor=13131a"
+                alt="Ahmed"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
             <DropdownMenuItem onClick={() => navigate("/profile")}>
@@ -74,15 +110,6 @@ export function Header({
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
-      <div className="flex gap-4">
-        {backButton && <BackButton />}
-        <h1 className={cn("text-primary text-3xl font-bold ", className)}>
-          {t(headerTitleKey, {
-            defaultValue: headerTitleKey,
-            ...translationValues,
-          })}
-        </h1>
-      </div>
-    </div>
+    </header>
   );
 }

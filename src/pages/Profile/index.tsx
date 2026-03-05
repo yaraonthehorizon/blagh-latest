@@ -4,7 +4,6 @@ import {
   Flame,
   Moon,
   Bookmark,
-  Settings,
   Gift,
   CreditCard,
   ChevronLeft,
@@ -12,6 +11,7 @@ import {
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+import { AppCard } from "@/components/AppCard";
 
 export function Profile() {
   const { t, i18n } = useTranslation();
@@ -69,7 +69,7 @@ export function Profile() {
 
   return (
     <div className="page-container">
-      <div className="relative max-w-lg mx-auto">
+      <div className="page-content">
         <Header
           headerTitleKey="page_title.profile"
           className="text-primary"
@@ -77,14 +77,11 @@ export function Profile() {
         />
         <div className="grid grid-cols-2 gap-3 mb-6">
           {stats.map((s) => (
-            <div
-              key={s.label}
-              className="rounded-xl bg-card p-4 mt-5 shadow-card"
-            >
+            <AppCard key={s.label} className="">
               <s.icon className="mb-2 h-5 w-5 text-secondary" />
-              <p className=" text-xl font-bold text-foreground">{s.value}</p>
+              <p className=" text-md font-bold text-foreground">{s.value}</p>
               <p className="text-xs text-muted-foreground">{s.label}</p>
-            </div>
+            </AppCard>
           ))}
         </div>
 
@@ -94,10 +91,10 @@ export function Profile() {
           </h2>
           <div className="flex sm:flex-col overflow-x-auto  gap-3 pb-4 -mx-6 px-6 no-scrollbar">
             {services.map((s) => (
-              <button
+              <AppCard
                 key={s.label}
                 onClick={() => navigate(s.path)}
-                className="flex shrink-0 w-full items-center justify-between rounded-xl bg-card p-4 shadow-card transition-transform hover:scale-[1.01] active:scale-[0.99]"
+                className="flex shrink-0 w-full items-center justify-between rounded-xl  transition-transform hover:scale-[1.01] active:scale-[0.99]"
               >
                 <div className="flex items-center gap-4">
                   <div className="rounded-full bg-primary/10 p-3 text-primary">
@@ -113,12 +110,12 @@ export function Profile() {
                 <ChevronLeft
                   className={`h-5 w-5 text-muted-foreground ${i18n.dir() === "rtl" ? "" : "rotate-180"}`}
                 />
-              </button>
+              </AppCard>
             ))}
           </div>
         </div>
-
-        <div className="rounded-xl bg-card p-5 shadow-card mb-4">
+        {/* 
+        <AppCard className="flex flex-col rounded-xl p-5 smb-4">
           <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">
             {t("content.profile.khatmah_progress")}
           </p>
@@ -134,16 +131,16 @@ export function Profile() {
               style={{ width: "17%" }}
             />
           </div>
-        </div>
+        </AppCard> */}
 
-        <div className="rounded-xl bg-card p-5 shadow-card">
+        <AppCard className="flex flex-col items-start ">
           <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">
             {t("content.profile.weekly_insight")}
           </p>
           <p className=" text-sm italic text-foreground leading-relaxed">
             {t("content.profile.insight_text")}
           </p>
-        </div>
+        </AppCard>
       </div>
     </div>
   );

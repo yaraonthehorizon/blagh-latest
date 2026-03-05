@@ -13,6 +13,7 @@ import NotFound from "./pages/NotFound";
 import { Athkar } from "./pages/Athkar";
 import Hadith from "./pages/Hadith";
 import { useState } from "react";
+import { MoreApps } from "./pages/MoreApps";
 import { SplashScreen } from "@/components/SplashScreen";
 import { Profile } from "./pages/Profile";
 import { FloatingActionButton } from "@/components/FloatingActionButton";
@@ -85,6 +86,7 @@ const App = () => {
                         path="/companionship"
                         element={<Companionship />}
                       />
+                      <Route path="/more-apps" element={<MoreApps />} />
                     </Route>
                     <Route path="/auth/login" element={<Login />} />
                     <Route path="/auth/signup" element={<SignUp />} />

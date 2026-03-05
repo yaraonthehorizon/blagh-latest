@@ -5,14 +5,14 @@
     "athkar": "Athkar",
     "duaa": "Duaa",
     "hadith": "Hadith",
-    "bleegh": "Bleegh",
+    "baligh": "Baligh",
     "knowledge": "Knowledge",
     "children": "Children",
     "search": "Search",
     "profile": "Profile",
     "send_greeting": "Send Greeting",
     "send_gift": "Send Knowledge Gift",
-    "send_quran_card": "SendQuran Card",
+    "send_quran_card": "Send Quran Card",
     "companionship": "Learning Companion"
   },
   "routes": {
@@ -22,7 +22,8 @@
     "knowledge": "Knowledge",
     "children": "Children",
     "bleegh": "Bleegh",
-    "services": "Services"
+    "services": "Services",
+    "reciters": "Reciters"
   },
 
   "quick_action": {
@@ -58,7 +59,8 @@
     "dhuhr": "Dhuhr",
     "asr": "Asr",
     "maghrib": "Maghrib",
-    "isha": "Isha"
+    "isha": "Isha",
+    "sunrise": "Sunrise"
   },
   "headers": {
     "home": {
@@ -68,7 +70,8 @@
   },
   "content": {
     "home": {
-      "welcome": "Welcome, {{name}}",
+      "welcome": "Assalamu Alaikum ",
+      "name": "{{name}} 👋",
       "prayer": "prayer",
       "in": "in",
       "minutes": "minute/s",
@@ -228,5 +231,121 @@
     }
   },
 
-  "basmala": "In the name of Allah, the Most Gracious, the Most Merciful"
+  "basmala": "In the name of Allah, the Most Gracious, the Most Merciful",
+  "apps": {
+    "title": "Apps",
+    "more_link": "More ←",
+    "quran": "Quran",
+    "hadith": "Hadith",
+    "qibla": "Qibla",
+    "tasbeeh": "Tasbeeh",
+    "dua": "Dua",
+    "calandar": "Calendar",
+    "athkar": "Athkar",
+    "more": "More"
+  },
+  "bottom_nav": {
+    "home": "Home",
+    "quran": "Quran",
+    "explore": "Explore",
+    "bookmarks": "Saved",
+    "profile": "Profile"
+  },
+  "articles": {
+    "title": "Selected Articles",
+    "view_all": "All ←",
+    "read_more": "Read More ←",
+    "ramadan": {
+      "title": "Productive Ramadan",
+      "desc": "How to achieve maximum spiritual benefit in this holy month",
+      "cat": "Ramadan",
+      "time": "5 mins"
+    },
+    "prayer": {
+      "title": "Khushoo in Prayer",
+      "desc": "Achieving presence of heart in a world full of distractions",
+      "cat": "Prayer",
+      "time": "7 mins"
+    },
+    "tazkiyah": {
+      "title": "Purification of the Soul",
+      "desc": "The path of internal purification and drawing closer to Allah Almighty",
+      "cat": "Tazkiyah",
+      "time": "4 mins"
+    }
+  },
+  "bismillah": {
+    "arabic": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+    "text": "In the name of Allah, the Most Gracious, the Most Merciful"
+  },
+  "hadith_section": {
+    "daily_title": "Hadith of the Day",
+    "source": "Sahih Al-Jami",
+    "text": "«The best of people are those that bring most benefit to the rest of mankind.»",
+    "narrator": "— Prophet Muhammad ﷺ"
+  },
+  "mega_card": {
+    "hijri_date_label": "Hijri Date",
+    "hijri_date_value": "14 Ramadan 1447",
+    "hijri_month": "🌙 Ramadan Mubarak",
+    "gregorian_date_label": "Gregorian Date",
+    "gregorian_date_value": "4 March 2026",
+    "day": "Wednesday",
+    "location": "Giza, Egypt",
+    "adhan": "Adhan",
+    "calendar": "Calendar"
+  },
+  "prayer_widget": {
+    "next_prayer": "Next Prayer",
+    "time_location": "12:18 — Giza",
+    "starts_in": "Starts in",
+    "countdown": "01:24:00",
+    "h_m_s": "h : m : s"
+  },
+  "reciters": {
+    "title": "Featured Reciters",
+    "view_all": "All ←",
+    "listen_now": "Listen Now",
+    "types": {
+      "murattal": "Murattal",
+      "mujawwad": "Mujawwad",
+      "educational": "Educational",
+      "haram_makki": "Haram Makki"
+    },
+    "mishari": {
+      "name": "Mishari Rashid Alafasy",
+      "location": "Kuwait"
+    },
+    "abdulbasit": {
+      "name": "Abdul Basit Abdul Samad",
+      "location": "Egypt"
+    },
+    "sudais": {
+      "name": "Abdul Rahman Al-Sudais",
+      "location": "Makkah"
+    }
+  },
+  "verse": {
+    "daily_title": "Verse of the Day",
+    "surah_info": "Surah Ash-Sharh • 94:5",
+    "listen_full": "Surah Ash-Sharh — Listen Full",
+    "reciter": "Sheikh Mishari Rashid Alafasy",
+    "text_ar": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
+    "text_trans": "\"For indeed, with hardship [will be] ease.\"",
+    "ref": "Ash-Sharh 94:5"
+  },
+  "baligh": {
+    "subtitle": "Your AI spiritual companion",
+    "welcome": "Assalamu Alaikum",
+    "intro": "I'm here to help you explore Islamic knowledge with authentic references.",
+    "disclaimer": "⚠️ I am an AI assistant, not a scholar.",
+    "suggestions": {
+      "fatiha": "Explain Surah Al-Fatiha simply",
+      "plan": "Create a 30-day Quran reading plan",
+      "athkar": "What are the morning athkar?",
+      "kursi": "Compare tafsir views on Ayat Al-Kursi"
+    },
+    "input_placeholder": "Ask Baligh anything...",
+    "signin_placeholder": "Sign in to chat..."
+  }
 }

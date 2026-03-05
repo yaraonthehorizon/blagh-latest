@@ -10,7 +10,7 @@ import {
   Users,
   Footprints,
 } from "lucide-react";
-import SearchBar from "@/components/SearchBar";
+import { AppCard } from "@/components/AppCard";
 
 export default function Hadith() {
   const { t } = useTranslation();
@@ -55,14 +55,13 @@ export default function Hadith() {
 
   return (
     <div className="page-container">
-      <div className="relative px-2 pb-8  max-w-lg mx-auto">
-        <Header headerTitleKey="page_title.hadith" className="" />
-        <SearchBar />
-        <div className="grid grid-cols-2 gap-3">
+      <div className="page-content">
+        <Header headerTitleKey="page_title.hadith" backButton />
+        <div className="grid grid-cols-2 gap-3 mt-10">
           {categories.map((category) => (
-            <button
+            <AppCard
               key={category.id}
-              className="flex flex-col w-full items-center justify-center gap-4 rounded-xl bg-card p-4 shadow-card transition-transform hover:scale-[1.01] active:scale-[0.99]"
+              className="flex flex-col w-full items-center justify-center gap-4 rounded-xl  transition-transform hover:scale-[1.01] active:scale-[0.99]"
             >
               <div
                 className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full `}
@@ -80,7 +79,7 @@ export default function Hadith() {
               <div className="rounded-full bg-secondary/10 px-3 py-1 text-xs font-bold text-secondary">
                 {category.count}
               </div>
-            </button>
+            </AppCard>
           ))}
         </div>
       </div>

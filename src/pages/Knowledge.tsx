@@ -10,6 +10,7 @@ import {
   Library,
   Footprints,
 } from "lucide-react";
+import { AppCard } from "@/components/AppCard";
 
 const Knowledge = () => {
   const { t } = useTranslation();
@@ -68,14 +69,13 @@ const Knowledge = () => {
 
   return (
     <div className="page-container">
-      <div className="relative px-2 pb-8 max-w-lg mx-auto">
-        <Header headerTitleKey="page_title.knowledge" />
-        <SearchBar />
-        <div className="grid grid-cols-2 gap-3">
+      <div className="page-content">
+        <Header headerTitleKey="page_title.knowledge" backButton />
+        <div className="grid grid-cols-2 gap-3 mt-10">
           {categories.map((category) => (
-            <button
+            <AppCard
               key={category.id}
-              className="flex flex-col w-full items-center justify-center gap-4 rounded-xl bg-card p-4 shadow-card transition-transform hover:scale-[1.01] active:scale-[0.99]"
+              className="flex flex-col w-full items-center justify-center transition-transform hover:scale-[1.01] active:scale-[0.99]"
             >
               <div
                 className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full ${category.color}`}
@@ -93,7 +93,7 @@ const Knowledge = () => {
               <div className="rounded-full bg-secondary/10 px-3 py-1 text-xs font-bold text-secondary">
                 {category.count}
               </div>
-            </button>
+            </AppCard>
           ))}
         </div>
       </div>

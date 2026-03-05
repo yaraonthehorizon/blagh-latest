@@ -1,6 +1,7 @@
 import { BookOpen, Scroll, Shield, Share } from "lucide-react";
 import { Header } from "@/components/Header";
 import { useTranslation } from "react-i18next";
+import { AppCard } from "@/components/AppCard";
 
 export function SendGift() {
   const { t } = useTranslation();
@@ -33,7 +34,7 @@ export function SendGift() {
 
   return (
     <div className="page-container">
-      <div className="relative max-w-lg mx-auto">
+      <div className="page-content">
         <Header
           headerTitleKey="content.profile.services.send_gift"
           backButton
@@ -44,7 +45,7 @@ export function SendGift() {
 
         <div className="space-y-3">
           {giftItems.map((item) => (
-            <div
+            <AppCard
               key={item.id}
               className="flex items-center justify-between rounded-xl bg-card p-4 shadow-card transition-transform hover:scale-[1.01] active:scale-[0.99]"
             >
@@ -70,7 +71,7 @@ export function SendGift() {
               >
                 <Share className="h-5 w-5" />
               </button>
-            </div>
+            </AppCard>
           ))}
         </div>
       </div>

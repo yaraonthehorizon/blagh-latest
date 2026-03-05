@@ -20,7 +20,7 @@ export function Companionship() {
 
   return (
     <div className="page-container">
-      <div className="relative px-2 pb-8 max-w-lg mx-auto">
+      <div className="page-content">
         <Header headerTitleKey="page_title.companionship" backButton />
 
         <div className="mt-8 space-y-6">

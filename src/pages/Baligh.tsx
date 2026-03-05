@@ -5,12 +5,15 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import balaghIcon from "@/assets/balagh-icon.png";
 import ReactMarkdown from "react-markdown";
+import { useTranslation } from "react-i18next";
+import { Header } from "@/components/Header";
 
 type Msg = { role: "user" | "assistant"; content: string };
 
 const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/baligh-chat`;
 
 const Baligh = () => {
+  const { t } = useTranslation();
   const [messages, setMessages] = useState<Msg[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -23,10 +26,10 @@ const Baligh = () => {
   }, [messages]);
 
   const suggestions = [
-    "Explain Surah Al-Fatiha simply",
-    "Create a 30-day Quran reading plan",
-    "What are the morning athkar?",
-    "Compare tafsir views on Ayat Al-Kursi",
+    t("baligh.suggestions.fatiha"),
+    t("baligh.suggestions.plan"),
+    t("baligh.suggestions.athkar"),
+    t("baligh.suggestions.kursi"),
   ];
 
   const sendMessage = async (text: string) => {
@@ -124,32 +127,26 @@ const Baligh = () => {
   const hasMessages = messages.length > 0;
 
   return (
-    <div className="page-container">
-      <div className="px-5">
-        <h1 className="font-display text-2xl font-bold text-foreground mb-1">
-          Baligh
-        </h1>
-        <p className="text-sm text-muted-foreground mb-4">
-          Your AI spiritual companion
-        </p>
+    <div className="page-container ">
+      <div className="page-content">
+        <Header headerTitleKey="page_title.baligh" backButton />
       </div>
 
       {!hasMessages ? (
-        <div className="flex-1 flex flex-col items-center justify-center px-5">
+        <div className="flex-1 flex flex-col items-center justify-center  page-content">
           <img
             src={balaghIcon}
             alt="Baligh"
             className="mb-4 h-16 w-16 opacity-60"
           />
-          <p className="font-display text-lg font-semibold text-foreground text-center">
-            Assalamu Alaikum
+          <p className=" text-lg font-semibold text-foreground text-center">
+            {t("baligh.welcome")}
           </p>
           <p className="mt-2 max-w-xs text-center text-sm text-muted-foreground">
-            I'm here to help you explore Islamic knowledge with authentic
-            references.
+            {t("baligh.intro")}
           </p>
           <p className="mt-4 rounded-lg bg-muted px-3 py-1.5 text-xs text-muted-foreground">
-            ⚠️ I am an AI assistant, not a scholar.
+            {t("baligh.disclaimer")}
           </p>
           <div className="mt-6 w-full max-w-sm space-y-2">
             {suggestions.map((s) => (
@@ -164,7 +161,7 @@ const Baligh = () => {
           </div>
         </div>
       ) : (
-        <div className="flex-1 overflow-y-auto px-5 space-y-4">
+        <div className="flex-1 overflow-y-auto px-5 space-y-4 page-content">
           {messages.map((m, i) => (
             <div
               key={i}
@@ -198,7 +195,7 @@ const Baligh = () => {
         </div>
       )}
 
-      <div className="px-5 pb-2 pt-3">
+      <div className="px-5 pb-2 pt-3 page-content">
         <form
           onSubmit={handleSubmit}
           className="flex items-center gap-2 rounded-xl bg-card px-4 py-3 shadow-card"
@@ -206,19 +203,23 @@ const Baligh = () => {
           <input
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder={user ? "Ask Baligh anything..." : "Sign in to chat..."}
+            placeholder={
+              user
+                ? t("baligh.input_placeholder")
+                : t("baligh.signin_placeholder")
+            }
             disabled={!user}
             className="flex-1 bg-transparent text-sm text-foreground placeholder:text-muted-foreground outline-none"
           />
           <button
             type="submit"
             disabled={isLoading || !input.trim() || !user}
-            className="rounded-full bg-primary p-2 text-primary-foreground transition-transform hover:scale-105 active:scale-95 disabled:opacity-50"
+            className="rounded-full bg-background p-2  transition-transform hover:scale-105 active:scale-95 disabled:opacity-50"
           >
             {isLoading ? (
-              <Loader2 className="h-4 w-4 animate-spin" />
+              <Loader2 className="h-4 w-4 text-foreground animate-spin" />
             ) : (
-              <Send className="h-4 w-4" />
+              <Send className="h-4 w-4 text-foreground" />
             )}
           </button>
         </form>

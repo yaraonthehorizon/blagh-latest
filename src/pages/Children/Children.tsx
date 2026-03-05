@@ -11,6 +11,7 @@ import { useQna } from "@/hooks/use-qna";
 import { useNavigate } from "react-router-dom";
 import { Header } from "@/components/Header";
 import SearchBar from "@/components/SearchBar";
+import { AppCard } from "@/components/AppCard";
 
 export function Children() {
   const categories = useQna();
@@ -30,14 +31,13 @@ export function Children() {
 
   return (
     <div className="page-container">
-      <div className="relative px-2 pb-8 max-w-lg mx-auto">
-        <Header headerTitleKey="page_title.children" />
-        <SearchBar />
-        <div className="grid grid-cols-3 gap-3">
+      <div className="page-content o">
+        <Header headerTitleKey="page_title.children" backButton />
+        <div className="grid grid-cols-3 gap-3 mt-10">
           {categories.map((category, index) => {
             const style = styles[index];
             return (
-              <button
+              <AppCard
                 key={category.id}
                 onClick={() => navigate(`/children/${category.id}`)}
                 className="flex flex-col items-center gap-2 p-2 shadow-card transition-transform hover:scale-105 active:scale-95 rounded-xl"
@@ -52,7 +52,7 @@ export function Children() {
                 <span className="text-xs font-medium text-primary text-center leading-tight">
                   {category.title}
                 </span>
-              </button>
+              </AppCard>
             );
           })}
         </div>

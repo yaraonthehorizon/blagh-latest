@@ -11,7 +11,7 @@ export function SendGreetingCard() {
 
   return (
     <div className="page-container">
-      <div className="relative px-2 pb-8 max-w-lg mx-auto">
+      <div className="page-content">
         <div className="flex items-center gap-4 mb-4">
           <Header headerTitleKey="page_title.send_greeting" backButton />
         </div>
