@@ -27,7 +27,11 @@ export function Quran() {
           ))}
         </div>
         <div className="">
-          <Header headerTitleKey="page_title.quran" backButton />
+          <Header
+            headerTitleKey="page_title.quran"
+            backButton
+            className="text-3xl mt-1"
+          />
           <div className="mt-6 space-y-4">
             {surahs.map((surah) => (
               <AppCard

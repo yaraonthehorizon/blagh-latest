@@ -7,12 +7,13 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
   return {
     server: {
+      host: true,
       port: process.env.PORT ? parseInt(process.env.PORT) : 5174,
       hmr: {
         overlay: false,
       },
     },
-    base: "/balagh-latest/",
+    base: "/blagh-latest/",
     plugins: [react(), mode === "development" && componentTagger()].filter(
       Boolean,
     ),

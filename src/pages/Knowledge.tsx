@@ -70,7 +70,11 @@ const Knowledge = () => {
   return (
     <div className="page-container">
       <div className="page-content">
-        <Header headerTitleKey="page_title.knowledge" backButton />
+        <Header
+          headerTitleKey="page_title.knowledge"
+          backButton
+          className="text-2xl mt-2"
+        />
         <div className="grid grid-cols-2 gap-3 mt-10">
           {categories.map((category) => (
             <AppCard

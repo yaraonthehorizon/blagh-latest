@@ -6,7 +6,7 @@ export default function RecitersSection() {
   return (
     <div className="pt-[22px] animate-fade-up [animation-delay:0.31s]">
       <div className="flex justify-between items-center  mb-[12px]">
-        <span className="text-base font-bold text-text">
+        <span className="text-base font-bold text-foreground">
           {t("reciters.title")}
         </span>
         <span className="text-[11px] text-primary2 cursor-pointer opacity-85">

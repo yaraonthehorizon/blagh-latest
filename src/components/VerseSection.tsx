@@ -5,7 +5,7 @@ export default function VerseSection() {
   return (
     <div className="pt-[22px] animate-fadeUp [animation-delay:0.22s]">
       <div className="flex justify-between items-center mb-[12px]">
-        <span className="text-base font-bold text-text">
+        <span className="text-base font-bold text-foreground">
           {t("verse.daily_title")}
         </span>
         <svg

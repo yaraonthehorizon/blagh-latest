@@ -8,6 +8,7 @@ import {
   Moon,
   Search,
   Bell,
+  Palette,
 } from "lucide-react";
 import { useTheme } from "@/hooks/use-theme";
 import {
@@ -15,6 +16,9 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  DropdownMenuSub,
+  DropdownMenuSubTrigger,
+  DropdownMenuSubContent,
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
 import { BackButton } from "./ui/back-button";
@@ -48,12 +52,7 @@ export function Header({
             <BackButton />
           </div>
         )}
-        <h1
-          className={cn(
-            "text-primary text-2xl font-bold mt-2 md:mt-0 ",
-            className,
-          )}
-        >
+        <h1 className={cn("text-primary text-2xl font-bold ", className)}>
           {t(headerTitleKey, {
             defaultValue: headerTitleKey,
             ...translationValues,
@@ -86,23 +85,46 @@ export function Header({
               <Languages className="mr-2 h-4 w-4" />
               <span>{i18n.language === "en" ? "العربية" : "English"}</span>
             </DropdownMenuItem>
-            <DropdownMenuItem
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            >
-              <div className="relative mr-2 h-4 w-4">
-                <Sun className="absolute h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-              </div>
-              <span>
-                {i18n.language === "en"
-                  ? theme === "dark"
-                    ? "Light Mode"
-                    : "Dark Mode"
-                  : theme === "dark"
-                    ? "الوضع النهاري"
-                    : "الوضع الليلي"}
-              </span>
-            </DropdownMenuItem>
+            <DropdownMenuSub>
+              <DropdownMenuSubTrigger>
+                <Palette className="mr-2 h-4 w-4" />
+                <span>{i18n.language === "en" ? "Theme" : "المظهر"}</span>
+              </DropdownMenuSubTrigger>
+              <DropdownMenuSubContent>
+                <DropdownMenuItem
+                  onClick={() => setTheme({ mode: "light", accent: "green" })}
+                >
+                  <Sun className="mr-2 h-4 w-4" />
+                  <span>
+                    {i18n.language === "en" ? "Light (Green)" : "أخضر فاتح"}
+                  </span>
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => setTheme({ mode: "dark", accent: "green" })}
+                >
+                  <Moon className="mr-2 h-4 w-4" />
+                  <span>
+                    {i18n.language === "en" ? "Dark (Green)" : "أخضر داكن"}
+                  </span>
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => setTheme({ mode: "light", accent: "gold" })}
+                >
+                  <Sun className="mr-2 h-4 w-4 text-amber-500" />
+                  <span>
+                    {i18n.language === "en" ? "Light (Gold)" : "ذهبي فاتح"}
+                  </span>
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => setTheme({ mode: "dark", accent: "gold" })}
+                >
+                  <Moon className="mr-2 h-4 w-4 text-amber-500" />
+                  <span>
+                    {i18n.language === "en" ? "Dark (Gold)" : "ذهبي داكن"}
+                  </span>
+                </DropdownMenuItem>
+              </DropdownMenuSubContent>
+            </DropdownMenuSub>
             {/* <DropdownMenuItem onClick={() => navigate("/auth/signup")}>
               <User className="mr-2 h-4 w-4" />
               <span>{t("content.auth.signup.title")}</span>

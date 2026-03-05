@@ -28,7 +28,11 @@ export function ChildrenCategory() {
   return (
     <div className="page-container ">
       <div className="page-content">
-        <Header headerTitleKey={category.title} backButton />
+        <Header
+          headerTitleKey={category.title}
+          backButton
+          className="text-xl mt-2"
+        />
 
         <div className="rounded-xl bg-card p-4 shadow-card">
           <p className="mb-6  text-sm text-muted-foreground">

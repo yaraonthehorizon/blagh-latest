@@ -13,7 +13,11 @@ export function SendGreetingCard() {
     <div className="page-container">
       <div className="page-content">
         <div className="flex items-center gap-4 mb-4">
-          <Header headerTitleKey="page_title.send_greeting" backButton />
+          <Header
+            headerTitleKey="page_title.send_greeting"
+            backButton
+            className="text-xl mt-2"
+          />
         </div>
 
         <div className="mt-8 relative overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-900  to-slate-600 p-8 text-center text-white shadow-xl border border-white/10">

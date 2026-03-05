@@ -46,7 +46,12 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
+        <ThemeProvider
+          defaultTheme={{
+            mode: "system",
+            accent: "green",
+          }}
+        >
           {showSplash ? (
             <SplashScreen onComplete={() => setShowSplash(false)} />
           ) : (

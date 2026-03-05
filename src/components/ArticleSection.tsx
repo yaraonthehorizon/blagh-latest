@@ -5,10 +5,10 @@ export default function ArticlesSection() {
   return (
     <div className="pt-[22px] animate-fade-up [animation-delay:0.34s]">
       <div className="flex justify-between items-center  mb-[12px]">
-        <span className="text-base font-bold text-text">
+        <span className="text-base font-bold text-foreground">
           {t("articles.title")}
         </span>
-        <span className="text-[11px] text-primary2 cursor-pointer opacity-85">
+        <span className="text-[11px] text-primary cursor-pointer opacity-85">
           {t("articles.view_all")}
         </span>
       </div>
@@ -67,15 +67,15 @@ function ArticleCard({
         </span>
       </div>
       <div className="p-[13px] px-[14px] pb-[15px]">
-        <div className="text-[13px] font-bold text-text mb-[5px] leading-[1.4]">
+        <div className="text-[13px] font-bold text-foreground mb-[5px] leading-[1.4]">
           {title}
         </div>
-        <div className="text-[11px] text-text2 leading-[1.6] font-light">
+        <div className="text-[11px] text-foreground leading-[1.6] font-light">
           {desc}
         </div>
         <div className="flex items-center justify-between mt-[10px]">
-          <span className="text-[10px] text-text2">{time}</span>
-          <span className="text-[10px] font-bold text-primary2 tracking-[0.5px]">
+          <span className="text-[10px] text-foreground">{time}</span>
+          <span className="text-[10px] font-bold text-primary tracking-[0.5px]">
             {t("articles.read_more")}
           </span>
         </div>

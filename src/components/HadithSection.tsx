@@ -5,7 +5,7 @@ export default function HadithSection() {
   return (
     <div className=" pt-[22px] animate-fade-up [animation-delay:0.28s]">
       <div className="flex justify-between items-center mb-[12px]">
-        <span className="text-base font-bold text-text">
+        <span className="text-base font-bold text-fore">
           {t("hadith_section.daily_title")}
         </span>
       </div>

@@ -56,7 +56,11 @@ export default function Hadith() {
   return (
     <div className="page-container">
       <div className="page-content">
-        <Header headerTitleKey="page_title.hadith" backButton />
+        <Header
+          headerTitleKey="page_title.hadith"
+          backButton
+          className="text-3xl mt-1"
+        />
         <div className="grid grid-cols-2 gap-3 mt-10">
           {categories.map((category) => (
             <AppCard

@@ -103,8 +103,10 @@ export default function AppsSection() {
   return (
     <div className=" pt-[26px] animate-fade-up [animation-delay:0.16s]">
       <div className="flex justify-between items-center mb-[14px]">
-        <span className="text-base font-bold text-text">{t("apps.title")}</span>
-        <span className="text-[11px] text-primary2 cursor-pointer opacity-85">
+        <span className="text-base font-bold text-foreground">
+          {t("apps.title")}
+        </span>
+        <span className="text-[11px] text-primary cursor-pointer opacity-85">
           {t("apps.more_link")}
         </span>
       </div>
@@ -130,7 +132,7 @@ export default function AppsSection() {
                 {app.icon}
               </svg>
             </div>
-            <span className="text-[10px] font-medium text-text2 text-center">
+            <span className="text-[10px] font-medium text-foreground text-center">
               {app.label}
             </span>
           </div>

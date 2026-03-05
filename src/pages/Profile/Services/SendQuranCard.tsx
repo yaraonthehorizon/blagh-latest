@@ -10,7 +10,11 @@ export function SendQuranCard() {
   return (
     <div className="page-container">
       <div className="page-content">
-        <Header headerTitleKey="page_title.send_quran_card" backButton />
+        <Header
+          headerTitleKey="page_title.send_quran_card"
+          backButton
+          className="text-lg mt-2"
+        />
 
         <div className="mt-8 relative overflow-hidden rounded-xl bg-[#fffbf2] shadow-xl border-[6px] border-double border-[#e4dccb]">
           <div className="relative z-10 p-6 sm:p-8 flex flex-col items-center text-center">

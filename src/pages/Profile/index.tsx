@@ -72,10 +72,10 @@ export function Profile() {
       <div className="page-content">
         <Header
           headerTitleKey="page_title.profile"
-          className="text-primary"
+          className="text-3xl mt-2"
           backButton
         />
-        <div className="grid grid-cols-2 gap-3 mb-6">
+        <div className="grid grid-cols-2 gap-3 mb-6 mt-5">
           {stats.map((s) => (
             <AppCard key={s.label} className="">
               <s.icon className="mb-2 h-5 w-5 text-secondary" />

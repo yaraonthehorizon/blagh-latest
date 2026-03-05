@@ -57,20 +57,26 @@ export function MoreApps() {
   return (
     <div className="page-container">
       <div className="page-content">
-        <Header headerTitleKey="apps.more" backButton />
+        <Header
+          headerTitleKey="apps.more"
+          backButton
+          className="text-3xl mt-1"
+        />
         <div className="grid gap-4 mt-6 ">
           {items.map((item, index) => (
             <AppCard
               key={index}
               onClick={() => navigate(item.path)}
-              className="bg-surface border border-bdr-p rounded-[22px] p-5 shadow flex items-center gap-4 cursor-pointer transition-transform active:scale-95 animate-fade-up"
+              className="bg-surface text-background border border-bdr-p rounded-[22px] p-5 shadow flex items-center gap-4 cursor-pointer transition-transform active:scale-95 animate-fade-up"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
               <div className="w-12 h-12 rounded-full bg-surface2 flex items-center justify-center shrink-0 text-primary">
                 {item.icon}
               </div>
               <div>
-                <h3 className="text-lg font-bold text-text">{item.title}</h3>
+                <h3 className="text-lg font-bold text-foreground">
+                  {item.title}
+                </h3>
                 <p className="text-sm text-text2">{item.description}</p>
               </div>
             </AppCard>

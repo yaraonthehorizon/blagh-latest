@@ -21,9 +21,13 @@ export function Companionship() {
   return (
     <div className="page-container">
       <div className="page-content">
-        <Header headerTitleKey="page_title.companionship" backButton />
+        <Header
+          headerTitleKey="page_title.companionship"
+          backButton
+          className="text-2xl mt-2"
+        />
 
-        <div className="mt-8 space-y-6">
+        <div className="mt-14 space-y-6">
           <div className="text-center space-y-2">
             <h2 className="text-xl font-bold text-foreground">
               {t("content.companionship.title")}
@@ -35,7 +39,7 @@ export function Companionship() {
 
           <form
             onSubmit={handleSubmit}
-            className="space-y-4 bg-card p-6 rounded-xl shadow-card border border-border/50"
+            className="space-y-4 m bg-card p-6 rounded-xl shadow-card border border-border/50"
           >
             <div className="space-y-2">
               <label

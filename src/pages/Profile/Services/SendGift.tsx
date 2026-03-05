@@ -38,6 +38,7 @@ export function SendGift() {
         <Header
           headerTitleKey="content.profile.services.send_gift"
           backButton
+          className="text-2xl mt-2"
         />
         {/* <p className="text-sm text-muted-foreground mb-6 -mt-2">
           {t("content.profile.services.send_gift_subtext")}

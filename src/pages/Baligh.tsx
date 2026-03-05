@@ -129,7 +129,11 @@ const Baligh = () => {
   return (
     <div className="page-container ">
       <div className="page-content">
-        <Header headerTitleKey="page_title.baligh" backButton />
+        <Header
+          headerTitleKey="page_title.baligh"
+          backButton
+          className="text-3xl mt-1"
+        />
       </div>
 
       {!hasMessages ? (

@@ -32,7 +32,11 @@ export function Children() {
   return (
     <div className="page-container">
       <div className="page-content o">
-        <Header headerTitleKey="page_title.children" backButton />
+        <Header
+          headerTitleKey="page_title.children"
+          backButton
+          className="text-3xl mt-1"
+        />
         <div className="grid grid-cols-3 gap-3 mt-10">
           {categories.map((category, index) => {
             const style = styles[index];
