@@ -42,7 +42,7 @@ const MainLayout = () => {
 
 const App = () => {
   const [showSplash, setShowSplash] = useState(true);
-
+  console.log(import.meta.env.VITE_BASE_PATH);
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
@@ -54,7 +54,7 @@ const App = () => {
               <Toaster />
               <Sonner />
               <AuthProvider>
-                <BrowserRouter basename={import.meta.env.VITE_BASE_PATH}>
+                <BrowserRouter basename={import.meta.env.BASE_URL}>
                   <Routes>
                     <Route element={<MainLayout />}>
                       <Route path="/" element={<Index />} />
