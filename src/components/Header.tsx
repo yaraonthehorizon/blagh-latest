@@ -39,7 +39,7 @@ export function Header({
   const { theme, setTheme } = useTheme();
 
   const toggleLanguage = () => {
-    const newLang = i18n.language === "en" ? "ar" : "en";
+    const newLang = i18n.language?.startsWith("en") ? "ar" : "en";
     i18n.changeLanguage(newLang);
     localStorage.setItem("i18nextLng", newLang);
   };
