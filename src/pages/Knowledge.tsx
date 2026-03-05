@@ -1,42 +1,104 @@
-import { BookOpen, Layers, TrendingUp, Search } from "lucide-react";
-
-const categories = [
-  { name: "Articles", count: 240, icon: BookOpen },
-  { name: "Learning Paths", count: 12, icon: TrendingUp },
-  { name: "Islamic Encyclopedia", count: 1800, icon: Layers },
-];
+import { Header } from "@/components/Header";
+import SearchBar from "@/components/SearchBar";
+import { useTranslation } from "react-i18next";
+import {
+  BookOpen,
+  Scroll,
+  Shield,
+  Scale,
+  HeartHandshake,
+  Library,
+  Footprints,
+} from "lucide-react";
+import { AppCard } from "@/components/AppCard";
 
 const Knowledge = () => {
+  const { t } = useTranslation();
+
+  const categories = [
+    {
+      id: "1",
+      title: t("content.knowledge.categories.quran"),
+      count: "114",
+      icon: BookOpen,
+      color: "text-emerald-600 bg-emerald-50",
+    },
+    {
+      id: "2",
+      title: t("content.knowledge.categories.tafsir"),
+      count: "30",
+      icon: Library,
+      color: "text-blue-600 bg-blue-50",
+    },
+    {
+      id: "3",
+      title: t("content.knowledge.categories.sunnah"),
+      count: "6",
+      icon: Scroll,
+      color: "text-amber-600 bg-amber-50",
+    },
+    {
+      id: "4",
+      title: t("content.knowledge.categories.creed"),
+      count: "12",
+      icon: Shield,
+      color: "text-indigo-600 bg-indigo-50",
+    },
+    {
+      id: "5",
+      title: t("content.knowledge.categories.fiqh"),
+      count: "4",
+      icon: Scale,
+      color: "text-rose-600 bg-rose-50",
+    },
+    {
+      id: "6",
+      title: t("content.knowledge.categories.seerah"),
+      count: "25",
+      icon: Footprints,
+      color: "text-cyan-600 bg-cyan-50",
+    },
+    {
+      id: "7",
+      title: t("content.knowledge.categories.tazkiyah"),
+      count: "10",
+      icon: HeartHandshake,
+      color: "text-stone-600 bg-stone-50",
+    },
+  ];
+
   return (
-    <div className="min-h-screen bg-background px-5 pb-24 pt-12">
-      <h1 className="font-display text-2xl font-bold text-foreground mb-1">Knowledge Hub</h1>
-      <p className="text-sm text-muted-foreground mb-6">Authentic Islamic learning</p>
-
-      <div className="mb-5 flex items-center gap-2 rounded-xl bg-card px-4 py-3 shadow-card">
-        <Search className="h-4 w-4 text-muted-foreground" />
-        <span className="text-sm text-muted-foreground">Search articles, topics, scholars...</span>
-      </div>
-
-      <div className="space-y-3">
-        {categories.map((c) => (
-          <div key={c.name} className="flex items-center gap-4 rounded-xl bg-card p-4 shadow-card">
-            <div className="rounded-full bg-secondary/10 p-3 text-secondary">
-              <c.icon className="h-5 w-5" />
-            </div>
-            <div className="flex-1">
-              <p className="font-display text-sm font-semibold text-foreground">{c.name}</p>
-              <p className="text-xs text-muted-foreground">{c.count} items</p>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div className="mt-6">
-        <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">Featured Path</p>
-        <div className="gradient-spiritual rounded-xl p-5 text-primary-foreground">
-          <p className="font-display text-lg font-bold">Foundations of Islam</p>
-          <p className="mt-1 text-sm opacity-80">A structured journey from the basics to deeper understanding</p>
-          <p className="mt-3 text-xs font-medium opacity-70">12 Modules • Beginner Friendly</p>
+    <div className="page-container">
+      <div className="page-content">
+        <Header
+          headerTitleKey="page_title.knowledge"
+          backButton
+          className="text-2xl mt-2"
+        />
+        <div className="grid grid-cols-2 gap-3 mt-10">
+          {categories.map((category) => (
+            <AppCard
+              key={category.id}
+              className="flex flex-col w-full items-center justify-center transition-transform hover:scale-[1.01] active:scale-[0.99]"
+            >
+              <div
+                className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full ${category.color}`}
+              >
+                <category.icon className="h-6 w-6" />
+              </div>
+              <div className="text-center">
+                <h3 className="font-bold text-foreground text-base leading-tight">
+                  {category.title}
+                </h3>
+                <p className="text-xs text-muted-foreground mt-1">
+                  {t("content.knowledge.browse_topics")}
+                </p>
+              </div>
+              <div className="rounded-full bg-secondary/10 px-3 py-1 text-xs font-bold text-secondary">
+                {category.count}
+              </div>
+            </AppCard>
+          ))}
         </div>
       </div>
     </div>

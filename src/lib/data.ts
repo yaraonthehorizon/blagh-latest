@@ -1,0 +1,51 @@
+export const surahs = [
+  {
+    number: 1,
+    name: "Al-Fatiha",
+    englishName: "The Opening",
+    ayahs: 7,
+    page: 1,
+  },
+  {
+    number: 2,
+    name: "Al-Baqarah",
+    englishName: "The Cow",
+    ayahs: 286,
+    page: 2,
+  },
+  {
+    number: 3,
+    name: "Al-Imran",
+    englishName: "Family of Imran",
+    ayahs: 200,
+    page: 50,
+  },
+  {
+    number: 4,
+    name: "An-Nisa",
+    englishName: "The Women",
+    ayahs: 176,
+    page: 77,
+  },
+  {
+    number: 5,
+    name: "Al-Ma'idah",
+    englishName: "The Table Spread",
+    ayahs: 120,
+    page: 106,
+  },
+  {
+    number: 6,
+    name: "Al-An'am",
+    englishName: "The Cattle",
+    ayahs: 165,
+    page: 128,
+  },
+  {
+    number: 7,
+    name: "Al-A'raf",
+    englishName: "The Heights",
+    ayahs: 206,
+    page: 151,
+  },
+];
