@@ -77,7 +77,9 @@ export function MoreApps() {
                 <h3 className="text-lg font-bold text-foreground">
                   {item.title}
                 </h3>
-                <p className="text-sm text-text2">{item.description}</p>
+                <p className="text-sm text-muted-foreground">
+                  {item.description}
+                </p>
               </div>
             </AppCard>
           ))}

@@ -66,10 +66,10 @@ function ReciterCard({
         </div>
       </div>
       <div className="p-3 pt-7 pb-[14px] flex flex-col items-center gap-[6px] flex-1">
-        <div className="text-xs font-bold text-text text-center leading-[1.3]">
+        <div className="text-xs font-bold text-foreground text-center leading-[1.3]">
           {name}
         </div>
-        <div className="flex items-center gap-1 text-[10px] text-text2 font-normal">
+        <div className="flex items-center gap-1 text-[10px] text-muted-foreground font-normal">
           <svg
             width="10"
             height="10"

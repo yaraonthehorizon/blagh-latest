@@ -45,7 +45,7 @@ export default function VerseSection() {
             <div className="text-xs font-bold text-play-nm mb-[3px]">
               {t("verse.listen_full")}
             </div>
-            <div className="text-[10px] text-text2 font-light">
+            <div className="text-[10px] text-muted-foreground font-light">
               {t("verse.reciter")}
             </div>
           </div>
@@ -54,7 +54,7 @@ export default function VerseSection() {
           {t("verse.text_ar")}
         </div>
         <div className="h-px bg-verse-div mb-[14px]"></div>
-        <div className="text-xs text-text2 leading-[1.9] italic font-light mb-[10px]">
+        <div className="text-xs text-muted-foreground leading-[1.9] italic font-light mb-[10px]">
           {t("verse.text_trans")}
         </div>
         <div className="text-[10px] text-primary2 font-semibold tracking-[1px] opacity-75">
