@@ -83,12 +83,16 @@ export function Header({
             </DropdownMenuItem>
             <DropdownMenuItem onClick={toggleLanguage}>
               <Languages className="mr-2 h-4 w-4" />
-              <span>{i18n.language === "en" ? "العربية" : "English"}</span>
+              <span>
+                {i18n.language.startsWith("en") ? "العربية" : "English"}
+              </span>
             </DropdownMenuItem>
             <DropdownMenuSub>
               <DropdownMenuSubTrigger>
                 <Palette className="mr-2 h-4 w-4" />
-                <span>{i18n.language === "en" ? "Theme" : "المظهر"}</span>
+                <span>
+                  {i18n.language.startsWith("en") ? "Theme" : "المظهر"}
+                </span>
               </DropdownMenuSubTrigger>
               <DropdownMenuSubContent>
                 <DropdownMenuItem
@@ -96,7 +100,9 @@ export function Header({
                 >
                   <Sun className="mr-2 h-4 w-4" />
                   <span>
-                    {i18n.language === "en" ? "Light (Green)" : "أخضر فاتح"}
+                    {i18n.language.startsWith("en")
+                      ? "Light (Green)"
+                      : "أخضر فاتح"}
                   </span>
                 </DropdownMenuItem>
                 <DropdownMenuItem
@@ -104,7 +110,9 @@ export function Header({
                 >
                   <Moon className="mr-2 h-4 w-4" />
                   <span>
-                    {i18n.language === "en" ? "Dark (Green)" : "أخضر داكن"}
+                    {i18n.language.startsWith("en")
+                      ? "Dark (Green)"
+                      : "أخضر داكن"}
                   </span>
                 </DropdownMenuItem>
                 <DropdownMenuItem
@@ -112,7 +120,9 @@ export function Header({
                 >
                   <Sun className="mr-2 h-4 w-4 text-amber-500" />
                   <span>
-                    {i18n.language === "en" ? "Light (Gold)" : "ذهبي فاتح"}
+                    {i18n.language.startsWith("en")
+                      ? "Light (Gold)"
+                      : "ذهبي فاتح"}
                   </span>
                 </DropdownMenuItem>
                 <DropdownMenuItem
@@ -120,7 +130,9 @@ export function Header({
                 >
                   <Moon className="mr-2 h-4 w-4 text-amber-500" />
                   <span>
-                    {i18n.language === "en" ? "Dark (Gold)" : "ذهبي داكن"}
+                    {i18n.language.startsWith("en")
+                      ? "Dark (Gold)"
+                      : "ذهبي داكن"}
                   </span>
                 </DropdownMenuItem>
               </DropdownMenuSubContent>
