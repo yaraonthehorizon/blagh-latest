@@ -16,7 +16,7 @@ export default function HadithSection() {
         <div className="text-[9px] font-bold tracking-[2px] uppercase text-hadith-tm mb-[14px]">
           {t("hadith_section.source")}
         </div>
-        <div className="text-sm leading-[1.95] text-text italic font-normal mb-[14px] relative z-[1]">
+        <div className="text-sm leading-[1.95] text-foreground italic font-normal mb-[14px] relative z-[1]">
           {t("hadith_section.text")}
         </div>
         <div className="text-[10px] text-hadith-tm font-semibold">

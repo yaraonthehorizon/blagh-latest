@@ -62,12 +62,12 @@ function PrayerItem({
       className={`flex flex-col items-center gap-[3px] py-2 px-[2px] rounded-[11px] flex-1 transition-all cursor-pointer active:scale-90 ${active ? "bg-pi-active-bg border border-pi-active-bdr" : ""} ${passed ? "opacity-35" : ""}`}
     >
       <span
-        className={`text-[9px] font-semibold whitespace-nowrap ${active ? "text-pi-active-nm font-bold" : "text-text2"}`}
+        className={`text-[9px] font-semibold whitespace-nowrap ${active ? "text-pi-active-nm font-bold" : "text-muted-foreground"}`}
       >
         {name}
       </span>
       <span
-        className={`text-[10px] font-bold ${active ? "text-pi-active-tm" : "text-text"}`}
+        className={`text-[10px] font-bold ${active ? "text-pi-active-tm" : "text-foreground"}`}
       >
         {time}
       </span>

@@ -7,7 +7,7 @@ export default function Bismillah() {
       <div className="font-quran text-[26px] text-bism-ar leading-[1.8]">
         {t("bismillah.arabic")}
       </div>
-      <div className="text-[10px] text-text2 font-light tracking-[1.5px] mt-4">
+      <div className="text-[10px] text-muted-foreground font-light tracking-[1.5px] mt-4">
         {t("bismillah.text")}
       </div>
     </div>

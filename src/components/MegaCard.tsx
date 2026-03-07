@@ -11,10 +11,10 @@ export default function MegaCard() {
           <span className="text-[9px] font-bold tracking-[2px] uppercase text-primary2 opacity-75">
             {t("mega_card.hijri_date_label")}
           </span>
-          <span className="text-[15px] font-bold text-text leading-[1.2]">
+          <span className="text-[15px] font-bold text-foreground leading-[1.2]">
             {t("mega_card.hijri_date_value")}
           </span>
-          <span className="text-[10px] text-text2 font-light">
+          <span className="text-[10px] text-muted-foreground font-light">
             {t("mega_card.hijri_month")}
           </span>
         </div>
@@ -23,10 +23,10 @@ export default function MegaCard() {
           <span className="text-[9px] font-bold tracking-[2px] uppercase text-primary2 opacity-75">
             {t("mega_card.gregorian_date_label")}
           </span>
-          <span className="text-[15px] font-bold text-text leading-[1.2]">
+          <span className="text-[15px] font-bold text-foreground leading-[1.2]">
             {t("mega_card.gregorian_date_value")}
           </span>
-          <span className="text-[10px] text-text2 font-light">
+          <span className="text-[10px] text-muted-foreground font-light">
             {t("mega_card.day")}
           </span>
         </div>
@@ -54,7 +54,7 @@ function QuickAction({
       <div className="w-4 h-4 rounded-[10px] bg-qa-icon-bg border border-bdr-p flex items-center justify-center text-qa-icon-cl">
         {icon}
       </div>
-      <span className="text-[10px] font-semibold text-text2 whitespace-nowrap">
+      <span className="text-[10px] font-semibold text-muted-foreground whitespace-nowrap">
         {label}
       </span>
     </div>
