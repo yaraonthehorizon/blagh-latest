@@ -36,7 +36,7 @@ export function Header({
 }) {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
-  const { theme, setTheme } = useTheme();
+  const { setTheme } = useTheme();
 
   const toggleLanguage = () => {
     const newLang = i18n.language?.startsWith("en") ? "ar" : "en";
