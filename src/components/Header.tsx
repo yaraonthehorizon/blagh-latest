@@ -46,20 +46,20 @@ export function Header({
 
   return (
     <header className="flex  justify-between w-full mt-10">
-      <div className="flex  gap-2 ">
+      <div className="flex px-2 gap-2 ">
         {backButton && (
           <div className="flex justify-center ">
             <BackButton />
           </div>
         )}
-        <h1 className={cn("text-primary text-2xl font-bold ", className)}>
+        <h1 className={cn("text-primary text-2xl font-bold mt-2", className)}>
           {t(headerTitleKey, {
             defaultValue: headerTitleKey,
             ...translationValues,
           })}
         </h1>
       </div>
-      <div className="flex gap-[9px] ">
+      <div className="flex gap-[9px] px-3 ">
         <button className="w-[38px] h-[38px] rounded-full bg-icn-bg border border-icn-bdr flex items-center justify-center cursor-pointer transition-transform active:scale-90 text-icn-cl shadow-sm">
           <Search className="h-4 w-4" />
         </button>

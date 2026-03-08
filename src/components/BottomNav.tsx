@@ -12,7 +12,7 @@ export default function BottomNav() {
     return location.pathname.startsWith(path);
   };
   return (
-    <nav className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] bg-nav-bg backdrop-blur-[22px] border-t border-nav-bdr py-3 pb-[26px] flex justify-around z-[200]">
+    <nav className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-lg bg-nav-bg backdrop-blur-[22px] border-t border-nav-bdr py-3 pb-[26px] flex justify-around z-[200]">
       <NavItem
         icon={
           <>

@@ -13,7 +13,8 @@
     "send_greeting": "Send Greeting",
     "send_gift": "Send Knowledge Gift",
     "send_quran_card": "Send Quran Card",
-    "companionship": "Learning Companion"
+    "companionship": "Learning Companion",
+    "recitation_categories": "Recitation Categories"
   },
   "routes": {
     "home": "Home",
@@ -253,8 +254,8 @@
   },
   "articles": {
     "title": "Selected Articles",
-    "view_all": "All ←",
-    "read_more": "Read More ←",
+    "view_all": "All ",
+    "read_more": "Read More ",
     "ramadan": {
       "title": "Productive Ramadan",
       "desc": "How to achieve maximum spiritual benefit in this holy month",
@@ -304,26 +305,9 @@
   },
   "reciters": {
     "title": "Featured Reciters",
-    "view_all": "All ←",
+    "view_all": "All ",
     "listen_now": "Listen Now",
-    "types": {
-      "murattal": "Murattal",
-      "mujawwad": "Mujawwad",
-      "educational": "Educational",
-      "haram_makki": "Haram Makki"
-    },
-    "mishari": {
-      "name": "Mishari Rashid Alafasy",
-      "location": "Kuwait"
-    },
-    "abdulbasit": {
-      "name": "Abdul Basit Abdul Samad",
-      "location": "Egypt"
-    },
-    "sudais": {
-      "name": "Abdul Rahman Al-Sudais",
-      "location": "Makkah"
-    }
+    "error_loading": "An error occurred while loading the reciters. Please try again later."
   },
   "verse": {
     "daily_title": "Verse of the Day",

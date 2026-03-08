@@ -10,7 +10,7 @@ import PrayerWidget from "@/components/PrayerWidget";
 import AppsSection from "@/components/AppsSection";
 import VerseSection from "@/components/VerseSection";
 import HadithSection from "@/components/HadithSection";
-import RecitersSection from "@/components/RecitersSecton";
+import RecitersSection from "@/components/RecitersSection";
 import ArticlesSection from "@/components/ArticleSection";
 
 export default function Index() {

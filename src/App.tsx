@@ -27,6 +27,10 @@ import {
   SendQuranCard,
   Companionship,
 } from "./pages/Profile/Services/index";
+import { AudioPlayerProvider } from "./providers/AudioPlayerProvider";
+import { GlobalAudioPlayer } from "./components/GlobalAudioPlayer";
+import RecitationCategories from "./pages/Recitations/Recitations";
+import RecitationsCategory from "./pages/Recitations/RecitationsCategory";
 
 const queryClient = new QueryClient();
 
@@ -42,69 +46,79 @@ const MainLayout = () => {
 
 const App = () => {
   const [showSplash, setShowSplash] = useState(true);
-  console.log(import.meta.env.VITE_BASE_PATH);
   return (
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <ThemeProvider
-          defaultTheme={{
-            mode: "system",
-            accent: "green",
-          }}
-        >
-          {showSplash ? (
-            <SplashScreen onComplete={() => setShowSplash(false)} />
-          ) : (
-            <>
-              <Toaster />
-              <Sonner />
-              <AuthProvider>
-                <BrowserRouter basename={import.meta.env.BASE_URL}>
-                  <Routes>
-                    <Route element={<MainLayout />}>
-                      <Route path="/" element={<Index />} />
-                      <Route path="/quran" element={<Quran />} />
-                      <Route
-                        path="/quran/:surahNumber"
-                        element={<SurahDetail />}
-                      />
-                      <Route path="/hadith" element={<Hadith />} />
-                      <Route path="/athkar" element={<Athkar />} />
-                      <Route path="/knowledge" element={<Knowledge />} />
-                      <Route path="/baligh" element={<Baligh />} />
-                      <Route path="/children" element={<Children />} />
-                      <Route
-                        path="/children/:categoryId"
-                        element={<ChildrenCategory />}
-                      />
-                      <Route path="/profile" element={<Profile />} />
-                      <Route path="/send-gift" element={<SendGift />} />
-                      <Route
-                        path="/send-greeting"
-                        element={<SendGreetingCard />}
-                      />
-                      <Route
-                        path="/send-quran-card"
-                        element={<SendQuranCard />}
-                      />
-                      <Route
-                        path="/companionship"
-                        element={<Companionship />}
-                      />
-                      <Route path="/more-apps" element={<MoreApps />} />
-                    </Route>
-                    <Route path="/auth/login" element={<Login />} />
-                    <Route path="/auth/signup" element={<SignUp />} />
-                    <Route path="/auth/otp" element={<OTP />} />
-                    <Route path="*" element={<NotFound />} />
-                  </Routes>
-                </BrowserRouter>
-              </AuthProvider>
-            </>
-          )}
-        </ThemeProvider>
-      </TooltipProvider>
-    </QueryClientProvider>
+    <AudioPlayerProvider>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <ThemeProvider
+            defaultTheme={{
+              mode: "system",
+              accent: "green",
+            }}
+          >
+            {showSplash ? (
+              <SplashScreen onComplete={() => setShowSplash(false)} />
+            ) : (
+              <>
+                <Toaster />
+                <Sonner />
+                <AuthProvider>
+                  <BrowserRouter basename={import.meta.env.BASE_URL}>
+                    <Routes>
+                      <Route element={<MainLayout />}>
+                        <Route path="/" element={<Index />} />
+                        <Route path="/quran" element={<Quran />} />
+                        <Route
+                          path="/quran/:surahNumber"
+                          element={<SurahDetail />}
+                        />
+                        <Route path="/hadith" element={<Hadith />} />
+                        <Route path="/athkar" element={<Athkar />} />
+                        <Route path="/knowledge" element={<Knowledge />} />
+                        <Route path="/baligh" element={<Baligh />} />
+                        <Route path="/children" element={<Children />} />
+                        <Route
+                          path="/children/:categoryId"
+                          element={<ChildrenCategory />}
+                        />
+                        <Route
+                          path="/recitations"
+                          element={<RecitationCategories />}
+                        />
+                        <Route
+                          path="/recitations/:categoryId"
+                          element={<RecitationsCategory />}
+                        />
+                        <Route path="/profile" element={<Profile />} />
+                        <Route path="/send-gift" element={<SendGift />} />
+                        <Route
+                          path="/send-greeting"
+                          element={<SendGreetingCard />}
+                        />
+                        <Route
+                          path="/send-quran-card"
+                          element={<SendQuranCard />}
+                        />
+                        <Route
+                          path="/companionship"
+                          element={<Companionship />}
+                        />
+                        <Route path="/more-apps" element={<MoreApps />} />
+                      </Route>
+                      <Route path="/auth/login" element={<Login />} />
+                      <Route path="/auth/signup" element={<SignUp />} />
+                      <Route path="/auth/otp" element={<OTP />} />
+                      <Route path="*" element={<NotFound />} />
+                    </Routes>
+                  </BrowserRouter>
+                </AuthProvider>
+              </>
+            )}
+          </ThemeProvider>
+        </TooltipProvider>
+      </QueryClientProvider>
+      <GlobalAudioPlayer />
+    </AudioPlayerProvider>
   );
 };
 
