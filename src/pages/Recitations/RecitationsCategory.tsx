@@ -18,15 +18,17 @@ export default function RecitationsCategory() {
 
   if (isLoading) {
     return (
-      <div className="page-content">
-        <Header headerTitleKey={""} backButton />
-        <div className="grid grid-cols-2 gap-4 mt-6 justify-items-center ">
-          {[1, 2, 3, 4, 5, 6].map((i) => (
-            <div
-              key={i}
-              className=" w-[160px] h-[180px] bg-surface border border-bdr-p rounded-[20px] animate-pulse"
-            />
-          ))}
+      <div className="page-container">
+        <div className="page-content">
+          <Header headerTitleKey={""} backButton />
+          <div className="grid grid-cols-2 gap-4 mt-6 justify-items-center ">
+            {[1, 2, 3, 4, 5, 6].map((i) => (
+              <div
+                key={i}
+                className=" w-[160px] h-[180px] bg-surface border border-bdr-p rounded-[20px] animate-pulse"
+              />
+            ))}
+          </div>
         </div>
       </div>
     );
@@ -34,12 +36,14 @@ export default function RecitationsCategory() {
 
   if (isError) {
     return (
-      <div className="page-content">
-        <Header headerTitleKey={""} backButton />
+      <div className="page-container">
+        <div className="page-content">
+          <Header headerTitleKey={""} backButton />
 
-        <div className="grid grid-cols-2 justify-items-center -gap-x-2 gap-y-4 mt-6">
-          <div className="mt-10 text-center text-muted-foreground">
-            {t("reciters.error_loading")}
+          <div className="grid grid-cols-2 justify-items-center -gap-x-2 gap-y-4 mt-6">
+            <div className="mt-10 text-center text-muted-foreground">
+              {t("reciters.error_loading")}
+            </div>
           </div>
         </div>
       </div>
@@ -47,24 +51,26 @@ export default function RecitationsCategory() {
   }
 
   return (
-    <div className="page-content">
-      <Header headerTitleKey={data.title} backButton />
+    <div className="page-container">
+      <div className="page-content">
+        <Header headerTitleKey={data.title} backButton className="text-base" />
 
-      <div className="grid grid-cols-2 justify-items-center -gap-x-2 gap-y-4 mt-6">
-        {data.recitations.length > 0 ? (
-          data.recitations.map((item: RecitationInfoCondensed) => (
-            <ReciterCard
-              key={item.id}
-              id={item.id}
-              name={item.title}
-              recitationId={item.id}
-            />
-          ))
-        ) : (
-          <div className="col-span-2 flex items-center justify-center h-[200px] text-sm text-muted-foreground">
-            {t("reciters.no_data")}
-          </div>
-        )}
+        <div className="grid grid-cols-2 justify-items-center -gap-x-2 gap-y-4 mt-6">
+          {data.recitations.length > 0 ? (
+            data.recitations.map((item: RecitationInfoCondensed) => (
+              <ReciterCard
+                key={item.id}
+                id={item.id}
+                name={item.title}
+                recitationId={item.id}
+              />
+            ))
+          ) : (
+            <div className="col-span-2 flex items-center justify-center h-[200px] text-sm text-muted-foreground">
+              {t("reciters.no_data")}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

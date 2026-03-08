@@ -60,20 +60,22 @@ export default function RecitationCategories() {
   }
 
   return (
-    <div className="page-content">
-      <Header headerTitleKey="page_title.recitation_categories" backButton />
-      <div className="mt-6 animate-fade-up">
-        <div className="grid grid-cols-1  gap-3">
-          {categories.map((item) => (
-            <CategoryCard
-              key={item.id}
-              title={item.title}
-              count={item.items_count}
-              onClick={() => {
-                navigate(`/recitations/${item.id}`);
-              }}
-            />
-          ))}
+    <div className="page-container">
+      <div className="page-content">
+        <Header headerTitleKey="page_title.recitation_categories" backButton />
+        <div className="mt-6 animate-fade-up">
+          <div className="grid grid-cols-1  gap-3">
+            {categories.map((item) => (
+              <CategoryCard
+                key={item.id}
+                title={item.title}
+                count={item.items_count}
+                onClick={() => {
+                  navigate(`/recitations/${item.id}`);
+                }}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>
