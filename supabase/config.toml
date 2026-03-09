@@ -1,0 +1,4 @@
+project_id = "udpneygpvxwosvsmzknc"
+
+[functions.baligh-chat]
+verify_jwt = false

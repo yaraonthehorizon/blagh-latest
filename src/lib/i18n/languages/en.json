@@ -1,0 +1,351 @@
+{
+  "page_title": {
+    "home": "Home",
+    "quran": "Quran",
+    "athkar": "Athkar",
+    "duaa": "Duaa",
+    "hadith": "Hadith",
+    "baligh": "Baligh",
+    "knowledge": "Knowledge",
+    "children": "Children",
+    "search": "Search",
+    "profile": "Profile",
+    "send_greeting": "Send Greeting",
+    "send_gift": "Send Knowledge Gift",
+    "send_quran_card": "Send Quran Card",
+    "companionship": "Learning Companion"
+  },
+  "routes": {
+    "home": "Home",
+    "quran": "Mushaf",
+    "hadith": "Hadith",
+    "knowledge": "Knowledge",
+    "children": "Children",
+    "bleegh": "Bleegh",
+    "services": "Services",
+    "reciters": "Reciters"
+  },
+
+  "quick_action": {
+    "prayer": "Prayer",
+    "calander": "Calander",
+    "quran": "Mushaf",
+    "duaa": "Duaa",
+    "hadith": "Hadith",
+    "tsbeeh": "Tsbeeh",
+    "athkar": "Athkar",
+    "qibla": "Qibla"
+  },
+  "greeting": {
+    "morning": "Good Morning ☀️",
+    "afternoon": "Good Afternoon 🕛",
+    "evening": "Good Evening 🌙",
+    "peace": "Peace be upon you"
+  },
+  "special_greeting": {
+    "ramadan": "Ramadan Mubarak! 🌙",
+    "eid": "Eid Mubarak! 🎉"
+  },
+  "cta": {
+    "read_quran": "Read Juz Today",
+    "discover_athkar": "Recite Morning and Evening Athkar",
+    "learn_duaa": "Learn Duaa",
+    "read_bleegh": "Read Bleegh",
+    "gain_knowledge": "Gain Knowledge",
+    "for_children": "For Children"
+  },
+  "prayers": {
+    "fajr": "Fajr",
+    "dhuhr": "Dhuhr",
+    "asr": "Asr",
+    "maghrib": "Maghrib",
+    "isha": "Isha",
+    "sunrise": "Sunrise"
+  },
+  "headers": {
+    "home": {
+      "prayer_times": "Prayer Times",
+      "daily_apps": "Daily Apps"
+    }
+  },
+  "content": {
+    "home": {
+      "welcome": "Assalamu Alaikum ",
+      "name": "{{name}} 👋",
+      "prayer": "prayer",
+      "in": "in",
+      "minutes": "minute/s",
+      "daily_verse": "Today's Verse",
+      "daily_hadith": "Today's Hadith",
+      "daily_reflection": "Today's Reflection",
+      "daily_reflection_prompt": "What act of kindness can you do today that no one will ever know about?"
+    },
+    "children": {
+      "title": "Children World",
+      "aqidah": "Aqidah",
+      "fiqh": "Fiqh",
+      "seerah": "Seerah",
+      "hadith": "Hadith"
+    },
+    "knowledge": {
+      "browse_topics": "Browse Topics",
+      "categories": {
+        "quran": "Quranic Sciences",
+        "tafsir": "Tafsir (Exegesis)",
+        "sunnah": "Sunnah",
+        "creed": "Aqidah (Creed)",
+        "fiqh": "Fiqh (Jurisprudence)",
+        "seerah": "Seerah (Biography)",
+        "tazkiyah": "Tazkiyah (Purification)"
+      }
+    },
+    "athkar": {
+      "tools": {
+        "quran_reader": {
+          "name": "Quran Reader",
+          "desc": "Read with translations & tafsir"
+        },
+        "prayer_times": {
+          "name": "Prayer Times",
+          "desc": "Accurate times & reminders"
+        },
+        "qibla_compass": {
+          "name": "Qibla Compass",
+          "desc": "Find the direction of Qibla"
+        },
+        "athkar": { "name": "Athkar", "desc": "Morning & evening remembrance" },
+        "duaa_collection": {
+          "name": "Dua Collection",
+          "desc": "Supplications for every occasion"
+        },
+        "hijri_calendar": {
+          "name": "Hijri Calendar",
+          "desc": "Islamic date & events"
+        },
+        "tasbih_counter": {
+          "name": "Tasbih Counter",
+          "desc": "Digital counter for dhikr"
+        }
+      }
+    },
+    "profile": {
+      "title": "My Space",
+      "subtitle": "Your spiritual journey",
+      "stats": {
+        "reading_streak": "Reading Streak",
+        "pages_read": "Pages Read",
+        "athkar_today": "Athkar Today",
+        "saved_items": "Saved Items"
+      },
+
+      "services": {
+        "title": "Services",
+        "send_gift": "Send a Gift",
+        "send_gift_subtext": "Surprise a loved one",
+        "gift_card": "Greeting Cards",
+        "gift_card_subtext": "Share the blessings",
+        "companionship": "Quran Companionship",
+        "companionship_subtext": "Find a reading partner",
+        "quran_card": "Quran Card",
+        "quran_card_subtext": "Dedicate a Khatmah"
+      },
+      "khatmah_progress": "Khatmah Progress",
+      "juz_progress": "Juz 5 of 30",
+      "weekly_insight": "Weekly Insight",
+      "insight_text": "You've been consistent with your morning azkar this week. Keep it up — small deeds done consistently are the most beloved to Allah."
+    },
+    "search": {
+      "placeholder": "Search for Surahs, Hadiths, or Topics...",
+      "input_placeholder": "Type to search...",
+      "tabs": {
+        "quran": "Quran",
+        "hadith": "Hadith"
+      },
+      "tab_content": {
+        "quran": "Search the Quran by Surah name, number, or topic.",
+        "hadith": "Search the Hadith collection by keywords or categories."
+      }
+    },
+    "hadith": {
+      "subtitle": "Explore the sayings of the Prophet ﷺ",
+      "browse_collection": "Browse Collection",
+      "categories": {
+        "quran": "The Noble Qur'an and Qur'anic Sciences",
+        "hadith": "The Hadith and Hadith Sciences",
+        "creed": "The Creed",
+        "fiqh": "Jurisprudence and Juristic Principles",
+        "virtues": "Virtues and Manners",
+        "dawah": "Da‘wah and Hisbah",
+        "seerah": "Seerah and History"
+      }
+    },
+    "auth": {
+      "login": {
+        "title": "Welcome Back",
+        "email_label": "Email",
+        "password_label": "Password",
+        "submit": "Login",
+        "no_account": "Don't have an account?",
+        "sign_up_link": "Sign Up"
+      },
+      "signup": {
+        "title": "Create an Account",
+        "name_label": "Full Name",
+        "phone_label": "Phone Number",
+        "email_label": "Email",
+        "password_label": "Password",
+        "submit": "Sign Up",
+        "has_account": "Already have an account?",
+        "login_link": "Login"
+      },
+      "otp": {
+        "title": "Verify OTP",
+        "description": "Enter the 6-digit code sent to your device",
+        "submit": "Verify",
+        "resend": "Resend Code"
+      }
+    },
+    "send_greeting": {
+      "greeting_card": {
+        "title": "Ramadan Kareem",
+        "subtitle": "May Allah accept your fasting, prayers, and good deeds."
+      },
+      "share_button": "Share Greeting",
+      "share_text": "Ramadan Kareem! Wishing you a blessed month filled with light and guidance."
+    },
+    "send_quran_card": {
+      "share_button": "Share Quran Card",
+      "share_text": "Let's complete this good deed together."
+    },
+    "companionship": {
+      "title": "Find a Learning Companion",
+      "description": "Invite a friend to join you on your spiritual journey. Learning together brings more blessings.",
+      "form": {
+        "name_label": "Friend's Name",
+        "name_placeholder": "Enter name",
+        "email_label": "Friend's Email",
+        "email_placeholder": "Enter email address",
+        "submit": "Send Invitation"
+      },
+      "success_message": "Invitation sent successfully!"
+    }
+  },
+
+  "basmala": "In the name of Allah, the Most Gracious, the Most Merciful",
+  "apps": {
+    "title": "Apps",
+    "more_link": "More ←",
+    "quran": "Quran",
+    "hadith": "Hadith",
+    "qibla": "Qibla",
+    "tasbeeh": "Tasbeeh",
+    "dua": "Dua",
+    "calandar": "Calendar",
+    "athkar": "Athkar",
+    "more": "More"
+  },
+  "bottom_nav": {
+    "home": "Home",
+    "quran": "Quran",
+    "explore": "Explore",
+    "bookmarks": "Saved",
+    "profile": "Profile"
+  },
+  "articles": {
+    "title": "Selected Articles",
+    "view_all": "All ←",
+    "read_more": "Read More ←",
+    "ramadan": {
+      "title": "Productive Ramadan",
+      "desc": "How to achieve maximum spiritual benefit in this holy month",
+      "cat": "Ramadan",
+      "time": "5 mins"
+    },
+    "prayer": {
+      "title": "Khushoo in Prayer",
+      "desc": "Achieving presence of heart in a world full of distractions",
+      "cat": "Prayer",
+      "time": "7 mins"
+    },
+    "tazkiyah": {
+      "title": "Purification of the Soul",
+      "desc": "The path of internal purification and drawing closer to Allah Almighty",
+      "cat": "Tazkiyah",
+      "time": "4 mins"
+    }
+  },
+  "bismillah": {
+    "arabic": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+    "text": "In the name of Allah, the Most Gracious, the Most Merciful"
+  },
+  "hadith_section": {
+    "daily_title": "Hadith of the Day",
+    "source": "Sahih Al-Jami",
+    "text": "«The best of people are those that bring most benefit to the rest of mankind.»",
+    "narrator": "— Prophet Muhammad ﷺ"
+  },
+  "mega_card": {
+    "hijri_date_label": "Hijri Date",
+    "hijri_date_value": "14 Ramadan 1447",
+    "hijri_month": "🌙 Ramadan Mubarak",
+    "gregorian_date_label": "Gregorian Date",
+    "gregorian_date_value": "4 March 2026",
+    "day": "Wednesday",
+    "location": "Giza, Egypt",
+    "adhan": "Adhan",
+    "calendar": "Calendar"
+  },
+  "prayer_widget": {
+    "next_prayer": "Next Prayer",
+    "time_location": "12:18 — Giza",
+    "starts_in": "Starts in",
+    "countdown": "01:24:00",
+    "h_m_s": "h : m : s"
+  },
+  "reciters": {
+    "title": "Featured Reciters",
+    "view_all": "All ←",
+    "listen_now": "Listen Now",
+    "types": {
+      "murattal": "Murattal",
+      "mujawwad": "Mujawwad",
+      "educational": "Educational",
+      "haram_makki": "Haram Makki"
+    },
+    "mishari": {
+      "name": "Mishari Rashid Alafasy",
+      "location": "Kuwait"
+    },
+    "abdulbasit": {
+      "name": "Abdul Basit Abdul Samad",
+      "location": "Egypt"
+    },
+    "sudais": {
+      "name": "Abdul Rahman Al-Sudais",
+      "location": "Makkah"
+    }
+  },
+  "verse": {
+    "daily_title": "Verse of the Day",
+    "surah_info": "Surah Ash-Sharh • 94:5",
+    "listen_full": "Surah Ash-Sharh — Listen Full",
+    "reciter": "Sheikh Mishari Rashid Alafasy",
+    "text_ar": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
+    "text_trans": "\"For indeed, with hardship [will be] ease.\"",
+    "ref": "Ash-Sharh 94:5"
+  },
+  "baligh": {
+    "subtitle": "Your AI spiritual companion",
+    "welcome": "Assalamu Alaikum",
+    "intro": "I'm here to help you explore Islamic knowledge with authentic references.",
+    "disclaimer": "⚠️ I am an AI assistant, not a scholar.",
+    "suggestions": {
+      "fatiha": "Explain Surah Al-Fatiha simply",
+      "plan": "Create a 30-day Quran reading plan",
+      "athkar": "What are the morning athkar?",
+      "kursi": "Compare tafsir views on Ayat Al-Kursi"
+    },
+    "input_placeholder": "Ask Baligh anything...",
+    "signin_placeholder": "Sign in to chat..."
+  }
+}

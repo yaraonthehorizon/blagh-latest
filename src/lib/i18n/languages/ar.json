@@ -1,0 +1,345 @@
+{
+  "page_title": {
+    "home": "الرئيسية",
+    "quran": "المصحف",
+    "hadith": "الأحاديث",
+    "athkar": "الأذكار",
+    "duaa": "الدعاء",
+    "baligh": "بليغ",
+    "knowledge": "المعرفة",
+    "children": "الأطفال",
+    "search": "بحث",
+    "profile": "المساحة الشخصية",
+    "send_greeting": "إرسل تهنئة",
+    "send_gift": "إرسل هدية المعرفة",
+    "send_quran_card": "هدية القرآن",
+    "companionship": "مصاحبة قرآنية"
+  },
+  "routes": {
+    "home": "الرئيسية",
+    "quran": "المصحف",
+    "hadith": "الحديث",
+    "knowledge": "المعرفة",
+
+    "children": "الأطفال",
+    "athkar": "الأذكار",
+    "bleegh": "بليغ",
+    "services": "الخدمات",
+    "reciters": "القرّاء"
+  },
+
+  "quick_action": {
+    "prayer": "الصلاة",
+    "calander": "التقويم",
+    "hadith": "الحديث",
+    "quran": "المصحف",
+    "duaa": "الادعية",
+    "tsbeeh": "التسبيح",
+    "athkar": "الأذكار",
+    "qibla": "القبلة"
+  },
+  "greeting": {
+    "morning": "☀️ صباح الخير ",
+    "afternoon": " 🕛 مساء الخير",
+    "evening": "🌙 مساء الخير",
+    "peace": "السلام عليكم"
+  },
+  "special_greeting": {
+    "ramadan": "رمضان كريم! 🌙",
+    "eid": "عيد مبارك! 🎉"
+  },
+  "cta": {
+    "read_quran": "اقرأ جزء اليوم",
+    "discover_athkar": "اكتشف الأذكار",
+    "learn_duaa": "تعلم الدعاء",
+    "read_bleegh": "استخدم بليغ",
+    "gain_knowledge": "اكتسب المعرفة",
+    "for_children": "لأطفال"
+  },
+  "prayers": {
+    "fajr": "الفجر",
+    "dhuhr": "الظهر",
+    "asr": "العصر",
+    "maghrib": "المغرب",
+    "isha": "العشاء",
+    "sunrise": "الشروق"
+  },
+  "headers": {
+    "home": {
+      "prayer_times": "أوقات الصلاة",
+      "daily_apps": "تطبيقاتك اليومية"
+    }
+  },
+  "content": {
+    "home": {
+      "welcome": "السلام عليكم ",
+      "name": "{{name}} 👋",
+      "prayer": "صلاة",
+      "in": "بعد",
+      "minutes": "دقيقة/دقائق",
+      "daily_verse": "آية اليوم",
+      "daily_hadith": "حديث اليوم",
+      "daily_reflection": "تأملات اليوم",
+      "daily_reflection_prompt": "ما هو العمل الصالح الذي يمكنك القيام به اليوم دون أن يعلم به أحد؟"
+    },
+    "children": {
+      "title": "عالم الأطفال"
+    },
+    "knowledge": {
+      "browse_topics": "تصفح المواضيع",
+      "categories": {
+        "quran": "علوم القرآن",
+        "tafsir": "التفسير",
+        "sunnah": "السنة النبوية",
+        "creed": "العقيدة",
+        "fiqh": "الفقه",
+        "seerah": "السيرة النبوية",
+        "tazkiyah": "التزكية"
+      }
+    },
+    "athkar": {
+      "tools": {
+        "quran_reader": {
+          "name": "قارئ القرآن",
+          "desc": "اقرأ مع الترجمات والتفسير"
+        },
+        "prayer_times": {
+          "name": "أوقات الصلاة",
+          "desc": "أوقات دقيقة وتذكيرات"
+        },
+        "qibla_compass": {
+          "name": "بوصلة القبلة",
+          "desc": "اعثر على اتجاه القبلة"
+        },
+        "athkar": { "name": "الأذكار", "desc": "أذكار الصباح والمساء" },
+        "duaa_collection": {
+          "name": "مجموعة الأدعية",
+          "desc": "أدعية لكل مناسبة"
+        },
+        "hijri_calendar": {
+          "name": "التقويم الهجري",
+          "desc": "التاريخ والمناسبات الإسلامية"
+        },
+        "tasbih_counter": { "name": "عداد التسبيح", "desc": "عداد رقمي للذكر" }
+      }
+    },
+    "hadith": {
+      "subtitle": "تصفح أحاديث النبي ﷺ",
+      "browse_collection": "تصفح المجموعة",
+      "categories": {
+        "quran": "القرآن الكريم وعلومه",
+        "hadith": "الحديث وعلومه",
+        "creed": "العقيدة",
+        "fiqh": "الفقه وأصوله",
+        "virtues": "الفضائل والآداب",
+        "dawah": "الدعوة والاحتساب",
+        "seerah": "السيرة والتاريخ"
+      }
+    },
+    "auth": {
+      "login": {
+        "title": "مرحباً بعودتك",
+        "email_label": "البريد الإلكتروني",
+        "password_label": "كلمة المرور",
+        "submit": "تسجيل الدخول",
+        "no_account": "ليس لديك حساب؟",
+        "sign_up_link": "إنشاء حساب"
+      },
+      "signup": {
+        "title": "إنشاء حساب",
+        "name_label": "الاسم الكامل",
+        "phone_label": "رقم الهاتف",
+        "email_label": "البريد الإلكتروني",
+        "password_label": "كلمة المرور",
+        "submit": "إنشاء حساب",
+        "has_account": "لديك حساب بالفعل؟",
+        "login_link": "تسجيل الدخول"
+      },
+      "otp": {
+        "title": "تحقق من الرمز",
+        "description": "أدخل الرمز المكون من 6 أرقام المرسل إلى جهازك",
+        "submit": "تحقق",
+        "resend": "إعادة إرسال الرمز"
+      }
+    },
+    "profile": {
+      "stats": {
+        "reading_streak": "تتابع القراءة",
+        "pages_read": "صفحات مقروءة",
+        "athkar_today": "أذكار اليوم",
+        "saved_items": "العناصر المحفوظة"
+      },
+
+      "services": {
+        "title": "الخدمات",
+        "send_gift": "اهد هدية",
+        "send_gift_subtext": "فاجئ من تحب",
+        "gift_card": "بطاقات التهنئة",
+        "gift_card_subtext": "شارك البركة",
+        "companionship": "مصاحبة قرآنية",
+        "companionship_subtext": "ادعو رفيقا للقراءة",
+        "quran_card": "بطاقة قرآن",
+        "quran_card_subtext": "أهدِ ختمة"
+      },
+      "khatmah_progress": "تقدم الختمة",
+      "juz_progress": "الجزء 5 من 30",
+      "weekly_insight": "إضاءة أسبوعية",
+      "insight_text": "لقد كنت منتظمًا في أذكار الصباح هذا الأسبوع. استمر في ذلك — أحب الأعمال إلى الله أدومها وإن قل."
+    },
+    "search": {
+      "placeholder": "ابحث عن سور، أحاديث، أو مواضيع...",
+      "input_placeholder": "اكتب للبحث...",
+      "tabs": {
+        "quran": "القرآن",
+        "hadith": "الحديث"
+      },
+      "tab_content": {
+        "quran": "ابحث في القرآن باسم السورة، رقمها، أو موضوعها.",
+        "hadith": "ابحث في مجموعة الحديث بالكلمات المفتاحية أو الفئات."
+      }
+    },
+    "send_greeting": {
+      "greeting_card": {
+        "title": "رمضان كريم",
+        "subtitle": "تقبل الله منا ومنكم الصيام والقيام وصالح الأعمال."
+      },
+      "share_button": "شارك التهنئة",
+      "share_text": "رمضان كريم! أتمنى لكم شهراً مباركاً مليئاً بالنور والهداية."
+    },
+    "send_quran_card": {
+      "share_button": "شارك الاجر",
+      "share_text": "شاركني الجزاء!. دعونا نكمل هذا العمل الصالح معًا."
+    },
+    "companionship": {
+      "title": "ابحث عن رفيق للتعلم",
+      "description": "ادعُ صديقاً لمشاركتك رحلتك الروحية. التعلم الجماعي يجلب المزيد من البركة.",
+      "form": {
+        "name_label": "اسم الصديق",
+        "name_placeholder": "أدخل الاسم",
+        "email_label": "البريد الإلكتروني للصديق",
+        "email_placeholder": "أدخل عنوان البريد الإلكتروني",
+        "submit": "إرسال الدعوة"
+      },
+      "success_message": "تم إرسال الدعوة بنجاح!"
+    }
+  },
+
+  "basmala": "بسم الله الرحمن الرحيم",
+  "apps": {
+    "title": "التطبيقات",
+    "more_link": "المزيد ←",
+    "quran": "القرآن",
+    "hadith": "الأحاديث",
+    "qibla": "القبلة",
+    "tasbeeh": "التسبيح",
+    "dua": "الأدعية",
+    "mosques": "المساجد",
+    "calandar": "التقويم",
+    "athkar": "الأذكار",
+    "more": "المزيد"
+  },
+  "bottom_nav": {
+    "home": "الرئيسية",
+    "quran": "القرآن",
+    "explore": "استكشاف",
+    "bookmarks": "المحفوظات",
+    "profile": "حسابي"
+  },
+  "articles": {
+    "title": "مقالات مختارة",
+    "view_all": "الكل ←",
+    "read_more": "اقرأ المزيد ←",
+    "ramadan": {
+      "title": "رمضان المثمر",
+      "desc": "كيف تحقق أقصى استفادة روحية في هذا الشهر الكريم",
+      "cat": "رمضان",
+      "time": "٥ دقائق"
+    },
+    "prayer": {
+      "title": "الخشوع في الصلاة",
+      "desc": "تحقيق الحضور القلبي في عالم مليء بالمشتتات",
+      "cat": "الصلاة",
+      "time": "٧ دقائق"
+    },
+    "tazkiyah": {
+      "title": "تزكية النفس",
+      "desc": "طريق التطهير الداخلي والتقرب إلى الله تعالى",
+      "cat": "تزكية",
+      "time": "٤ دقائق"
+    }
+  },
+  "bismillah": {
+    "arabic": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+    "text": "بسم الله الرحمن الرحيم"
+  },
+  "hadith_section": {
+    "daily_title": "حديث اليوم",
+    "source": "صحيح الجامع",
+    "text": "«خير الناس أنفعهم للناس»",
+    "narrator": "— النبي محمد ﷺ"
+  },
+  "mega_card": {
+    "hijri_date_label": "التاريخ الهجري",
+    "hijri_date_value": "١٤ رمضان ١٤٤٧",
+    "hijri_month": "🌙 رمضان المبارك",
+    "gregorian_date_label": "التاريخ الميلادي",
+    "gregorian_date_value": "٤ مارس ٢٠٢٦",
+    "day": "الأربعاء",
+    "location": "الجيزة، مصر",
+    "adhan": "الأذان",
+    "calendar": "التقويم"
+  },
+  "prayer_widget": {
+    "next_prayer": "الصلاة القادمة",
+    "time_location": "١٢:١٨ — الجيزة",
+    "starts_in": "يبدأ خلال",
+    "countdown": "٠١:٢٤:٠٠",
+    "h_m_s": "س : د : ث"
+  },
+  "reciters": {
+    "title": "القرّاء المميزون",
+    "view_all": "الكل ←",
+    "listen_now": "استمع الآن",
+    "types": {
+      "murattal": "مرتّل",
+      "mujawwad": "مجوّد",
+      "educational": "تعليمي",
+      "haram_makki": "حرم مكي"
+    },
+    "mishari": {
+      "name": "مشاري راشد العفاسي",
+      "location": "الكويت"
+    },
+    "abdulbasit": {
+      "name": "عبد الباسط عبد الصمد",
+      "location": "مصر"
+    },
+    "sudais": {
+      "name": "عبد الرحمن السديس",
+      "location": "مكة المكرمة"
+    }
+  },
+  "verse": {
+    "daily_title": "آية اليوم",
+    "surah_info": "سورة الشرح • ٩٤:٥",
+    "listen_full": "سورة الشرح — استمع كاملاً",
+    "reciter": "الشيخ مشاري راشد العفاسي",
+    "text_ar": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
+    "text_trans": "\"فإن مع العسر يسراً\"",
+    "ref": "الشرح ٩٤:٥"
+  },
+  "baligh": {
+    "subtitle": "رفيقك الروحي بالذكاء الاصطناعي",
+    "welcome": "السلام عليكم",
+    "intro": "أنا هنا لمساعدتك في استكشاف المعرفة الإسلامية بمراجع موثوقة.",
+    "disclaimer": "⚠️ أنا مساعد ذكي ولست عالماً.",
+    "suggestions": {
+      "fatiha": "اشرح سورة الفاتحة ببساطة",
+      "plan": "أنشئ خطة قراءة للقرآن لمدة 30 يومًا",
+      "athkar": "ما هي أذكار الصباح؟",
+      "kursi": "قارن بين آراء التفسير في آية الكرسي"
+    },
+    "input_placeholder": "اسأل بليغ أي شيء...",
+    "signin_placeholder": "سجل الدخول للدردشة..."
+  }
+}
