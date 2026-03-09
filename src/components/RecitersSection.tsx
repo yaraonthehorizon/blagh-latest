@@ -32,9 +32,11 @@ export default function RecitersSection() {
   }
 
   if (isError) {
-    <div className="flex items-center justify-center w-full h-[180px] text-sm text-muted-foreground bg-surface border border-bdr-p rounded-[20px]">
-      {t("reciters.error_loading")}
-    </div>;
+    return (
+      <div className="flex items-center justify-center w-full h-[180px] text-sm text-muted-foreground bg-surface border border-bdr-p rounded-[20px]">
+        {t("reciters.error_loading")}
+      </div>
+    );
   }
   return (
     <div className="pt-[22px] animate-fade-up [animation-delay:0.31s]">
@@ -57,7 +59,7 @@ export default function RecitersSection() {
         <span className="text-[11px] text-primary2 cursor-pointer opacity-85"></span>
       </div>
       <div className="flex gap-3 overflow-x-auto  pb-3 snap-x snap-mandatory no-scrollbar">
-        {data.authors.length > 0 && !isLoading && !isError ? (
+        {data?.authors && data.authors.length > 0 ? (
           data.authors
             .slice(10, 20)
             .map((item: ReciterInfo) => (

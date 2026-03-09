@@ -5,7 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 const CATEGORY_IDS = [364764, 364777, 364774, 364771, 364768];
 
 export function useGetRecitationCategories() {
-  const locale = i18n.language || "en";
+  const locale = i18n.language.startsWith("ar") ? "ar" : "en";
 
   return useQuery({
     queryKey: ["quran-categories", locale],

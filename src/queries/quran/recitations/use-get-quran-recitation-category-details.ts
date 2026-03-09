@@ -6,7 +6,7 @@ import i18n from "@/lib/i18n/init";
 export function useGetQuranRecitationCategoryDetails<T = unknown>(
   recitationId?: string | number,
 ) {
-  const locale = i18n.language || "en";
+  const locale = i18n.language.startsWith("ar") ? "ar" : "en";
 
   return useQuery({
     queryKey: ["quran-recitation-category", recitationId, locale],

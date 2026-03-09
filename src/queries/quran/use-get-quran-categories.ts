@@ -9,12 +9,12 @@ interface QuranCategory {
 }
 
 export function useGetQuranCategories() {
-  const locale = i18n.language || "en";
+  const locale = i18n.language?.startsWith("ar") ? "ar" : "en";
 
   return useQuery({
     queryKey: ["quran-categories"],
     queryFn: () => {
-      return apiClient<QuranCategory[]>("quran/get-categories/ " + locale);
+      return apiClient<QuranCategory[]>("quran/get-categories/" + locale);
     },
   });
 }

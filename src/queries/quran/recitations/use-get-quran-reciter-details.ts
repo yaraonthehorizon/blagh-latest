@@ -4,7 +4,7 @@ import i18n from "@/lib/i18n/init";
 
 // You can define a specific interface for the response data here if known
 export function useGetQuranReciterDetails<T = unknown>() {
-  const locale = i18n.language || "en";
+  const locale = i18n.language.startsWith("ar") ? "ar" : "en";
 
   return useQuery({
     queryKey: [
