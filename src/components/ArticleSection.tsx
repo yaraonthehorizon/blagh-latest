@@ -15,9 +15,7 @@ export default function ArticlesSection() {
           </span>
           <button
             className="flex items-center text-xs text-primary font-bold"
-            onClick={() => {
-              navigate("/recitations/");
-            }}
+            onClick={() => {}}
           >
             {t("articles.view_all")}
             <ArrowRight className="w-4 h-4 rtl:rotate-180" />
