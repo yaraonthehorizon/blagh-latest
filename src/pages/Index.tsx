@@ -25,7 +25,7 @@ export default function Index() {
               headerTitleKey="content.home.welcome"
               className="text-sm font-medium text-primary"
             />
-            <p className="text-foreground text-2xl font-bold -mt-5 mb-3">
+            <p className="text-foreground text-2xl font-bold -mt-3 mb-3">
               {t("content.home.name", { name: "Yara" })}
             </p>
           </div>

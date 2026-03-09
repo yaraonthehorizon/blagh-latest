@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import balaghIcon from "@/assets/balagh-icon.png";
+import balaghWordDark from "@/assets/balagh-dark.png";
 
 interface SplashScreenProps {
   onComplete: () => void;
@@ -27,7 +28,7 @@ export function SplashScreen({ onComplete }: SplashScreenProps) {
 
   return (
     <div
-      className={`fixed inset-0 z-50 flex items-center justify-center bg-background transition-opacity duration-500 ${
+      className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-background transition-opacity duration-500 ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
@@ -36,6 +37,13 @@ export function SplashScreen({ onComplete }: SplashScreenProps) {
           src={balaghIcon}
           alt="Balagh"
           className="h-32 w-32 object-contain drop-shadow-lg"
+        />
+      </div>
+      <div className="flex flex-col items-center ">
+        <img
+          src={balaghWordDark}
+          alt="Balagh"
+          className="h-16 w-16 object-contain"
         />
       </div>
     </div>

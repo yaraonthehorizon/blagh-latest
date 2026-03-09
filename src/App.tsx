@@ -26,7 +26,8 @@ import {
   SendGreetingCard,
   SendQuranCard,
   Companionship,
-} from "./pages/Profile/Services/index";
+  Services,
+} from "./pages/Services/index";
 import { AudioPlayerProvider } from "./providers/AudioPlayerProvider";
 import { GlobalAudioPlayer } from "./components/GlobalAudioPlayer";
 import RecitationCategories from "./pages/Recitations/Recitations";
@@ -90,17 +91,21 @@ const App = () => {
                           element={<RecitationsCategory />}
                         />
                         <Route path="/profile" element={<Profile />} />
-                        <Route path="/send-gift" element={<SendGift />} />
                         <Route
-                          path="/send-greeting"
+                          path="/services/send-gift"
+                          element={<SendGift />}
+                        />
+                        <Route path="/services" element={<Services />} />
+                        <Route
+                          path="/services/send-greeting"
                           element={<SendGreetingCard />}
                         />
                         <Route
-                          path="/send-quran-card"
+                          path="/services/send-quran-card"
                           element={<SendQuranCard />}
                         />
                         <Route
-                          path="/companionship"
+                          path="/services/companionship"
                           element={<Companionship />}
                         />
                         <Route path="/more-apps" element={<MoreApps />} />

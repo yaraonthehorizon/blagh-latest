@@ -7,14 +7,21 @@
     "hadith": "Hadith",
     "baligh": "Baligh",
     "knowledge": "Knowledge",
+    "tsbeeh": "Tsbeeh",
+    "qibla": "Qibla",
+    "calendar": "Calendar",
     "children": "Children",
     "search": "Search",
     "profile": "Profile",
-    "send_greeting": "Send Greeting",
-    "send_gift": "Send Knowledge Gift",
-    "send_quran_card": "Send Quran Card",
+    "services": "Services",
+
     "companionship": "Learning Companion",
-    "recitation_categories": "Recitation Categories"
+    "send_gift": "Send Knowledge Gift",
+    "send_greeting": "Send Greeting",
+    "send_quran_card": "Send Quran Card",
+
+    "recitation_categories": "Recitation Categories",
+    "more_apps": "More Apps"
   },
   "routes": {
     "home": "Home",
@@ -206,6 +213,12 @@
         "resend": "Resend Code"
       }
     },
+    "services": {
+      "send_greeting_subtext": "Share joy with personalized Islamic greetings",
+      "send_gift_subtext": "Share the gift of knowledge with loved ones",
+      "send_quran_card_subtext": "Design and share beautiful Quranic verses",
+      "companionship_subtext": "Find a partner for your spiritual journey"
+    },
     "send_greeting": {
       "greeting_card": {
         "title": "Ramadan Kareem",
@@ -229,20 +242,31 @@
         "submit": "Send Invitation"
       },
       "success_message": "Invitation sent successfully!"
+    },
+    "more_apps": {
+      "athkar_subtext": "Discover selected morning and evening athkar to enrich your daily remembrance.",
+      "qibla_subtext": "Find the direction of the Qibla from anywhere in the world with our accurate compass.",
+      "duaa_subtext": "Learn about selected supplications for every occasion.",
+      "tsbeeh_subtext": "Count your tasbeehs easily with our simple and smooth digital counter, perfect for morning and evening azkar.",
+      "calendar_subtext": "Keep track of Islamic dates and occasions with our comprehensive Hijri calendar, including holidays and religious observances."
     }
   },
 
   "basmala": "In the name of Allah, the Most Gracious, the Most Merciful",
   "apps": {
     "title": "Apps",
-    "more_link": "More ←",
+    "more_link": "More",
     "quran": "Quran",
     "hadith": "Hadith",
+    "prayer": "Prayer",
     "qibla": "Qibla",
     "tasbeeh": "Tasbeeh",
     "dua": "Dua",
     "calandar": "Calendar",
     "athkar": "Athkar",
+    "knowledge": "Knowledge",
+    "baligh": "Baligh",
+    "children": "Children",
     "more": "More"
   },
   "bottom_nav": {
@@ -250,7 +274,8 @@
     "quran": "Quran",
     "explore": "Explore",
     "bookmarks": "Saved",
-    "profile": "Profile"
+    "profile": "Profile",
+    "services": "Services"
   },
   "articles": {
     "title": "Selected Articles",
