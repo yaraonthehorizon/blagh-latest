@@ -1,16 +1,26 @@
+import { ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router";
 
 export default function ArticlesSection() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+
   return (
     <div className="pt-[22px] animate-fade-up [animation-delay:0.34s]">
       <div className="flex justify-between items-center  mb-[12px]">
-        <span className="text-base font-bold text-foreground">
-          {t("articles.title")}
-        </span>
-        <span className="text-[11px] text-primary cursor-pointer opacity-85">
-          {t("articles.view_all")}
-        </span>
+        <div className="flex justify-between items-center w-full">
+          <span className="text-sm text-primary font-bold">
+            {t("articles.title")}
+          </span>
+          <button
+            className="flex items-center text-xs text-primary font-bold"
+            onClick={() => {}}
+          >
+            {t("articles.view_all")}
+            <ArrowRight className="w-4 h-4 rtl:rotate-180" />
+          </button>
+        </div>
       </div>
       <div className="flex gap-[14px] overflow-x-auto pb-3 snap-x snap-mandatory no-scrollbar">
         <ArticleCard

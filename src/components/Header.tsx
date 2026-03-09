@@ -52,14 +52,14 @@ export function Header({
             <BackButton />
           </div>
         )}
-        <h1 className={cn("text-primary text-2xl font-bold ", className)}>
+        <h1 className={cn("text-primary text-2xl font-bold mt-2", className)}>
           {t(headerTitleKey, {
             defaultValue: headerTitleKey,
             ...translationValues,
           })}
         </h1>
       </div>
-      <div className="flex gap-[9px] ">
+      <div className="flex gap-[9px]">
         <button className="w-[38px] h-[38px] rounded-full bg-icn-bg border border-icn-bdr flex items-center justify-center cursor-pointer transition-transform active:scale-90 text-icn-cl shadow-sm">
           <Search className="h-4 w-4" />
         </button>
