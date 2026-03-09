@@ -127,7 +127,14 @@ export default function AppsSection() {
       label: t("apps.more"),
       path: "/more-apps",
       icon: (
-        <svg width="30" height="30" viewBox="0 0 48 48">
+        <svg
+          width="30"
+          height="30"
+          viewBox="0 0 48 48 "
+          stroke="currentColor"
+          strokeWidth="2"
+          className="text-white"
+        >
           <circle cx="14" cy="24" r="3.5" fill="#888" />
           <circle cx="24" cy="24" r="3.5" fill="#888" />
           <circle cx="34" cy="24" r="3.5" fill="#888" />
