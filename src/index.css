@@ -424,7 +424,7 @@
     @apply min-h-screen bg-background px-10 pb-24 pt-5;
   }
   .page-content {
-    @apply relative max-w-xl mx-auto px-0 md:px-16;
+    @apply relative max-w-lg mx-auto px-0 md:px-16;
   }
   .font-display {
     font-family: "Playfair Display", serif;

@@ -13,7 +13,8 @@
     "send_greeting": "إرسل تهنئة",
     "send_gift": "إرسل هدية المعرفة",
     "send_quran_card": "هدية القرآن",
-    "companionship": "مصاحبة قرآنية"
+    "companionship": "مصاحبة قرآنية",
+    "recitation_categories": "فئات التلاوة"
   },
   "routes": {
     "home": "الرئيسية",
@@ -247,8 +248,8 @@
   },
   "articles": {
     "title": "مقالات مختارة",
-    "view_all": "الكل ←",
-    "read_more": "اقرأ المزيد ←",
+    "view_all": "الكل ",
+    "read_more": "اقرأ المزيد ",
     "ramadan": {
       "title": "رمضان المثمر",
       "desc": "كيف تحقق أقصى استفادة روحية في هذا الشهر الكريم",
@@ -298,26 +299,9 @@
   },
   "reciters": {
     "title": "القرّاء المميزون",
-    "view_all": "الكل ←",
+    "view_all": "الكل ",
     "listen_now": "استمع الآن",
-    "types": {
-      "murattal": "مرتّل",
-      "mujawwad": "مجوّد",
-      "educational": "تعليمي",
-      "haram_makki": "حرم مكي"
-    },
-    "mishari": {
-      "name": "مشاري راشد العفاسي",
-      "location": "الكويت"
-    },
-    "abdulbasit": {
-      "name": "عبد الباسط عبد الصمد",
-      "location": "مصر"
-    },
-    "sudais": {
-      "name": "عبد الرحمن السديس",
-      "location": "مكة المكرمة"
-    }
+    "error_loading": "حدث خطأ أثناء تحميل القراء. الرجاء المحاولة لاحقًا."
   },
   "verse": {
     "daily_title": "آية اليوم",
