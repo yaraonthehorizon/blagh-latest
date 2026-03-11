@@ -32,9 +32,7 @@ export function KnowledgeCategory() {
   );
   const cachedTitle = cachedCategory?.title;
   const cachedSubCategories = cachedCategory?.sub_categories || [];
-
-  // If title or subcategories are not in cache, fetch all categories to find them.
-  // This will be fast if data is already in the query cache.
+  // If title is not in cache, fetch all categories to find it.
   const { data: fetchedCategoriesResponse, isLoading: isLoadingCategories } =
     useGetKnowledgeCategories<KnowledgeResponse>(sourceLanguage);
 
@@ -49,30 +47,30 @@ export function KnowledgeCategory() {
     ? cachedSubCategories
     : fetchedSubCategories;
 
-  console.log("Knowledge category subcategories:", subCategories);
   if (!subCategories.length && !isLoadingCategories) {
     return (
       <div className="page-container">
         <div className="page-content">
           <Header headerTitleKey="" backButton />
-          <div className="flex items-center justify-center h-full">
-            <p className="text-muted-foreground">No subcategories found</p>
+          <div className="flex items-center justify-center h-[400px]">
+            <p className="text-foreground">No subcategories found</p>
           </div>
         </div>
       </div>
     );
   }
 
-  if (isLoadingCategories) {
+  if (isLoadingCategories && !cachedCategory) {
     return (
       <div className="page-container">
         <div className="page-content">
-          <Header headerTitleKey={title} backButton className="text-lg mt-2" />
+          <Header headerTitleKey=" " backButton className="text-lg mt-2" />
+          <div className="mt-2 h-7 w-48 animate-pulse rounded-md bg-muted/40" />
           <div className="grid grid-cols-1 gap-3 mt-10">
             {[1, 2, 3, 4, 5, 6].map((i) => (
               <div
                 key={i}
-                className="h-32 rounded-xl bg-muted/40 animate-pulse"
+                className="h-24 rounded-xl bg-muted/40 animate-pulse"
               />
             ))}
           </div>

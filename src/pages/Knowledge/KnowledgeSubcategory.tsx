@@ -1,15 +1,11 @@
 import { Header } from "@/components/Header";
 import { AppCard } from "@/components/AppCard";
 import { useNavigate, useParams } from "react-router-dom";
-import { useGetKnowledgeCategory } from "@/queries/knowledge/use-get-knowledge-category";
-import { KnowledgeDataItems, KnowledgeResponse } from "@/types/knowledge";
+import { KnowledgeResponse } from "@/types/knowledge";
 import { useQueryClient } from "@tanstack/react-query";
 import { useGetKnowledgeCategories } from "@/queries/knowledge/use-get-knowledge-categories";
-import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Badge } from "@/components/ui/badge";
-import { isKnowledgeItems } from "@/gurads/isKnowledgeItems";
 import { useGetKnowledgeSubcategory } from "@/queries/knowledge/use-get-knowledge-subcategory";
 import type { KnowledgeSubcategory } from "@/types/knowledge";
 export function KnowledgeSubcategory() {
@@ -54,9 +50,12 @@ export function KnowledgeSubcategory() {
     KnowledgeSubcategory[]
   >(subCategoryId, sourceLanguage);
 
-  console.log("Knowledge subcategory data:", data);
-  if (!data) return null;
-  if ("error" in data || isError) {
+  const isPageLoading =
+    (isLoading && !data) || (isLoadingCategories && !cachedTitle);
+
+  console.log("Knowledge subcategory items:", data);
+
+  if (isError) {
     return (
       <div className="page-container">
         <div className="page-content">
@@ -69,38 +68,34 @@ export function KnowledgeSubcategory() {
     );
   }
 
-  if (isLoading || (!title && isLoadingCategories)) {
-    return (
-      <div className="page-container">
-        <div className="page-content">
-          <Header headerTitleKey={title} backButton className="text-2xl mt-2" />
+  return (
+    <div className="page-container">
+      <div className="page-content">
+        <Header headerTitleKey={title || " "} backButton className="text-lg" />
+
+        {isPageLoading ? (
           <div className="grid grid-cols-1 gap-3 mt-10">
             {[1, 2, 3, 4, 5, 6].map((i) => (
               <div
                 key={i}
-                className="h-32 rounded-xl bg-muted/40 animate-pulse"
+                className="h-24 rounded-xl bg-muted/40 animate-pulse"
               />
             ))}
           </div>
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <div className="page-container">
-      <div className="page-content">
-        <Header headerTitleKey={title} backButton className="text-lg" />
-        <div className="grid grid-cols-1 gap-3 mt-10">
-          {data &&
-            data.map((item) => (
+        ) : isError || "error" in (data ?? {}) ? (
+          <div className="flex items-center justify-center h-[400px]">
+            <p className=" text-foreground">No Subcategory Data to Display</p>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 gap-3 mt-10">
+            {data?.map((item) => (
               <AppCard
+                key={item.id}
                 onClick={() =>
                   navigate(
                     `/knowledge/${categoryId}/${subCategoryId}/${item.id}`,
                   )
                 }
-                key={item.id}
                 className="flex flex-col w-full items-center justify-center transition-transform hover:scale-[1.01] active:scale-[0.99]"
               >
                 <div className="text-center mt-2">
@@ -111,15 +106,17 @@ export function KnowledgeSubcategory() {
 
                 <div className="flex items-center justify-center mt-2 gap-2 capitalize">
                   <Badge className="capitalize leading-none px-2 pt-1.5 sm:pt-0">
-                    {t(
-                      "content.knowledge.importance." +
-                        item.importance_level.toLowerCase(),
-                    )}
+                    {item.importance_level &&
+                      t(
+                        "content.knowledge.importance." +
+                          item.importance_level.toLowerCase(),
+                      )}
                   </Badge>
                 </div>
               </AppCard>
             ))}
-        </div>
+          </div>
+        )}
       </div>
     </div>
   );

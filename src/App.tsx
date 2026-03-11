@@ -29,10 +29,11 @@ import {
   Services,
 } from "./pages/Services/index";
 import { AudioPlayerProvider } from "./providers/AudioPlayerProvider";
-import { GlobalAudioPlayer } from "./components/GlobalAudioPlayer";
+import { GlobalAudioPlayer } from "./components/global/GlobalAudioPlayer";
 import { Recitations, RecitationsCategory } from "./pages/Recitations";
 import { KnowledgeItemPage } from "./pages/Knowledge/KnowledgeItemPage";
 import { KnowledgeSubcategory } from "./pages/Knowledge/KnowledgeSubcategory";
+import { GlobalScrollToTop } from "./components/global/GlobalScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -66,6 +67,7 @@ const App = () => {
                 <Sonner />
                 <AuthProvider>
                   <BrowserRouter basename={import.meta.env.BASE_URL}>
+                    <GlobalScrollToTop />
                     <Routes>
                       <Route element={<MainLayout />}>
                         <Route path="/" element={<Index />} />
