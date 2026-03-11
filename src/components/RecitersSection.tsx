@@ -17,7 +17,6 @@ export default function RecitersSection() {
   const { data, isLoading, isError } =
     useGetQuranReciterDetails<RecitersResponse>();
 
-  console.log("Reciters data:", data);
   if (isLoading) {
     return (
       <div className="flex gap-3">
@@ -42,8 +41,8 @@ export default function RecitersSection() {
     <div className="pt-[22px] animate-fade-up [animation-delay:0.31s]">
       <div className="flex justify-between items-center  mb-[12px]">
         <div className="flex justify-between items-center w-full">
-          <span className="text-sm text-primary font-bold">
-            {t("reciters.title")}
+          <span className="text-sm text-foreground font-bold">
+            {t("content.home.reciters_title")}
           </span>
           <button
             className="flex items-center text-xs text-primary font-bold"

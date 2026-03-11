@@ -10,7 +10,7 @@ interface CategoryItem {
   items_count?: number;
 }
 
-export default function RecitationCategories() {
+export function Recitations() {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const { data, isLoading, isError } = useGetRecitationCategories();

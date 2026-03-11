@@ -7,7 +7,7 @@ import { useGetQuranRecitationCategoryDetails } from "@/queries/quran/recitation
 import { RecitationCategoryDetails } from "@/types/quran/recitation-category-details";
 import { RecitationInfoCondensed } from "@/types/quran/recitation-info";
 
-export default function RecitationsCategory() {
+export function RecitationsCategory() {
   const { categoryId } = useParams<{ categoryId: string }>();
   const { t } = useTranslation();
 

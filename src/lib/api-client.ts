@@ -18,7 +18,7 @@ export async function apiClient<T>(
     ...customConfig,
   };
 
-  const url = endpoint.startsWith("http") ? endpoint : `${BASE_URL}${endpoint}`;
+  const url = `${BASE_URL}${endpoint}`;
   const response = await fetch(url, config);
 
   if (!response.ok) {

@@ -10,8 +10,8 @@ export default function ArticlesSection() {
     <div className="pt-[22px] animate-fade-up [animation-delay:0.34s]">
       <div className="flex justify-between items-center  mb-[12px]">
         <div className="flex justify-between items-center w-full">
-          <span className="text-sm text-primary font-bold">
-            {t("articles.title")}
+          <span className="text-sm text-foreground font-bold">
+            {t("content.home.articles_title")}
           </span>
           <button
             className="flex items-center text-xs text-primary font-bold"
