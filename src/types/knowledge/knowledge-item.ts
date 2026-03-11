@@ -13,13 +13,14 @@ export interface KnowledgeItem {
   image?: string;
   api_url: string;
 
-  attachments: [
-    {
-      order: number;
-      size: string;
-      extension_type: string;
-      description: string;
-      url: string;
-    },
-  ];
+  attachments: {
+    order: number;
+    size: string;
+    extension_type: string;
+    description: string;
+    url: string;
+  }[];
 }
+
+// New type for the array that can also be an error
+export type KnowledgeItemResponse = KnowledgeItem | { error: string };

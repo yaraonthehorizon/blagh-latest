@@ -92,6 +92,11 @@ const App = () => {
                           path="/knowledge/:categoryId/:subCategoryId/:itemId"
                           element={<KnowledgeItemPage />}
                         />
+                        <Route
+                          path="/knowledge-gift/:itemId"
+                          element={<KnowledgeItemPage />}
+                        />
+
                         <Route path="/baligh" element={<Baligh />} />
                         <Route path="/children" element={<Children />} />
                         <Route

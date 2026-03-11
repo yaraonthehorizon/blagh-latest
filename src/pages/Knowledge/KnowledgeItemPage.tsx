@@ -8,6 +8,8 @@ import { ReadableFilesViewer } from "@/components/ReadableFilesViewer";
 import { AudioViewer } from "@/components/AudioViewer";
 import { VideoViewer } from "@/components/VideoViewer";
 import { ApplicationViewer } from "@/components/ApplicationViewer";
+import { ShareButton } from "@/components/ShareButton";
+
 export function KnowledgeItemPage() {
   const { itemId } = useParams();
   const { t, i18n } = useTranslation();
@@ -18,6 +20,9 @@ export function KnowledgeItemPage() {
     sourceLanguage,
     sourceLanguage,
   );
+
+  console.log(data);
+
   if (isLoading) {
     return (
       <div className="page-container">
@@ -45,8 +50,8 @@ export function KnowledgeItemPage() {
             backButton
             className="text-xl"
           />
-          <div className=" flex items-center justify-center h-full">
-            <p className="text-destructive">Error loading categories</p>
+          <div className=" flex items-center justify-center h-[400px]">
+            <p className="text-foreground text-lg">Error loading item.</p>
           </div>
         </div>
       </div>
@@ -67,8 +72,9 @@ export function KnowledgeItemPage() {
         <div className="grid grid-cols-1 gap-3 mt-10">
           <div
             key={data.id}
-            className="flex flex-col w-full items-center justify-center rounded-xl bg-muted/20 p-7"
+            className="relative flex flex-col w-full items-center justify-center rounded-xl bg-muted/20 py-8 px-7"
           >
+            <div className="absolute top-2 end-5 w-10 "></div>
             <div className="text-center mt-2">
               <h3 className="font-bold text-foreground text-base leading-tight line-clamp-2">
                 {data.title}
@@ -159,50 +165,16 @@ export function KnowledgeItemPage() {
                       />
                     );
                   }
-
-                  // Fallbacks based on category type if extension is unknown
-                  //   if (type === "videos") {
-                  //     return (
-                  //       <VideoViewer
-                  //         key={idx}
-                  //         title={data.title}
-                  //         item={attachment}
-                  //       />
-                  //     );
-                  //   }
-
-                  //   if (type === "audios" || type === "fatwa") {
-                  //     const trackId = `${data.id}-${idx}`;
-                  //     return (
-                  //       <AudioViewer
-                  //         key={idx}
-                  //         title={data.title}
-                  //         trackId={trackId}
-                  //         item={attachment}
-                  //       />
-                  //     );
-                  //   }
-
-                  //   if (type === "apps") {
-                  //     return (
-                  //       <ApplicationViewer
-                  //         key={idx}
-                  //         image={data.image}
-                  //         title={data.title}
-                  //         item={attachment}
-                  //       />
-                  //     );
-                  //   }
-
-                  //   // Default fallback (books, articles, poster, khotab, etc.)
-                  //   return (
-                  //     <ReadableFilesViewer
-                  //       key={idx}
-                  //       title={data.title}
-                  //       item={attachment}
-                  //     />
-                  //   );
                 })}
+                <ShareButton
+                  url={
+                    import.meta.env.VITE_BASE_WEB_URL +
+                    `knowledge-gift/${data.id}`
+                  }
+                  buttonText="Share"
+                  title={data.title}
+                  description={data.description}
+                />
               </div>
             </div>
           </div>

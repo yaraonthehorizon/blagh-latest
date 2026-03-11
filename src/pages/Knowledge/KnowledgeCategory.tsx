@@ -6,7 +6,6 @@ import { useQueryClient } from "@tanstack/react-query";
 import { useGetKnowledgeCategories } from "@/queries/knowledge/use-get-knowledge-categories";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { Badge } from "lucide-react";
 
 export function KnowledgeCategory() {
   const { categoryId } = useParams();

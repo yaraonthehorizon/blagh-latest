@@ -54,11 +54,12 @@ export function ReadableFilesViewer(props: ReadableFilesViewerProps) {
           href={props.item.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-center pt-1 capitalize"
+          className="text-center pt-1 capitalize  flex items-center gap-1 text-lg 
+"
         >
           {isDocx ? "Download Document" : "View file"}
         </a>
-        <ArrowRight className="inline-block ml-1 w-4 h-4 animate-pulse" />
+        <ArrowRight size={20} className="inline-block -mt-0.5 sm:mt-0 " />
       </div>
     </div>
   );
