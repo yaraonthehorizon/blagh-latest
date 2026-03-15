@@ -14,12 +14,12 @@ export function KnowledgeItemPage() {
   const { itemId } = useParams();
   const { t, i18n } = useTranslation();
 
+  console.log("KnowledgeItemPage itemId:", itemId);
+
   const sourceLanguage = i18n.language.startsWith("ar") ? "ar" : "en";
-  const { data, isLoading, error } = useGetKnowledgeItem<KnowledgeItem>(
-    itemId,
-    sourceLanguage,
-    sourceLanguage,
-  );
+  const { data, isLoading, error } = useGetKnowledgeItem<{
+    data: KnowledgeItem;
+  }>(itemId, sourceLanguage, sourceLanguage);
 
   console.log(data);
 
@@ -62,45 +62,48 @@ export function KnowledgeItemPage() {
       <div className="page-content">
         <Header
           headerTitleKey={
-            data.title.length > 20
-              ? data.title.slice(0, 20) + "..."
-              : data.title
+            data.data.title.length > 20
+              ? data.data.title.slice(0, 20) + "..."
+              : data.data.title
           }
           backButton
           className="line-clamp-2 text-sm"
         />
         <div className="grid grid-cols-1 gap-3 mt-10">
           <div
-            key={data.id}
+            key={data.data.id}
             className="relative flex flex-col w-full items-center justify-center rounded-xl bg-muted/20 py-8 px-7"
           >
             <div className="absolute top-2 end-5 w-10 "></div>
             <div className="text-center mt-2">
               <h3 className="font-bold text-foreground text-base leading-tight line-clamp-2">
-                {data.title}
+                {data.data.title}
               </h3>
               <p className="text-xs text-muted-foreground mt-1 line-clamp-3">
-                {data.description ? data.description : ""}
+                {data.data.description ? data.data.description : ""}
               </p>
             </div>
             <div className="flex items-center justify-center gap-2 mt-2">
               <Badge className="capitalize leading-none px-2 pt-1.5 sm:pt-0">
-                {t("content.knowledge.categories." + data.type.toLowerCase())}
+                {t(
+                  "content.knowledge.categories." +
+                    data.data.type.toLowerCase(),
+                )}
               </Badge>
               <Badge className="capitalize leading-none px-2 pt-1.5 sm:pt-0">
                 {t(
                   "content.knowledge.importance." +
-                    data.importance_level.toLowerCase(),
+                    data.data.importance_level.toLowerCase(),
                 )}
               </Badge>
             </div>
 
             <div className="flex items-center justify-center mt-2 gap-5 ">
               <div className="w-full ">
-                {data.attachments?.map((attachment, idx) => {
+                {data.data.attachments?.map((attachment, idx) => {
                   const extension =
                     attachment.extension_type?.toLowerCase() || "";
-                  const type = data.type.toLowerCase();
+                  const type = data.data.type.toLowerCase();
 
                   if (
                     ["mp4", "mov", "avi", "mkv", "webm"].includes(extension)
@@ -108,7 +111,7 @@ export function KnowledgeItemPage() {
                     return (
                       <VideoViewer
                         key={idx}
-                        title={data.title}
+                        title={data.data.title}
                         item={attachment}
                       />
                     );
@@ -119,12 +122,12 @@ export function KnowledgeItemPage() {
                       extension,
                     )
                   ) {
-                    const trackId = `${data.id}-${idx}`;
+                    const trackId = `${data.data.id}-${idx}`;
 
                     return (
                       <AudioViewer
                         key={idx}
-                        title={data.title}
+                        title={data.data.title}
                         trackId={trackId}
                         item={attachment}
                       />
@@ -139,8 +142,8 @@ export function KnowledgeItemPage() {
                     return (
                       <ApplicationViewer
                         key={idx}
-                        image={data.image}
-                        title={data.title}
+                        image={data.data.image}
+                        title={data.data.title}
                         item={attachment}
                       />
                     );
@@ -160,7 +163,7 @@ export function KnowledgeItemPage() {
                     return (
                       <ReadableFilesViewer
                         key={idx}
-                        title={data.title}
+                        title={data.data.title}
                         item={attachment}
                       />
                     );
@@ -169,11 +172,11 @@ export function KnowledgeItemPage() {
                 <ShareButton
                   url={
                     import.meta.env.VITE_BASE_WEB_URL +
-                    `knowledge-gift/${data.id}`
+                    `knowledge-gift/${data.data.id}`
                   }
                   buttonText="Share"
-                  title={data.title}
-                  description={data.description}
+                  title={data.data.title}
+                  description={data.data.description}
                 />
               </div>
             </div>

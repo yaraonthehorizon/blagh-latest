@@ -1,22 +1,16 @@
 import { useTranslation } from "react-i18next";
-import { useGetRecitationCategories } from "@/queries/quran/recitations/use-get-recitation-categories";
+import { useGetQuranRecitationCategories } from "@/queries/quran/recitations/use-get-quran-recitation-categories";
 import { CategoryCard } from "@/components/CategoryCard";
 import { useNavigate } from "react-router-dom";
 import { Header } from "@/components/Header";
-
-interface CategoryItem {
-  id: number | string;
-  title: string;
-  items_count?: number;
-}
+import { RecitationCategoryDetails } from "@/types/quran/recitation-category-details";
 
 export function Recitations() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const locale = i18n.language.startsWith("ar") ? "ar" : "en";
   const navigate = useNavigate();
-  const { data, isLoading, isError } = useGetRecitationCategories();
-
-  // Handle different response structures (array vs object with data property)
-  const categories = Array.isArray(data) ? (data as CategoryItem[]) : [];
+  const { data, isLoading, isError } =
+    useGetQuranRecitationCategories<RecitationCategoryDetails>(locale);
 
   if (isLoading) {
     return (
@@ -48,7 +42,7 @@ export function Recitations() {
     );
   }
 
-  if (categories.length === 0) {
+  if (data.length === 0) {
     return (
       <div className="page-content">
         <Header headerTitleKey="page_title.recitation_categories" backButton />
@@ -65,13 +59,12 @@ export function Recitations() {
         <Header headerTitleKey="page_title.recitation_categories" backButton />
         <div className="mt-6 animate-fade-up">
           <div className="grid grid-cols-1  gap-3">
-            {categories.map((item) => (
+            {data.map((item) => (
               <CategoryCard
-                key={item.id}
-                title={item.title}
-                count={item.items_count}
+                key={item.data.id}
+                title={item.data.title}
                 onClick={() => {
-                  navigate(`/recitations/${item.id}`);
+                  navigate(`/recitations/${item.data.id}`);
                 }}
               />
             ))}

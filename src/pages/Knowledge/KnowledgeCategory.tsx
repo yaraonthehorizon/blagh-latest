@@ -20,24 +20,25 @@ export function KnowledgeCategory() {
   }, []);
 
   // Try reading categories from cache
-  const cachedCategoriesResponse = queryClient.getQueryData<KnowledgeResponse>([
-    "knowledge-categories",
-    sourceLanguage,
-  ]);
+  const cachedCategoriesResponse = queryClient.getQueryData<{
+    data: KnowledgeResponse;
+  }>(["knowledge-categories", sourceLanguage]);
 
-  const cachedCategories = cachedCategoriesResponse?.sub_categories;
+  const cachedCategories = cachedCategoriesResponse?.data.all_sub_categories;
   const cachedCategory = cachedCategories?.find(
     (c) => c.id === Number(categoryId),
   );
   const cachedTitle = cachedCategory?.title;
-  const cachedSubCategories = cachedCategory?.sub_categories || [];
+  const cachedSubCategories = cachedCategory?.all_sub_categories || [];
   // If title is not in cache, fetch all categories to find it.
   const { data: fetchedCategoriesResponse, isLoading: isLoadingCategories } =
-    useGetKnowledgeCategories<KnowledgeResponse>(sourceLanguage);
+    useGetKnowledgeCategories<{ data: KnowledgeResponse }>(sourceLanguage);
 
-  const fetchedCategory = fetchedCategoriesResponse?.sub_categories?.find(
-    (c) => c.id === Number(categoryId),
-  );
+  const fetchedCategory =
+    fetchedCategoriesResponse?.data.all_sub_categories?.find(
+      (c) => c.id === Number(categoryId),
+    );
+
   const fetchedTitle = fetchedCategory?.title;
   const fetchedSubCategories = fetchedCategory?.sub_categories || [];
 
@@ -45,19 +46,6 @@ export function KnowledgeCategory() {
   const subCategories = cachedSubCategories.length
     ? cachedSubCategories
     : fetchedSubCategories;
-
-  if (!subCategories.length && !isLoadingCategories) {
-    return (
-      <div className="page-container">
-        <div className="page-content">
-          <Header headerTitleKey="" backButton />
-          <div className="flex items-center justify-center h-[400px]">
-            <p className="text-foreground">No subcategories found</p>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   if (isLoadingCategories && !cachedCategory) {
     return (

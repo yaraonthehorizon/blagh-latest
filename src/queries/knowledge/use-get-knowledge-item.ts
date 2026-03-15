@@ -10,7 +10,7 @@ export function useGetKnowledgeItem<T = unknown>(
     queryKey: ["knowledge-item", itemId, sourceLanguage, translationLanguage],
     queryFn: () => {
       return apiClient<T>(
-        "main/get-item/" + itemId + "/" + sourceLanguage + "/json",
+        `knowledge/get-item/${itemId}/${translationLanguage}/${sourceLanguage}`,
       );
     },
   });

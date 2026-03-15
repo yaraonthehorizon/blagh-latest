@@ -7,5 +7,7 @@ export interface KnowledgeResponse {
   description: string;
   translation_language: string;
   source_language: string;
+  categories: KnowledgeCategory[];
   sub_categories: KnowledgeCategory[];
+  all_sub_categories: KnowledgeCategory[];
 }

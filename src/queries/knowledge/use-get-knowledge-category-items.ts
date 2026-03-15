@@ -1,8 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { apiClient } from "@/lib/api-client";
-import { KnowledgeItem } from "@/types/knowledge";
 
-export function useGetKnowledgeCategory<T = unknown>(
+export function useGetKnowledgeCategoryItems<T = unknown>(
   categoryId: string,
   sourceLanguage: string,
   translationLanguage: string,
@@ -11,7 +10,7 @@ export function useGetKnowledgeCategory<T = unknown>(
 ) {
   return useQuery({
     queryKey: [
-      "knowledge-category",
+      "knowledge-category-items",
       categoryId,
       page,
       pageSize,
@@ -20,17 +19,7 @@ export function useGetKnowledgeCategory<T = unknown>(
     ],
     queryFn: () => {
       return apiClient<T>(
-        "main/get-category-items/" +
-          categoryId +
-          "/showall/" +
-          translationLanguage +
-          "/" +
-          sourceLanguage +
-          "/" +
-          page +
-          "/" +
-          pageSize +
-          "/json",
+        `knowledge/get-category-items/${categoryId}/${translationLanguage}/${sourceLanguage}/${page}/${pageSize}`,
       );
     },
   });

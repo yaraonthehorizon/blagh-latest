@@ -5,9 +5,7 @@ export function useGetKnowledgeCategories<T = unknown>(sourceLanguage: string) {
   return useQuery({
     queryKey: ["knowledge-categories", sourceLanguage],
     queryFn: () => {
-      return apiClient<T>(
-        "main/get-object-category-tree/" + sourceLanguage + "/json",
-      );
+      return apiClient<T>(`knowledge/get-category-tree/${sourceLanguage}`);
     },
   });
 }

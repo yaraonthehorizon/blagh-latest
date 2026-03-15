@@ -30,7 +30,11 @@ import {
 } from "./pages/Services/index";
 import { AudioPlayerProvider } from "./providers/AudioPlayerProvider";
 import { GlobalAudioPlayer } from "./components/global/GlobalAudioPlayer";
-import { Recitations, RecitationsCategory } from "./pages/Recitations";
+import {
+  Recitations,
+  RecitationsCategory,
+  RecitationCategoryItem,
+} from "./pages/Recitations";
 import { KnowledgeItemPage } from "./pages/Knowledge/KnowledgeItemPage";
 import { KnowledgeSubcategory } from "./pages/Knowledge/KnowledgeSubcategory";
 import { GlobalScrollToTop } from "./components/global/GlobalScrollToTop";
@@ -107,6 +111,10 @@ const App = () => {
                         <Route
                           path="/recitations/:categoryId"
                           element={<RecitationsCategory />}
+                        />
+                        <Route
+                          path="/recitations/:categoryId/:recitationId"
+                          element={<RecitationCategoryItem />}
                         />
                         <Route path="/profile" element={<Profile />} />
                         <Route

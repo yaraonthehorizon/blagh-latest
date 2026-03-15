@@ -9,7 +9,7 @@ export function useGetKnowledgeGiftItems<T = unknown>(sourceLanguage: string) {
     queryKey: ["knowledge-gift-items", sourceLanguage],
     queryFn: async () => {
       const promises = GIFT_ITEM_IDs.map((id) =>
-        apiClient<T>("main/get-item/" + id + "/" + sourceLanguage + "/json"),
+        apiClient<T>(`knowledge/get-item/${id}/${sourceLanguage}`),
       );
       return Promise.all(promises);
     },

@@ -4,17 +4,18 @@ import { apiClient } from "@/lib/api-client";
 export function useGetKnowledgeSubcategory<T = unknown>(
   subCategoryId: string,
   sourceLanguage: string,
+  translationLanguage: string,
 ) {
   return useQuery({
-    queryKey: ["knowledge-subcategory", subCategoryId, sourceLanguage],
+    queryKey: [
+      "knowledge-subcategory",
+      subCategoryId,
+      sourceLanguage,
+      translationLanguage,
+    ],
     queryFn: () => {
       return apiClient<T>(
-        "categories/viewitems/" +
-          subCategoryId +
-          "/showall/" +
-          sourceLanguage +
-          "/showall" +
-          "/json",
+        `knowledge/get-subcategory-items/${subCategoryId}/${sourceLanguage}/${translationLanguage}`,
       );
     },
   });

@@ -11,4 +11,5 @@ export interface KnowledgeCategory {
   has_children: true;
   category_items: string;
   sub_categories?: KnowledgeSubcategory[];
+  all_sub_categories?: KnowledgeSubcategory[];
 }
