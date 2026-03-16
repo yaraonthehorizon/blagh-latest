@@ -30,8 +30,6 @@ export function SendGift() {
     );
   }
 
-  console.log("data", data);
-
   if (isError) {
     return (
       <div className="page-container">

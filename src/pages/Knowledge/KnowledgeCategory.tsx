@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 
 export function KnowledgeCategory() {
   const { categoryId } = useParams();
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const sourceLanguage = i18n.language.startsWith("ar") ? "ar" : "en";
 
   const navigate = useNavigate();
@@ -24,12 +24,15 @@ export function KnowledgeCategory() {
     data: KnowledgeResponse;
   }>(["knowledge-categories", sourceLanguage]);
 
-  const cachedCategories = cachedCategoriesResponse?.data.all_sub_categories;
+  const cachedCategories = cachedCategoriesResponse?.data.sub_categories;
   const cachedCategory = cachedCategories?.find(
     (c) => c.id === Number(categoryId),
   );
+
   const cachedTitle = cachedCategory?.title;
-  const cachedSubCategories = cachedCategory?.all_sub_categories || [];
+
+  const cachedSubCategories = cachedCategory?.sub_categories || [];
+
   // If title is not in cache, fetch all categories to find it.
   const { data: fetchedCategoriesResponse, isLoading: isLoadingCategories } =
     useGetKnowledgeCategories<{ data: KnowledgeResponse }>(sourceLanguage);
@@ -47,7 +50,7 @@ export function KnowledgeCategory() {
     ? cachedSubCategories
     : fetchedSubCategories;
 
-  if (isLoadingCategories && !cachedCategory) {
+  if (!isLoadingCategories && !cachedCategory) {
     return (
       <div className="page-container">
         <div className="page-content">
@@ -69,7 +72,7 @@ export function KnowledgeCategory() {
   return (
     <div className="page-container">
       <div className="page-content">
-        <Header headerTitleKey={title} backButton className="text-lg" />
+        <Header headerTitleKey={title} backButton className="text-sm" />
         <div className="grid grid-cols-1 gap-3 mt-10">
           {subCategories.map((subCategory) => (
             <AppCard

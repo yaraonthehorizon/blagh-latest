@@ -5,7 +5,6 @@ import { apiClient } from "@/lib/api-client";
 export function useGetQuranRecitersAndAssociatedRecitations<T = unknown>(
   locale: string,
 ) {
-  // /quran/get-category/364794/ar/json
   return useQuery({
     queryKey: [
       "quran-get-reciters-and-associated-recitations",

@@ -1,10 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
 import { apiClient } from "@/lib/api-client";
 
-export function useGetKnowledgeSubcategory<T = unknown>(
+export function useGetKnowledgeSubcategoryItems<T = unknown>(
   subCategoryId: string,
   sourceLanguage: string,
   translationLanguage: string,
+  page: number,
+  pageSize: number,
 ) {
   return useQuery({
     queryKey: [
@@ -12,10 +14,12 @@ export function useGetKnowledgeSubcategory<T = unknown>(
       subCategoryId,
       sourceLanguage,
       translationLanguage,
+      page,
+      pageSize,
     ],
     queryFn: () => {
       return apiClient<T>(
-        `knowledge/get-subcategory-items/${subCategoryId}/${sourceLanguage}/${translationLanguage}`,
+        `knowledge/get-subcategory-items/${subCategoryId}/${sourceLanguage}/${translationLanguage}/${page}/${pageSize}`,
       );
     },
   });

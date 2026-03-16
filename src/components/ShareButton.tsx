@@ -48,9 +48,9 @@ export function ShareButton({
       onClick={handleShare}
       style={{ padding: "10px 20px", fontSize: "16px" }}
     >
-      <div className="flex items-center gap-2 text-lg mt-1">
+      <div className="flex items-center gap-2 text-lg -mt-0.5">
         {buttonText || ""}
-        <ShareIcon size={20} className="inline-block -mt-1.5 sm:mt-0 " />
+        <ShareIcon size={20} className="inline-block -pt-1.5 sm:-mt-1 " />
       </div>
     </button>
   );

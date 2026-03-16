@@ -20,25 +20,30 @@ interface ApplicationViewerProps {
   };
 }
 
-export function ApplicationViewer(props: ApplicationViewerProps) {
-  const isLink = props.item.extension_type === "LINK";
+export function ApplicationViewer({
+  key,
+  item,
+  image,
+  title,
+}: ApplicationViewerProps) {
+  const isLink = item.extension_type === "LINK";
   const isArchive = ["rar", "zip", "7z"].includes(
-    props.item.extension_type.toLowerCase(),
+    item.extension_type.toLowerCase(),
   );
 
   const { t } = useTranslation();
 
   return (
     <div
-      key={props.key}
+      key={key}
       className="flex flex-col gap-4 mt-5 w-full bg-card border rounded-xl p-4 shadow-sm"
     >
       <div className="flex gap-4 items-start">
         <div className="shrink-0">
-          {props.image ? (
+          {image ? (
             <img
-              src={props.image}
-              alt={props.title}
+              src={image}
+              alt={title}
               className="w-16 h-16 rounded-xl object-cover border bg-muted"
             />
           ) : (
@@ -53,18 +58,18 @@ export function ApplicationViewer(props: ApplicationViewerProps) {
         </div>
         <div className="flex flex-col flex-1 min-w-0">
           <h3 className="font-semibold text-base leading-tight text-foreground">
-            {props.title}
+            {title}
           </h3>
           <p className="text-sm text-muted-foreground mt-1 line-clamp-2">
-            {props.item.description || "No description available"}
+            {item.description || "No description available"}
           </p>
           <div className="flex items-center gap-2 mt-2">
             <span className="text-[10px] font-bold px-2 py-0.5 bg-secondary/20 text-secondary rounded uppercase">
-              {props.item.extension_type}
+              {item.extension_type}
             </span>
-            {props.item.size && props.item.size !== "0 B" && (
+            {item.size && item.size !== "0 B" && (
               <span className="text-[10px] text-muted-foreground font-medium">
-                {props.item.size}
+                {item.size}
               </span>
             )}
           </div>
@@ -72,7 +77,7 @@ export function ApplicationViewer(props: ApplicationViewerProps) {
       </div>
 
       <a
-        href={props.item.url}
+        href={item.url}
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center justify-center gap-2 w-full h-10 rounded-lg bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary/90 transition-colors"

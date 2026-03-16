@@ -13,21 +13,24 @@ interface AudioViewerProps {
     url: string;
   };
 }
-export function AudioViewer(props: AudioViewerProps) {
+export function AudioViewer({ key, item, trackId, title }: AudioViewerProps) {
   const { playTrack, togglePlay, currentTrack, isPlaying } = useAudioPlayer();
-  const isCurrent = currentTrack?.id === props.trackId;
+  const isCurrent = currentTrack?.id === trackId;
   const isPlayingTrack = isCurrent && isPlaying;
   return (
-    <div className="flex flex-col text-center items-center gap-4 rounded-lg border text-sm mt-5 bg-card p-3 text-card-foreground shadow-sm">
+    <div
+      key={key}
+      className="flex flex-col text-center items-center gap-4 rounded-lg border text-sm mt-5 bg-card p-5 text-card-foreground shadow-sm"
+    >
       <button
         onClick={() => {
           if (isCurrent) {
             togglePlay();
           } else {
             playTrack({
-              id: props.trackId,
-              title: props.title,
-              src: props.item.url,
+              id: trackId,
+              title: title,
+              src: item.url,
             });
           }
         }}
@@ -35,7 +38,7 @@ export function AudioViewer(props: AudioViewerProps) {
       >
         {isPlayingTrack ? <Pause /> : <Play />}
       </button>
-      <p className="flex-1 font-medium">{props.title}</p>
+      <p className="flex-1 font-medium">{title}</p>
     </div>
   );
 }
