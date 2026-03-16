@@ -1,30 +1,30 @@
 import { useTranslation } from "react-i18next";
 import { ReciterInfo } from "@/types/quran/reciter-info";
 import { ReciterCard } from "@/components/ReciterCard";
-import { useGetQuranReciterDetails } from "@/queries/quran/recitations/use-get-quran-reciter-details";
 import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useGetQuranRecitersAndAssociatedRecitations } from "@/queries/quran/recitations/use-get-quran-reciters-and-associated-recitations";
 
 export default function RecitersSection() {
-  const { t } = useTranslation();
   const navigate = useNavigate();
-
+  const { t, i18n } = useTranslation();
+  const locale = i18n.language.startsWith("ar") ? "ar" : "en";
   interface RecitersResponse {
-    authors?: ReciterInfo[];
-    data?: ReciterInfo[];
+    data: {
+      authors: ReciterInfo[];
+    };
   }
 
   const { data, isLoading, isError } =
-    useGetQuranReciterDetails<RecitersResponse>();
+    useGetQuranRecitersAndAssociatedRecitations<RecitersResponse>(locale);
 
-  console.log("Reciters data:", data);
   if (isLoading) {
     return (
-      <div className="flex gap-3">
+      <div className="flex snap-x snap-mandatory justify-between items-center overflow-scroll no-scrollbar w-full mt-14">
         {[1, 2, 3].map((i) => (
           <div
             key={i}
-            className="flex-shrink-0 w-[160px] h-[180px] bg-surface border border-bdr-p rounded-[20px] animate-pulse"
+            className="flex-shrink-0  overflow-x-auto  pb-3  no-scrollbar  w-[160px] h-[180px] bg-surface border border-bdr-p rounded-[20px] animate-pulse"
           ></div>
         ))}
       </div>
@@ -42,8 +42,8 @@ export default function RecitersSection() {
     <div className="pt-[22px] animate-fade-up [animation-delay:0.31s]">
       <div className="flex justify-between items-center  mb-[12px]">
         <div className="flex justify-between items-center w-full">
-          <span className="text-sm text-primary font-bold">
-            {t("reciters.title")}
+          <span className="text-sm text-foreground font-bold">
+            {t("content.home.reciters_title")}
           </span>
           <button
             className="flex items-center text-xs text-primary font-bold"
@@ -59,9 +59,9 @@ export default function RecitersSection() {
         <span className="text-[11px] text-primary2 cursor-pointer opacity-85"></span>
       </div>
       <div className="flex gap-3 overflow-x-auto  pb-3 snap-x snap-mandatory no-scrollbar">
-        {data?.authors && data.authors.length > 0 ? (
-          data.authors
-            .slice(10, 20)
+        {data.data.authors && data.data.authors.length > 0 ? (
+          data.data.authors
+            .slice(0, 10)
             .map((item: ReciterInfo) => (
               <ReciterCard
                 key={item.id}
