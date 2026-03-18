@@ -98,7 +98,9 @@ export function KnowledgeItemPage() {
             </div>
             <div className="flex items-center justify-center gap-2 mt-2">
               <Badge className="capitalize leading-none px-2 pt-1.5 sm:pt-0">
-                {t(itemData.type.toLowerCase())}
+                {t(
+                  "content.knowledge.categories." + itemData.type.toLowerCase(),
+                )}
               </Badge>
               <Badge className="capitalize leading-none px-2 pt-1.5 sm:pt-0">
                 {t(

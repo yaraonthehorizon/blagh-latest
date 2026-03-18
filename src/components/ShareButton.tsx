@@ -1,40 +1,29 @@
 import React from "react";
 import { Share } from "@capacitor/share";
-import { Share as ShareIcon } from "lucide-react";
+import { Share as ShareIcon, Copy as CopyIcon } from "lucide-react";
 interface ShareButtonProps {
   buttonText?: string;
   title: string;
   description?: string;
   url: string;
 }
-export function ShareButton({
-  buttonText,
-  title,
-  description,
-  url,
-}: ShareButtonProps) {
+export function ShareButton({ buttonText, title, url }: ShareButtonProps) {
   async function handleShare() {
-    // const baseWebUrl =
-    //   import.meta.env.VITE_BASE_WEB_URL || "http://localhost:5173";
-    // const currentPath = window.location.pathname;
-
-    // const urlToShare = Capacitor.isNativePlatform()
-    //   ? `${baseWebUrl}${currentPath}`
-    //   : window.location.href;
-
     try {
       const { value: canShare } = await Share.canShare();
+
+      // Ensure we don't accidentally get double slashes if the url prop has a leading slash
+      const cleanUrl = url.startsWith("/") ? url.slice(1) : url;
+      const fullUrl = `${window.location.origin}/blagh-latest/${cleanUrl}`;
 
       if (canShare) {
         await Share.share({
           title: title,
-          text:
-            description || "I just found this and thought you might like it.",
-          url: url,
+          url: fullUrl,
           dialogTitle: "Share with friends", // This property only applies to Android
         });
       } else {
-        await navigator.clipboard.writeText(url);
+        await navigator.clipboard.writeText(fullUrl);
         alert("Link copied to clipboard!");
       }
     } catch (error) {
@@ -48,9 +37,9 @@ export function ShareButton({
       onClick={handleShare}
       style={{ padding: "10px 20px", fontSize: "16px" }}
     >
-      <div className="flex justify-center items-center gap-2 text-xl mt-2">
+      <div className="flex justify-center items-center gap-2 text-xl mt-2 sm:mt-0">
         {buttonText || ""}
-        <ShareIcon size={20} className="inline-block mb-2.5  sm:-mt-1 " />
+        <ShareIcon size={20} className="inline-block mb-2.5  sm:mt-2 " />
       </div>
     </button>
   );
