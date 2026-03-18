@@ -1,6 +1,6 @@
 import React from "react";
 import { Share } from "@capacitor/share";
-import { Share as ShareIcon } from "lucide-react";
+import { Share as ShareIcon, Copy as CopyIcon } from "lucide-react";
 interface ShareButtonProps {
   buttonText?: string;
   title: string;
@@ -14,22 +14,12 @@ export function ShareButton({
   url,
 }: ShareButtonProps) {
   async function handleShare() {
-    // const baseWebUrl =
-    //   import.meta.env.VITE_BASE_WEB_URL || "http://localhost:5173";
-    // const currentPath = window.location.pathname;
-
-    // const urlToShare = Capacitor.isNativePlatform()
-    //   ? `${baseWebUrl}${currentPath}`
-    //   : window.location.href;
-
     try {
       const { value: canShare } = await Share.canShare();
 
       if (canShare) {
         await Share.share({
           title: title,
-          text:
-            description || "I just found this and thought you might like it.",
           url: url,
           dialogTitle: "Share with friends", // This property only applies to Android
         });
