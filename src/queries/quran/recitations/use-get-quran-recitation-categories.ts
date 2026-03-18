@@ -12,5 +12,7 @@ export function useGetQuranRecitationCategories<T = unknown>(locale: string) {
       );
       return Promise.all(promises);
     },
+    staleTime: 1000 * 60 * 60,
+    refetchOnWindowFocus: false,
   });
 }

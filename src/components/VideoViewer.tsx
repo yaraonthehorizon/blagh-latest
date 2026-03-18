@@ -1,8 +1,6 @@
 interface VideoViewerProps {
-  key: number;
-  title: string;
   item: {
-    order: number;
+    order?: number;
     size: string;
     extension_type: string;
     description: string;
@@ -10,11 +8,11 @@ interface VideoViewerProps {
   };
 }
 
-export function VideoViewer({ key, item, title }: VideoViewerProps) {
+export function VideoViewer({ item }: VideoViewerProps) {
   return (
-    <div className="border border-primary/50 rounded-xl">
+    <div className=" border border-primary/50 rounded-xl">
       <video
-        key={key}
+        key={item.url}
         controls
         className="w-full rounded-lg mb-2"
         preload="none"

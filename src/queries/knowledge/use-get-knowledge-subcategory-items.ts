@@ -22,5 +22,7 @@ export function useGetKnowledgeSubcategoryItems<T = unknown>(
         `knowledge/get-subcategory-items/${subCategoryId}/${sourceLanguage}/${translationLanguage}/${page}/${pageSize}`,
       );
     },
+    staleTime: 1000 * 60 * 60,
+    refetchOnWindowFocus: false,
   });
 }

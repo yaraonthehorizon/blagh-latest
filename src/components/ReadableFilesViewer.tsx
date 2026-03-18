@@ -6,7 +6,7 @@ interface ReadableFilesViewerProps {
   key: number;
   title: string;
   item: {
-    order: number;
+    order?: number;
     size: string;
     extension_type: string;
     description: string;
@@ -59,12 +59,12 @@ export function ReadableFilesViewer({
           href={item.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-center -pt-1  flex items-center gap-1 text-lg 
+          className="text-center pt-1 sm:pt-0  flex items-center gap-1 text-lg 
 "
         >
           {isDocx
-            ? `${t("content.category_items.download_file")} (${item.order + 1})`
-            : `${t("content.category_items.view_file")} (${item.order + 1})`}
+            ? `${t("content.category_items.download_file")} (${item.order !== undefined ? item.order + 1 : ""})`
+            : `${t("content.category_items.view_file")} (${item.order !== undefined ? item.order + 1 : ""})`}
         </a>
         <ArrowRight size={20} className="inline-block -mt-0.5 sm:mt-0 " />
       </div>

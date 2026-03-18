@@ -355,7 +355,7 @@
     "title": "Featured Reciters",
     "view_all": "All ",
     "listen_now": "Listen Now",
-    "error_loading": "An error occurred while loading the reciters. Please try again later."
+    "error_loading": "Error loading reciters. Please try again later."
   },
   "verse": {
     "daily_title": "Verse of the Day",

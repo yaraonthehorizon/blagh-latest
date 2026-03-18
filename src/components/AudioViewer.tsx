@@ -6,7 +6,7 @@ interface AudioViewerProps {
   title: string;
   trackId: string;
   item: {
-    order: number;
+    order?: number;
     size: string;
     extension_type: string;
     description: string;

@@ -15,5 +15,6 @@ export function useGetQuranRecitersAndAssociatedRecitations<T = unknown>(
         `quran/recitation/get-reciters-and-associated-recitations/364794/${locale}`,
       );
     },
+    refetchOnWindowFocus: false,
   });
 }

@@ -14,5 +14,7 @@ export function useGetQuranCategories(locale: string) {
     queryFn: () => {
       return apiClient<QuranCategory[]>("quran/get-categories/" + locale);
     },
+    staleTime: 1000 * 60 * 60,
+    refetchOnWindowFocus: false,
   });
 }

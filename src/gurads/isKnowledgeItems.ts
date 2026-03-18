@@ -1,11 +1,8 @@
-import {
-  KnowledgeDataItems,
-  KnowledgeItem,
-  KnowledgePagination,
-} from "@/types/knowledge";
+import { KnowledgeItem } from "@/types/knowledge";
+import { KnowledgeItemResponse } from "@/types/knowledge/knowledge-item";
 
-export function isKnowledgeItems(
-  data: KnowledgeDataItems,
-): data is { data: KnowledgeItem[]; links: KnowledgePagination } {
-  return "data" in data;
+export function isKnowledgeItemResponse(
+  item: KnowledgeItemResponse,
+): item is Extract<KnowledgeItemResponse, { data: KnowledgeItem }> {
+  return "data" in item && !!item.data;
 }
