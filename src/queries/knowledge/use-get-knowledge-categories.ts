@@ -7,5 +7,7 @@ export function useGetKnowledgeCategories<T = unknown>(sourceLanguage: string) {
     queryFn: () => {
       return apiClient<T>(`knowledge/get-category-tree/${sourceLanguage}`);
     },
+    staleTime: 1000 * 60 * 60,
+    refetchOnWindowFocus: false,
   });
 }

@@ -12,10 +12,10 @@ export interface KnowledgeItem {
   importance_level: string;
   image?: string;
   api_url: string;
-
   attachments: {
-    order: number;
+    id: number;
     size: string;
+    order?: number;
     extension_type: string;
     description: string;
     url: string;

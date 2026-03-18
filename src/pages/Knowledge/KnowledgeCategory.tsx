@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 
 export function KnowledgeCategory() {
   const { categoryId } = useParams();
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const sourceLanguage = i18n.language.startsWith("ar") ? "ar" : "en";
 
   const navigate = useNavigate();
@@ -24,12 +24,15 @@ export function KnowledgeCategory() {
     data: KnowledgeResponse;
   }>(["knowledge-categories", sourceLanguage]);
 
-  const cachedCategories = cachedCategoriesResponse?.data.all_sub_categories;
+  const cachedCategories = cachedCategoriesResponse?.data.sub_categories;
   const cachedCategory = cachedCategories?.find(
     (c) => c.id === Number(categoryId),
   );
+
   const cachedTitle = cachedCategory?.title;
-  const cachedSubCategories = cachedCategory?.all_sub_categories || [];
+
+  const cachedSubCategories = cachedCategory?.sub_categories || [];
+
   // If title is not in cache, fetch all categories to find it.
   const { data: fetchedCategoriesResponse, isLoading: isLoadingCategories } =
     useGetKnowledgeCategories<{ data: KnowledgeResponse }>(sourceLanguage);
@@ -47,12 +50,12 @@ export function KnowledgeCategory() {
     ? cachedSubCategories
     : fetchedSubCategories;
 
-  if (isLoadingCategories && !cachedCategory) {
+  if (!isLoadingCategories && !cachedCategory) {
     return (
       <div className="page-container">
         <div className="page-content">
           <Header headerTitleKey=" " backButton className="text-lg mt-2" />
-          <div className="mt-2 h-7 w-48 animate-pulse rounded-md bg-muted/40" />
+          <div className="absolute top-1 end-1/2 -me-3  mt-1 h-7 w-32 animate-pulse rounded-md bg-muted/40" />
           <div className="grid grid-cols-1 gap-3 mt-10">
             {[1, 2, 3, 4, 5, 6].map((i) => (
               <div
@@ -69,7 +72,13 @@ export function KnowledgeCategory() {
   return (
     <div className="page-container">
       <div className="page-content">
-        <Header headerTitleKey={title} backButton className="text-lg" />
+        <Header
+          headerTitleKey={
+            title.length > 12 ? title.slice(0, 12) + "..." : title || " "
+          }
+          backButton
+          className="text-lg"
+        />
         <div className="grid grid-cols-1 gap-3 mt-10">
           {subCategories.map((subCategory) => (
             <AppCard

@@ -57,7 +57,7 @@ export function Knowledge() {
         <Header headerTitleKey="page_title.knowledge" backButton />
         <div className="grid grid-cols-2 gap-3 mt-10">
           {data.data &&
-            data.data.categories.map((category) => (
+            data.data.sub_categories.map((category) => (
               <AppCard
                 onClick={() => navigate(`/knowledge/${category.id}`)}
                 key={category.id}

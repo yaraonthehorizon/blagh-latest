@@ -104,9 +104,8 @@
       "categories": {
         "books": "Books",
         "poster": "Poster",
-        "favourites": "Favourites",
+        "favorites": "Favourites",
         "apps": "Apps",
-
         "quran": "Quran",
         "cards": "Cards",
         "audios": "Audio",
@@ -120,7 +119,8 @@
         "critical": "Critical",
         "high": "High",
         "normal": "Medium",
-        "low": "Low"
+        "low": "Low",
+        "undefined": "Medium"
       },
       "items_count": "{{count}} items"
     },
@@ -270,6 +270,7 @@
     "category_items": {
       "download_file": "Download File",
       "view_file": "View File",
+      "share": " Share",
       "no_preview": "Preview is not available for this file type.",
       "disclaimer": "Disclaimer: You are responsible for any downloads or interactions with external links. Please ensure you trust the source before proceeding."
     }
@@ -354,7 +355,7 @@
     "title": "Featured Reciters",
     "view_all": "All ",
     "listen_now": "Listen Now",
-    "error_loading": "An error occurred while loading the reciters. Please try again later."
+    "error_loading": "Error loading reciters. Please try again later."
   },
   "verse": {
     "daily_title": "Verse of the Day",

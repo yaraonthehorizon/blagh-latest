@@ -1,16 +1,19 @@
 import { Header } from "@/components/Header";
 import { useTranslation } from "react-i18next";
 import { AppCard } from "@/components/AppCard";
-import { KnowledgeItem } from "@/types/knowledge";
 import { useGetKnowledgeGiftItems } from "@/queries/knowledge/use-get-knowledge-gift-items";
 import ShareButton from "@/components/ShareButton";
-import { KnowledgeItemResponse } from "@/types/knowledge/knowledge-item";
+import {
+  KnowledgeItem,
+  KnowledgeItemResponse,
+} from "@/types/knowledge/knowledge-item";
 export function SendGift() {
   const { t, i18n } = useTranslation();
   const sourceLanguage = i18n.language.startsWith("ar") ? "ar" : "en";
 
-  const { data, isLoading, isError } =
-    useGetKnowledgeGiftItems<KnowledgeItemResponse>(sourceLanguage);
+  const { data, isLoading, isError } = useGetKnowledgeGiftItems<{
+    data: KnowledgeItemResponse;
+  }>(sourceLanguage);
 
   if (isLoading) {
     return (
@@ -29,8 +32,6 @@ export function SendGift() {
       </div>
     );
   }
-
-  console.log("data", data);
 
   if (isError) {
     return (
@@ -57,43 +58,44 @@ export function SendGift() {
           backButton
           className="text-2xl mt-2"
         />
-        <p className="text-sm text-muted-foreground mb-6 -mt-2">
+        <p className="text-md text-muted-foreground mb-6 -mt-2">
           {t("content.profile.services.send_gift_subtext")}
         </p>
 
         <div className="space-y-3">
-          {data
-            .filter(
-              (item): item is KnowledgeItem =>
-                !(item as { error: string }).error,
-            )
-            .map((item) => (
-              <AppCard
-                key={item.id}
-                className="flex items-center justify-between rounded-xl bg-card p-4 shadow-card transition-transform hover:scale-[1.01] active:scale-[0.99]"
-              >
-                <div className="flex items-center gap-4">
-                  <div>
-                    <h3 className=" font-bold text-foreground text-base leading-tight">
-                      {item.title}
-                    </h3>
-                    <p className="text-xs text-muted-foreground mt-1">
-                      {item.description ? item.description : ""}
-                    </p>
+          {data &&
+            data
+              .filter(
+                (item): item is { data: KnowledgeItem } =>
+                  !("error" in item.data),
+              )
+              .map((item) => (
+                <AppCard
+                  key={item.data.id}
+                  className="flex items-center justify-between rounded-xl bg-card p-4 shadow-card transition-transform hover:scale-[1.01] active:scale-[0.99]"
+                >
+                  <div className="flex items-center gap-4">
+                    <div>
+                      <h3 className=" font-bold text-foreground text-base leading-tight">
+                        {item.data.title}
+                      </h3>
+                      <p className="text-xs text-muted-foreground mt-1">
+                        {item.data.description ? item.data.description : ""}
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-center justify-center shrink-0">
-                  <ShareButton
-                    url={
-                      import.meta.env.VITE_BASE_WEB_URL +
-                      `knowledge-gift/${item.id}`
-                    }
-                    title={item.title}
-                    description={item.description}
-                  />
-                </div>
-              </AppCard>
-            ))}
+                  <div className="flex items-center justify-center shrink-0">
+                    <ShareButton
+                      url={
+                        import.meta.env.VITE_BASE_WEB_URL +
+                        `knowledge-gift/${item.data.id}`
+                      }
+                      title={item.data.title}
+                      description={item.data.description}
+                    />
+                  </div>
+                </AppCard>
+              ))}
         </div>
       </div>
     </div>

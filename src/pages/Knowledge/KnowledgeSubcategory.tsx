@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { AppCard } from "@/components/AppCard";
 import { useNavigate, useParams } from "react-router-dom";
@@ -6,16 +7,25 @@ import { useQueryClient } from "@tanstack/react-query";
 import { useGetKnowledgeCategories } from "@/queries/knowledge/use-get-knowledge-categories";
 import { useTranslation } from "react-i18next";
 import { Badge } from "@/components/ui/badge";
-import { useGetKnowledgeSubcategory } from "@/queries/knowledge/use-get-knowledge-subcategory";
-import type { KnowledgeSubcategory } from "@/types/knowledge";
+import { useGetKnowledgeSubcategoryItems } from "@/queries/knowledge/use-get-knowledge-subcategory-items";
+import type { KnowledgeItem, KnowledgeSubcategory } from "@/types/knowledge";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { PaginationControls } from "@/components/Pagination";
 export function KnowledgeSubcategory() {
   const { categoryId, subCategoryId } = useParams();
   const { t, i18n } = useTranslation();
+  const [page, setPage] = useState(1);
+  const pageSize = 25;
+
   const sourceLanguage = i18n.language.startsWith("ar") ? "ar" : "en";
   const translationLanguage = i18n.language.startsWith("ar") ? "ar" : "en";
 
   const navigate = useNavigate();
   const queryClient = useQueryClient();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [page]);
 
   // Try reading categories from cache
   const cachedCategoriesResponse = queryClient.getQueryData<{
@@ -48,22 +58,26 @@ export function KnowledgeSubcategory() {
 
   const title = cachedTitle || fetchedTitle || "";
 
-  const { data, isLoading, isError } = useGetKnowledgeSubcategory<{
-    data: KnowledgeSubcategory[];
-  }>(subCategoryId, sourceLanguage, translationLanguage);
+  const { data, isLoading, isError } = useGetKnowledgeSubcategoryItems<{
+    data: {
+      data: KnowledgeItem[];
+      page: number;
+      pageSize: number;
+      total: number;
+      totalPages: number;
+    };
+  }>(subCategoryId, sourceLanguage, translationLanguage, page, pageSize);
 
   const isPageLoading =
     (isLoading && !data) || (isLoadingCategories && !cachedTitle);
 
-  console.log("Knowledge category subcategories:", data);
-
-  if (isError) {
+  if (isError || "error" in (data ?? {})) {
     return (
       <div className="page-container">
         <div className="page-content">
           <Header headerTitleKey="page_title.knowledge" backButton />
-          <div className=" flex items-center justify-center h-full">
-            <p className="text-destructive">Error loading categories</p>
+          <div className=" flex items-center justify-center h-[400px]">
+            <p className="text-foreground text-lg">Error loading categories</p>
           </div>
         </div>
       </div>
@@ -73,36 +87,34 @@ export function KnowledgeSubcategory() {
   if (isPageLoading)
     return (
       <div className="page-container">
-        <div className="page-content">
+        <div className="relative page-content">
           <Header headerTitleKey=" " backButton className="text-lg mt-2" />
-          <div className="mt-2 h-7 w-48 animate-pulse rounded-md bg-muted/40" />
+          <div className="absolute top-1 end-1/2 -me-3  mt-1 h-7 w-32 animate-pulse rounded-md bg-muted/40" />
+          <div className="grid grid-cols-1 gap-3 mt-10">
+            {[1, 2, 3, 4, 5, 6].map((i) => (
+              <div
+                key={i}
+                className="h-24 rounded-xl bg-muted/40 animate-pulse"
+              />
+            ))}
+          </div>
         </div>
-      </div>
-    );
-
-  if (isLoading)
-    return (
-      <div className="grid grid-cols-1 gap-3 mt-10">
-        {[1, 2, 3, 4, 5, 6].map((i) => (
-          <div key={i} className="h-24 rounded-xl bg-muted/40 animate-pulse" />
-        ))}
-      </div>
-    );
-
-  if (isError || "error" in (data ?? {}))
-    return (
-      <div className="flex items-center justify-center h-[400px]">
-        <p className=" text-foreground">No Subcategory Data to Display</p>
       </div>
     );
 
   return (
     <div className="page-container">
       <div className="page-content">
-        <Header headerTitleKey={title || " "} backButton className="text-lg" />
+        <Header
+          headerTitleKey={
+            title.length > 12 ? title.slice(0, 12) + "..." : title || " "
+          }
+          backButton
+          className="text-lg"
+        />
 
         <div className="grid grid-cols-1 gap-3 mt-10">
-          {data?.data.map((item) => (
+          {data?.data.data.map((item) => (
             <AppCard
               key={item.id}
               onClick={() =>
@@ -122,6 +134,13 @@ export function KnowledgeSubcategory() {
                     t(
                       "content.knowledge.categories." + item.type.toLowerCase(),
                     )}
+                  {/* {item.importance_level &&
+                    t(
+                      "content.knowledge.importance." +
+                        item.importance_level.toLowerCase(),
+                    )} */}
+                </Badge>
+                <Badge className="capitalize leading-none px-2 pt-1.5 sm:pt-0">
                   {item.importance_level &&
                     t(
                       "content.knowledge.importance." +
@@ -132,6 +151,11 @@ export function KnowledgeSubcategory() {
             </AppCard>
           ))}
         </div>
+        <PaginationControls
+          page={page}
+          totalPages={data?.data?.totalPages}
+          setPage={setPage}
+        />
       </div>
     </div>
   );
