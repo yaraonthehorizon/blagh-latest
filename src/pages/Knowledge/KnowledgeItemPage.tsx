@@ -73,6 +73,7 @@ export function KnowledgeItemPage() {
   // Safely extract our expected item shape after the error checks
   const itemData = ("data" in data ? data.data : data) as KnowledgeItem;
 
+  console.log("Item Data:", itemData);
   return (
     <div className="page-container">
       <div className="page-content">
@@ -98,7 +99,9 @@ export function KnowledgeItemPage() {
             </div>
             <div className="flex items-center justify-center gap-2 mt-2">
               <Badge className="capitalize leading-none px-2 pt-1.5 sm:pt-0">
-                {t(itemData.type.toLowerCase())}
+                {t(
+                  "content.knowledge.categories." + itemData.type.toLowerCase(),
+                )}
               </Badge>
               <Badge className="capitalize leading-none px-2 pt-1.5 sm:pt-0">
                 {t(
