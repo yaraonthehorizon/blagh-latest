@@ -73,7 +73,6 @@ export function KnowledgeItemPage() {
   // Safely extract our expected item shape after the error checks
   const itemData = ("data" in data ? data.data : data) as KnowledgeItem;
 
-  console.log("Item Data:", itemData);
   return (
     <div className="page-container">
       <div className="page-content">
