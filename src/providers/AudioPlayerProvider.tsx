@@ -11,7 +11,7 @@ import React, {
 export interface Track {
   id: string | number;
   title: string;
-  reciterName: string;
+  reciterName?: string;
   src: string;
   image?: string;
 }

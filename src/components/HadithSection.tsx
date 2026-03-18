@@ -5,8 +5,8 @@ export default function HadithSection() {
   return (
     <div className=" pt-[22px] animate-fade-up [animation-delay:0.28s]">
       <div className="flex justify-between items-center mb-[12px]">
-        <span className="text-base font-bold text-fore">
-          {t("hadith_section.daily_title")}
+        <span className="text-base font-bold text-foreground">
+          {t("content.home.hadith_title")}
         </span>
       </div>
       <div className="bg-hadith-bg border border-hadith-bdr rounded-[22px] p-6 px-[22px] relative overflow-hidden shadow-sm">

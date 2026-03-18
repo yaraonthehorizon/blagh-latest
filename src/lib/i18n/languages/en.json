@@ -86,7 +86,11 @@
       "daily_verse": "Today's Verse",
       "daily_hadith": "Today's Hadith",
       "daily_reflection": "Today's Reflection",
-      "daily_reflection_prompt": "What act of kindness can you do today that no one will ever know about?"
+      "daily_reflection_prompt": "What act of kindness can you do today that no one will ever know about?",
+      "articles_title": "Selected Articles",
+      "reciters_title": "Selected Reciters",
+      "hadith_title": " Hadith of the Day",
+      "verse_title": " Verse of the Day"
     },
     "children": {
       "title": "Children World",
@@ -98,14 +102,27 @@
     "knowledge": {
       "browse_topics": "Browse Topics",
       "categories": {
-        "quran": "Quranic Sciences",
-        "tafsir": "Tafsir (Exegesis)",
-        "sunnah": "Sunnah",
-        "creed": "Aqidah (Creed)",
-        "fiqh": "Fiqh (Jurisprudence)",
-        "seerah": "Seerah (Biography)",
-        "tazkiyah": "Tazkiyah (Purification)"
-      }
+        "books": "Books",
+        "poster": "Poster",
+        "favorites": "Favourites",
+        "apps": "Apps",
+        "quran": "Quran",
+        "cards": "Cards",
+        "audios": "Audio",
+        "videos": "Video",
+        "khotab": "Sermons",
+        "articles": "Articles",
+        "fatwa": "Fatwas"
+      },
+      "importance": {
+        "exceptional": "Exceptional",
+        "critical": "Critical",
+        "high": "High",
+        "normal": "Medium",
+        "low": "Low",
+        "undefined": "Medium"
+      },
+      "items_count": "{{count}} items"
     },
     "athkar": {
       "tools": {
@@ -249,6 +266,13 @@
       "duaa_subtext": "Learn about selected supplications for every occasion.",
       "tsbeeh_subtext": "Count your tasbeehs easily with our simple and smooth digital counter, perfect for morning and evening azkar.",
       "calendar_subtext": "Keep track of Islamic dates and occasions with our comprehensive Hijri calendar, including holidays and religious observances."
+    },
+    "category_items": {
+      "download_file": "Download File",
+      "view_file": "View File",
+      "share": " Share",
+      "no_preview": "Preview is not available for this file type.",
+      "disclaimer": "Disclaimer: You are responsible for any downloads or interactions with external links. Please ensure you trust the source before proceeding."
     }
   },
 
@@ -305,7 +329,6 @@
     "text": "In the name of Allah, the Most Gracious, the Most Merciful"
   },
   "hadith_section": {
-    "daily_title": "Hadith of the Day",
     "source": "Sahih Al-Jami",
     "text": "«The best of people are those that bring most benefit to the rest of mankind.»",
     "narrator": "— Prophet Muhammad ﷺ"
@@ -332,7 +355,7 @@
     "title": "Featured Reciters",
     "view_all": "All ",
     "listen_now": "Listen Now",
-    "error_loading": "An error occurred while loading the reciters. Please try again later."
+    "error_loading": "Error loading reciters. Please try again later."
   },
   "verse": {
     "daily_title": "Verse of the Day",

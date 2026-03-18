@@ -8,13 +8,13 @@ interface QuranCategory {
   narrator: string;
 }
 
-export function useGetQuranCategories() {
-  const locale = i18n.language?.startsWith("ar") ? "ar" : "en";
-
+export function useGetQuranCategories(locale: string) {
   return useQuery({
     queryKey: ["quran-categories"],
     queryFn: () => {
       return apiClient<QuranCategory[]>("quran/get-categories/" + locale);
     },
+    staleTime: 1000 * 60 * 60,
+    refetchOnWindowFocus: false,
   });
 }

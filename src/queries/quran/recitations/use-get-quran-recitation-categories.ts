@@ -1,19 +1,18 @@
 import { apiClient } from "@/lib/api-client";
-import i18n from "@/lib/i18n/init";
 import { useQuery } from "@tanstack/react-query";
 
 const CATEGORY_IDS = [364764, 364777, 364774, 364771, 364768];
 
-export function useGetRecitationCategories() {
-  const locale = i18n.language.startsWith("ar") ? "ar" : "en";
-
+export function useGetQuranRecitationCategories<T = unknown>(locale: string) {
   return useQuery({
-    queryKey: ["quran-categories", locale],
+    queryKey: ["quran-category", locale],
     queryFn: async () => {
       const promises = CATEGORY_IDS.map((id) =>
-        apiClient(`quran/get-category/${id}/${locale}/json`),
+        apiClient<T>(`quran/recitation/get-category/${id}/${locale}`),
       );
       return Promise.all(promises);
     },
+    staleTime: 1000 * 60 * 60,
+    refetchOnWindowFocus: false,
   });
 }

@@ -7,7 +7,7 @@ import { AuthProvider } from "@/contexts/AuthContext";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import BottomNav from "@/components/BottomNav";
 import Index from "./pages/Index";
-import Knowledge from "./pages/Knowledge";
+import { Knowledge, KnowledgeCategory } from "./pages/Knowledge";
 import Baligh from "./pages/Baligh";
 import NotFound from "./pages/NotFound";
 import { Athkar } from "./pages/Athkar";
@@ -29,9 +29,15 @@ import {
   Services,
 } from "./pages/Services/index";
 import { AudioPlayerProvider } from "./providers/AudioPlayerProvider";
-import { GlobalAudioPlayer } from "./components/GlobalAudioPlayer";
-import RecitationCategories from "./pages/Recitations/Recitations";
-import RecitationsCategory from "./pages/Recitations/RecitationsCategory";
+import { GlobalAudioPlayer } from "./components/global/GlobalAudioPlayer";
+import {
+  Recitations,
+  RecitationsCategory,
+  RecitationCategoryItem,
+} from "./pages/Recitations";
+import { KnowledgeItemPage } from "./pages/Knowledge/KnowledgeItemPage";
+import { KnowledgeSubcategory } from "./pages/Knowledge/KnowledgeSubcategory";
+import { GlobalScrollToTop } from "./components/global/GlobalScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -65,6 +71,7 @@ const App = () => {
                 <Sonner />
                 <AuthProvider>
                   <BrowserRouter basename={import.meta.env.BASE_URL}>
+                    <GlobalScrollToTop />
                     <Routes>
                       <Route element={<MainLayout />}>
                         <Route path="/" element={<Index />} />
@@ -76,19 +83,38 @@ const App = () => {
                         <Route path="/hadith" element={<Hadith />} />
                         <Route path="/athkar" element={<Athkar />} />
                         <Route path="/knowledge" element={<Knowledge />} />
+                        <Route
+                          path="/knowledge/:categoryId"
+                          element={<KnowledgeCategory />}
+                        />
+                        <Route
+                          path="/knowledge/:categoryId/:subCategoryId"
+                          element={<KnowledgeSubcategory />}
+                        />
+
+                        <Route
+                          path="/knowledge/:categoryId/:subCategoryId/:itemId"
+                          element={<KnowledgeItemPage />}
+                        />
+                        <Route
+                          path="/knowledge-gift/:itemId"
+                          element={<KnowledgeItemPage />}
+                        />
+
                         <Route path="/baligh" element={<Baligh />} />
                         <Route path="/children" element={<Children />} />
                         <Route
                           path="/children/:categoryId"
                           element={<ChildrenCategory />}
                         />
-                        <Route
-                          path="/recitations"
-                          element={<RecitationCategories />}
-                        />
+                        <Route path="/recitations" element={<Recitations />} />
                         <Route
                           path="/recitations/:categoryId"
                           element={<RecitationsCategory />}
+                        />
+                        <Route
+                          path="/recitations/:categoryId/:recitationId"
+                          element={<RecitationCategoryItem />}
                         />
                         <Route path="/profile" element={<Profile />} />
                         <Route

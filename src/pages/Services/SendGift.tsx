@@ -1,36 +1,54 @@
-import { BookOpen, Scroll, Shield, Share } from "lucide-react";
 import { Header } from "@/components/Header";
 import { useTranslation } from "react-i18next";
 import { AppCard } from "@/components/AppCard";
-
+import { useGetKnowledgeGiftItems } from "@/queries/knowledge/use-get-knowledge-gift-items";
+import ShareButton from "@/components/ShareButton";
+import {
+  KnowledgeItem,
+  KnowledgeItemResponse,
+} from "@/types/knowledge/knowledge-item";
 export function SendGift() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const sourceLanguage = i18n.language.startsWith("ar") ? "ar" : "en";
 
-  function handleShare(e: React.MouseEvent, title: string, subtitle: string) {}
+  const { data, isLoading, isError } = useGetKnowledgeGiftItems<{
+    data: KnowledgeItemResponse;
+  }>(sourceLanguage);
 
-  const giftItems = [
-    {
-      id: "quran",
-      title: "Surah Al-Mulk",
-      subtitle: "The Sovereignty • 30 Ayahs",
-      icon: BookOpen,
-      color: "text-emerald-600 bg-emerald-50",
-    },
-    {
-      id: "hadith",
-      title: "Virtues of Charity",
-      subtitle: "Riyad as-Salihin",
-      icon: Scroll,
-      color: "text-amber-600 bg-amber-50",
-    },
-    {
-      id: "knowledge",
-      title: "Understanding Tawheed",
-      subtitle: "Islamic Creed",
-      icon: Shield,
-      color: "text-indigo-600 bg-indigo-50",
-    },
-  ];
+  if (isLoading) {
+    return (
+      <div className="page-container">
+        <div className="page-content">
+          <Header headerTitleKey="" backButton className="text-2xl mt-2" />
+          <div className="grid grid-cols-1 gap-3 mt-10">
+            {[1, 2, 3, 4, 5, 6].map((i) => (
+              <div
+                key={i}
+                className="h-32 rounded-xl bg-muted/20 animate-pulse"
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (isError) {
+    return (
+      <div className="page-container">
+        <div className="page-content">
+          <Header
+            headerTitleKey="page_title.knowledge"
+            backButton
+            className="text-xl"
+          />
+          <div className=" flex items-center justify-center h-[400px]">
+            <p className="text-foreground text-lg">Error loading items.</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="page-container">
@@ -40,40 +58,44 @@ export function SendGift() {
           backButton
           className="text-2xl mt-2"
         />
-        {/* <p className="text-sm text-muted-foreground mb-6 -mt-2">
+        <p className="text-md text-muted-foreground mb-6 -mt-2">
           {t("content.profile.services.send_gift_subtext")}
-        </p> */}
+        </p>
 
         <div className="space-y-3">
-          {giftItems.map((item) => (
-            <AppCard
-              key={item.id}
-              className="flex items-center justify-between rounded-xl bg-card p-4 shadow-card transition-transform hover:scale-[1.01] active:scale-[0.99]"
-            >
-              <div className="flex items-center gap-4">
-                <div
-                  className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full ${item.color}`}
+          {data &&
+            data
+              .filter(
+                (item): item is { data: KnowledgeItem } =>
+                  !("error" in item.data),
+              )
+              .map((item) => (
+                <AppCard
+                  key={item.data.id}
+                  className="flex items-center justify-between rounded-xl bg-card p-4 shadow-card transition-transform hover:scale-[1.01] active:scale-[0.99]"
                 >
-                  <item.icon className="h-6 w-6" />
-                </div>
-                <div>
-                  <h3 className=" font-bold text-foreground text-base leading-tight">
-                    {item.title}
-                  </h3>
-                  <p className="text-xs text-muted-foreground mt-1">
-                    {item.subtitle}
-                  </p>
-                </div>
-              </div>
-              <button
-                onClick={(e) => handleShare(e, item.title, item.subtitle)}
-                className="rounded-full bg-secondary/10 p-2.5 text-secondary hover:bg-secondary/20 transition-colors"
-                aria-label="Share"
-              >
-                <Share className="h-5 w-5" />
-              </button>
-            </AppCard>
-          ))}
+                  <div className="flex items-center gap-4">
+                    <div>
+                      <h3 className=" font-bold text-foreground text-base leading-tight">
+                        {item.data.title}
+                      </h3>
+                      <p className="text-xs text-muted-foreground mt-1">
+                        {item.data.description ? item.data.description : ""}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-center shrink-0">
+                    <ShareButton
+                      url={
+                        import.meta.env.VITE_BASE_WEB_URL +
+                        `knowledge-gift/${item.data.id}`
+                      }
+                      title={item.data.title}
+                      description={item.data.description}
+                    />
+                  </div>
+                </AppCard>
+              ))}
         </div>
       </div>
     </div>

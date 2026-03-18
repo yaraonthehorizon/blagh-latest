@@ -18,7 +18,7 @@ export interface RecitationInfo {
     type: string;
     kind: string;
   }[];
-  attachments?: {
+  attachments: {
     id: number;
     order: number;
     title: string;

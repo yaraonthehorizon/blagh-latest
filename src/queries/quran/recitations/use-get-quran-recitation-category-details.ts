@@ -11,7 +11,11 @@ export function useGetQuranRecitationCategoryDetails<T = unknown>(
   return useQuery({
     queryKey: ["quran-recitation-category", recitationId, locale],
     queryFn: () => {
-      return apiClient<T>(`quran/get-category/${recitationId}/${locale}/json`);
+      return apiClient<T>(
+        `quran/recitation/get-category/${recitationId}/${locale}`,
+      );
     },
+    staleTime: 1000 * 60 * 60,
+    refetchOnWindowFocus: false,
   });
 }

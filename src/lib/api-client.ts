@@ -1,5 +1,7 @@
-const BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
-
+const BASE_URL = import.meta.env.VITE_API_BASE_URL.replace(
+  "localhost",
+  window.location.hostname,
+);
 interface RequestConfig extends RequestInit {
   token?: string;
 }
@@ -18,7 +20,7 @@ export async function apiClient<T>(
     ...customConfig,
   };
 
-  const url = endpoint.startsWith("http") ? endpoint : `${BASE_URL}${endpoint}`;
+  const url = `${BASE_URL}${endpoint}`;
   const response = await fetch(url, config);
 
   if (!response.ok) {
