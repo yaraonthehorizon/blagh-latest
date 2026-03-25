@@ -366,6 +366,10 @@
     "text_trans": "\"For indeed, with hardship [will be] ease.\"",
     "ref": "Ash-Sharh 94:5"
   },
+  "share": {
+    "dialog_title": "Share with friends",
+    "link_copied": "Link copied to clipboard!"
+  },
   "baligh": {
     "subtitle": "Your AI spiritual companion",
     "welcome": "Assalamu Alaikum",
@@ -377,7 +381,9 @@
       "athkar": "What are the morning athkar?",
       "kursi": "Compare tafsir views on Ayat Al-Kursi"
     },
+    "redirect": "Open Link",
     "input_placeholder": "Ask Baligh anything...",
-    "signin_placeholder": "Sign in to chat..."
+    "signin_placeholder": "Sign in to chat...",
+    "error_response": "Failed to get response"
   }
 }

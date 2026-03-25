@@ -1,134 +1,80 @@
-import { Bot, Send, Loader2 } from "lucide-react";
+import { Send, Loader2, Link, Dot } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
-import { useAuth } from "@/contexts/AuthContext";
-import { useNavigate } from "react-router-dom";
-import { toast } from "sonner";
 import balaghIcon from "@/assets/balagh-icon.png";
-import ReactMarkdown from "react-markdown";
 import { useTranslation } from "react-i18next";
 import { Header } from "@/components/Header";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { useMutateChatMessage } from "@/mutations/chat/use-mutate-chat-message";
+import { ChatMessage } from "@/types/chat";
+import { ChatApiResponse } from "@/types/chat/chat-api-response";
+import { toast } from "sonner";
+import { TypingMessage } from "@/components/TypingMessage";
+import { cn } from "@/lib/utils";
 
-type Msg = { role: "user" | "assistant"; content: string };
-
-const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/baligh-chat`;
-
-const Baligh = () => {
-  const { t } = useTranslation();
-  const [messages, setMessages] = useState<Msg[]>([]);
+export function Baligh() {
+  const { t, i18n } = useTranslation();
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const { user } = useAuth();
-  const navigate = useNavigate();
+
+  const { isPending, mutate: chatMutation } = useMutateChatMessage();
 
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    messagesEndRef.current?.scrollIntoView({ behavior: "auto" });
   }, [messages]);
 
   const suggestions = [
     t("baligh.suggestions.fatiha"),
     t("baligh.suggestions.plan"),
     t("baligh.suggestions.athkar"),
-    t("baligh.suggestions.kursi"),
   ];
 
-  const sendMessage = async (text: string) => {
-    if (!user) {
-      navigate("/auth");
-      return;
-    }
-    if (!text.trim() || isLoading) return;
+  function sendMessage(text: string) {
+    if (!text.trim() || isPending) return;
+    const userMsg: ChatMessage = {
+      id: crypto.randomUUID(),
+      role: "user",
+      content: text.trim(),
+    };
 
-    const userMsg: Msg = { role: "user", content: text.trim() };
-    setMessages((prev) => [...prev, userMsg]);
+    setMessages((prevMessages) => [...prevMessages, userMsg]);
     setInput("");
-    setIsLoading(true);
 
-    let assistantSoFar = "";
-    const allMessages = [...messages, userMsg];
-
-    try {
-      const resp = await fetch(CHAT_URL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+    chatMutation(
+      { messages: [userMsg], locale: i18n.language },
+      {
+        onSuccess: async (response: ChatApiResponse) => {
+          setMessages((prev) => [
+            ...prev,
+            {
+              id: response.requestIdentifier,
+              role: "assistant",
+              content: {
+                message: response?.data?.response?.message || "No message",
+                redirectUrl: response?.data?.response?.redirectUrl,
+              },
+            },
+          ]);
         },
-        body: JSON.stringify({ messages: allMessages }),
-      });
+        onError: (error) => {
+          toast.error(error.message || t("baligh.error_response"));
+        },
+      },
+    );
+  }
 
-      if (!resp.ok) {
-        const errData = await resp.json().catch(() => ({}));
-        throw new Error(errData.error || `Error ${resp.status}`);
-      }
-
-      if (!resp.body) throw new Error("No response body");
-
-      const reader = resp.body.getReader();
-      const decoder = new TextDecoder();
-      let textBuffer = "";
-
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        textBuffer += decoder.decode(value, { stream: true });
-
-        let newlineIndex: number;
-        while ((newlineIndex = textBuffer.indexOf("\n")) !== -1) {
-          let line = textBuffer.slice(0, newlineIndex);
-          textBuffer = textBuffer.slice(newlineIndex + 1);
-          if (line.endsWith("\r")) line = line.slice(0, -1);
-          if (line.startsWith(":") || line.trim() === "") continue;
-          if (!line.startsWith("data: ")) continue;
-          const jsonStr = line.slice(6).trim();
-          if (jsonStr === "[DONE]") break;
-          try {
-            const parsed = JSON.parse(jsonStr);
-            const content = parsed.choices?.[0]?.delta?.content as
-              | string
-              | undefined;
-            if (content) {
-              assistantSoFar += content;
-              setMessages((prev) => {
-                const last = prev[prev.length - 1];
-                if (last?.role === "assistant") {
-                  return prev.map((m, i) =>
-                    i === prev.length - 1
-                      ? { ...m, content: assistantSoFar }
-                      : m,
-                  );
-                }
-                return [
-                  ...prev,
-                  { role: "assistant", content: assistantSoFar },
-                ];
-              });
-            }
-          } catch {
-            textBuffer = line + "\n" + textBuffer;
-            break;
-          }
-        }
-      }
-    } catch (e: unknown) {
-      console.error(e);
-      if (e instanceof Error)
-        toast.error(e.message || "Failed to get response");
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
+  function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     sendMessage(input);
-  };
+  }
 
   const hasMessages = messages.length > 0;
 
   return (
-    <div className="page-container ">
-      <div className="page-content">
+    <div className="h-[100dvh] page-container overflow-hidden flex flex-col gap-10 ">
+      {/* Header */}
+      <div className="page-content w-full">
         <Header
           headerTitleKey="page_title.baligh"
           backButton
@@ -136,100 +82,150 @@ const Baligh = () => {
         />
       </div>
 
-      {!hasMessages ? (
-        <div className="flex-1 flex flex-col items-center justify-center  page-content">
-          <img
-            src={balaghIcon}
-            alt="Baligh"
-            className="mb-4 h-16 w-16 opacity-60"
-          />
-          <p className=" text-lg font-semibold text-foreground text-center">
-            {t("baligh.welcome")}
-          </p>
-          <p className="mt-2 max-w-xs text-center text-sm text-muted-foreground">
-            {t("baligh.intro")}
-          </p>
-          <p className="mt-4 rounded-lg bg-muted px-3 py-1.5 text-xs text-muted-foreground">
-            {t("baligh.disclaimer")}
-          </p>
-          <div className="mt-6 w-full max-w-sm space-y-2">
-            {suggestions.map((s) => (
-              <button
-                key={s}
-                onClick={() => sendMessage(s)}
-                className="w-full rounded-lg border border-border bg-card px-4 py-2.5 text-left text-sm text-foreground transition-colors hover:bg-muted"
-              >
-                {s}
-              </button>
-            ))}
-          </div>
-        </div>
-      ) : (
-        <div className="flex-1 overflow-y-auto px-5 space-y-4 page-content">
-          {messages.map((m, i) => (
-            <div
-              key={i}
-              className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}
-            >
+      {/* Messages */}
+      {hasMessages ? (
+        <div className="flex-grow min-h-0 overflow-y-auto overscroll-contain space-y-5 page-content mt-10  w-full ">
+          {messages.map((m, i) => {
+            const isLastMessage = i === messages.length - 1;
+            return (
               <div
-                className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm ${
-                  m.role === "user"
-                    ? "gradient-spiritual text-primary-foreground rounded-br-md"
-                    : "bg-card shadow-card text-foreground rounded-bl-md"
-                }`}
-              >
-                {m.role === "assistant" ? (
-                  <div className="prose prose-sm max-w-none text-foreground prose-headings:text-foreground prose-strong:text-foreground prose-a:text-secondary">
-                    <ReactMarkdown>{m.content}</ReactMarkdown>
-                  </div>
-                ) : (
-                  m.content
+                key={`${m.role}-${m.id}`}
+                className={cn(
+                  "flex w-full items-start ",
+                  `${m.role === "user" ? "justify-start" : "justify-end"}`,
                 )}
+              >
+                <div
+                  className={cn("flex", "flex-col", "space-y-2", {
+                    "items-start": m.role === "user",
+                    "items-end": m.role !== "user",
+                  })}
+                >
+                  {/* Message Bubble */}
+                  <div
+                    className={cn(
+                      "max-w-[85%] rounded-2xl px-4 py-3 text-sm flex justify-center",
+                      {
+                        "bg-card-foreground shadow-card text-primary-foreground rounded-br-md":
+                          m.role === "user",
+                        "bg-card shadow-card text-foreground rounded-bl-md":
+                          m.role !== "user",
+                      },
+                    )}
+                  >
+                    {m.role === "assistant" && typeof m.content === "object" ? (
+                      <div className=" max-w-none text-foreground">
+                        {m.content.message &&
+                          (isLastMessage ? (
+                            <TypingMessage
+                              text={m.content.message}
+                              onUpdate={() =>
+                                messagesEndRef.current?.scrollIntoView({
+                                  behavior: "smooth",
+                                })
+                              }
+                            />
+                          ) : (
+                            m.content.message
+                          ))}
+                      </div>
+                    ) : (
+                      m.content.toString()
+                    )}
+                  </div>
+
+                  {/* Redirect Chip */}
+                  {m.role === "assistant" &&
+                    typeof m.content === "object" &&
+                    m.content.redirectUrl && (
+                      <a
+                        href={m.content.redirectUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1.5 text-xs font-medium text-primary hover:bg-primary/20"
+                      >
+                        {t("baligh.redirect")}
+                        <Link className="h-3 w-3" />
+                      </a>
+                    )}
+                </div>
               </div>
-            </div>
-          ))}
-          {isLoading && messages[messages.length - 1]?.role === "user" && (
-            <div className="flex justify-start">
+            );
+          })}
+
+          {/* Loading Indicator */}
+          {isPending && messages[messages.length - 1]?.role === "user" && (
+            <div
+              className={cn(
+                "flex w-full justify-start",
+                `${messages[messages.length - 1]?.role === "assistant" ? "justify-start" : "justify-end"}`,
+              )}
+            >
               <div className="rounded-2xl rounded-bl-md bg-card px-4 py-3 shadow-card">
                 <Loader2 className="h-4 w-4 animate-spin text-muted-foreground" />
               </div>
             </div>
           )}
+
           <div ref={messagesEndRef} />
+        </div>
+      ) : (
+        /* Empty State */
+        <div className="flex-1 min-h-0 flex flex-col items-center justify-center page-content space-y-5 mt-10">
+          <img
+            src={balaghIcon}
+            alt="Baligh"
+            className="mb-4 h-16 w-16 opacity-60"
+          />
+
+          <p className="text-lg font-semibold text-center">
+            {t("baligh.welcome")}
+          </p>
+
+          <p className="mt-2 max-w-xs text-center text-sm text-muted-foreground">
+            {t("baligh.intro")}
+          </p>
+
+          <p className="mt-4 rounded-lg bg-muted px-3 py-1.5 text-xs text-muted-foreground">
+            {t("baligh.disclaimer")}
+          </p>
+
+          <div className="mt-6 w-full max-w-sm space-y-2">
+            {suggestions.map((s) => (
+              <Button
+                key={s}
+                onClick={() => sendMessage(s)}
+                className="w-full rounded-lg text-primary items-start justify-start border border-border bg-card  text-sm hover:bg-muted"
+              >
+                {s}
+              </Button>
+            ))}
+          </div>
         </div>
       )}
 
-      <div className="px-5 pb-2 pt-3 page-content">
+      {/* Input */}
+      <div className="flex-shrink-0 border-t bg-background page-content mt-10 -mb-12 w-full ">
         <form
           onSubmit={handleSubmit}
-          className="flex items-center gap-2 rounded-xl bg-card px-4 py-3 shadow-card"
+          className="flex gap-3 rounded-xl bg-card px-3 py-3 shadow-card my-2  border"
         >
-          <input
+          <Input
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder={
-              user
-                ? t("baligh.input_placeholder")
-                : t("baligh.signin_placeholder")
-            }
-            disabled={!user}
-            className="flex-1 bg-transparent text-sm text-foreground placeholder:text-muted-foreground outline-none"
+            placeholder={t("baligh.input_placeholder")}
+            className="flex-1 bg-transparent text-base outline-none "
           />
-          <button
+
+          <Button
             type="submit"
-            disabled={isLoading || !input.trim() || !user}
-            className="rounded-full bg-background p-2  transition-transform hover:scale-105 active:scale-95 disabled:opacity-50"
+            disabled={isPending || !input.trim()}
+            className="rounded-full bg-background text-foreground p-3 hover:scale-105 active:scale-95 disabled:opacity-50"
           >
-            {isLoading ? (
-              <Loader2 className="h-4 w-4 text-foreground animate-spin" />
-            ) : (
-              <Send className="h-4 w-4 text-foreground" />
-            )}
-          </button>
+            <Send className="h-4 w-4" />
+          </Button>
         </form>
       </div>
     </div>
   );
-};
-
-export default Baligh;
+}

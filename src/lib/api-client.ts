@@ -4,14 +4,15 @@ const BASE_URL = import.meta.env.VITE_API_BASE_URL.replace(
 );
 interface RequestConfig extends RequestInit {
   token?: string;
+  data?: unknown;
 }
 
 export async function apiClient<T>(
   endpoint: string,
-  { token, headers, ...customConfig }: RequestConfig = {},
+  { token, headers, data, ...customConfig }: RequestConfig = {},
 ): Promise<T> {
   const config: RequestInit = {
-    method: "GET",
+    method: data ? "POST" : "GET",
     headers: {
       "Content-Type": "application/json",
       ...(token ? { Authorization: `Bearer ${token}` } : {}),
@@ -19,6 +20,10 @@ export async function apiClient<T>(
     },
     ...customConfig,
   };
+
+  if (data) {
+    config.body = JSON.stringify(data);
+  }
 
   const url = `${BASE_URL}${endpoint}`;
   const response = await fetch(url, config);
