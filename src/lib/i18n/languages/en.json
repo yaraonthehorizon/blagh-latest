@@ -101,8 +101,12 @@
     },
     "knowledge": {
       "browse_topics": "Browse Topics",
+      "show_more": "Show More",
+      "show_less": "Show Less",
       "categories": {
         "books": "Books",
+        "interactive-books": "Interactive Books",
+        "study-books": "Study Books",
         "poster": "Poster",
         "favorites": "Favourites",
         "apps": "Apps",

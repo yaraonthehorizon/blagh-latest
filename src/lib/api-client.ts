@@ -7,10 +7,11 @@ interface RequestConfig extends RequestInit {
   data?: unknown;
 }
 
-export async function apiClient<T>(
+export async function apiClient<T, R = T>(
   endpoint: string,
   { token, headers, data, ...customConfig }: RequestConfig = {},
-): Promise<T> {
+  map?: (data: T) => R,
+): Promise<R> {
   const config: RequestInit = {
     method: data ? "POST" : "GET",
     headers: {
@@ -33,5 +34,9 @@ export async function apiClient<T>(
     throw new Error(errorMessage || "Something went wrong");
   }
 
-  return response.json();
+  const json: { data: T } = await response.json();
+
+  // The API wraps most responses in a `data` property. Let's unwrap it.
+  console.log("API response for", endpoint, ":", json.data);
+  return map ? map(json.data) : (json.data as unknown as R);
 }

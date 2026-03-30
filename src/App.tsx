@@ -35,7 +35,6 @@ import {
   RecitationCategoryItem,
 } from "./pages/Recitations";
 import { KnowledgeItemPage } from "./pages/Knowledge/KnowledgeItemPage";
-import { KnowledgeSubcategory } from "./pages/Knowledge/KnowledgeSubcategory";
 import { GlobalScrollToTop } from "./components/global/GlobalScrollToTop";
 import { AuthProvider } from "./providers/AuthProvider";
 
@@ -88,12 +87,7 @@ const App = () => {
                           element={<KnowledgeCategory />}
                         />
                         <Route
-                          path="/knowledge/:categoryId/:subCategoryId"
-                          element={<KnowledgeSubcategory />}
-                        />
-
-                        <Route
-                          path="/knowledge/:categoryId/:subCategoryId/:itemId"
+                          path="/knowledge/:categoryId/:itemId"
                           element={<KnowledgeItemPage />}
                         />
                         <Route

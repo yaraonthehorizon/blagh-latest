@@ -12,10 +12,10 @@ export function Knowledge() {
   const { t, i18n } = useTranslation();
   const sourceLanguage = i18n.language.startsWith("ar") ? "ar" : "en";
 
-  const { data, isLoading, error } = useGetKnowledgeCategories<{
-    data: KnowledgeResponse;
-  }>(sourceLanguage);
+  const { data, isLoading, error } =
+    useGetKnowledgeCategories<KnowledgeResponse>(sourceLanguage);
 
+  console.log(data);
   if (isLoading) {
     return (
       <div className="page-container">
@@ -56,8 +56,8 @@ export function Knowledge() {
       <div className="page-content">
         <Header headerTitleKey="page_title.knowledge" backButton />
         <div className="grid grid-cols-2 gap-3 mt-10">
-          {data.data &&
-            data.data.sub_categories.map((category) => (
+          {data &&
+            data.sub_categories?.map((category) => (
               <AppCard
                 onClick={() => navigate(`/knowledge/${category.id}`)}
                 key={category.id}

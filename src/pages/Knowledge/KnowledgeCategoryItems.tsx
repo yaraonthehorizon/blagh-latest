@@ -11,7 +11,8 @@ import { useGetKnowledgeSubcategoryItems } from "@/queries/knowledge/use-get-kno
 import type { KnowledgeItem, KnowledgeSubcategory } from "@/types/knowledge";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { PaginationControls } from "@/components/Pagination";
-export function KnowledgeSubcategory() {
+import { useGetKnowledgeCategoryItems } from "@/queries/knowledge/use-get-knowledge-category-items";
+export function KnowledgeCategoryItems() {
   const { categoryId, subCategoryId } = useParams();
   const { t, i18n } = useTranslation();
   const [page, setPage] = useState(1);
@@ -28,20 +29,17 @@ export function KnowledgeSubcategory() {
   }, [page]);
 
   // Try reading categories from cache
-  const cachedCategoriesResponse = queryClient.getQueryData<{
-    data: KnowledgeResponse;
-  }>(["knowledge-categories", sourceLanguage]);
+  const cachedCategoriesResponse = queryClient.getQueryData<KnowledgeResponse>([
+    "knowledge-categories",
+    sourceLanguage,
+  ]);
 
-  const cachedCategories = cachedCategoriesResponse?.data.sub_categories;
+  const cachedCategories = cachedCategoriesResponse?.sub_categories;
   const cachedCategory = cachedCategories?.find(
     (c) => c.id === Number(categoryId),
   );
 
-  const cachedSubCategory = cachedCategory?.sub_categories?.find(
-    (sc) => sc.id === Number(subCategoryId),
-  );
-
-  const cachedTitle = cachedSubCategory?.title;
+  const cachedTitle = cachedCategory?.title;
 
   // If title is not in cache, fetch all categories to find it.
   // This will be fast if data is already in the query cache.
@@ -51,21 +49,17 @@ export function KnowledgeSubcategory() {
   const fetchedCategory = fetchedCategoriesResponse?.sub_categories?.find(
     (c) => c.id === Number(categoryId),
   );
-  const fetchedSubCategory = fetchedCategory?.sub_categories?.find(
-    (sc) => sc.id === Number(subCategoryId),
-  );
-  const fetchedTitle = fetchedSubCategory?.title;
+
+  const fetchedTitle = fetchedCategory?.title;
 
   const title = cachedTitle || fetchedTitle || "";
 
-  const { data, isLoading, isError } = useGetKnowledgeSubcategoryItems<{
-    data: {
-      data: KnowledgeItem[];
-      page: number;
-      pageSize: number;
-      total: number;
-      totalPages: number;
-    };
+  const { data, isLoading, isError } = useGetKnowledgeCategoryItems<{
+    data: KnowledgeItem[];
+    page: number;
+    pageSize: number;
+    total: number;
+    totalPages: number;
   }>(subCategoryId, sourceLanguage, translationLanguage, page, pageSize);
 
   const isPageLoading =
@@ -114,7 +108,7 @@ export function KnowledgeSubcategory() {
         />
 
         <div className="grid grid-cols-1 gap-3 mt-10">
-          {data?.data.data.map((item) => (
+          {data?.data.map((item) => (
             <AppCard
               key={item.id}
               onClick={() =>
@@ -153,7 +147,7 @@ export function KnowledgeSubcategory() {
         </div>
         <PaginationControls
           page={page}
-          totalPages={data?.data?.totalPages}
+          totalPages={data?.totalPages || 1}
           setPage={setPage}
         />
       </div>

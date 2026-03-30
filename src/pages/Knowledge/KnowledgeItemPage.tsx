@@ -18,10 +18,7 @@ export function KnowledgeItemPage() {
   const { t, i18n } = useTranslation();
   const sourceLanguage = i18n.language.startsWith("ar") ? "ar" : "en";
   const { data, isLoading, isError } = useGetKnowledgeItem<
-    | {
-        data: KnowledgeItemResponse;
-      }
-    | { error: string }
+    KnowledgeItemResponse | { error: string }
   >(itemId, sourceLanguage);
 
   if (isLoading) {
@@ -43,15 +40,7 @@ export function KnowledgeItemPage() {
     );
   }
 
-  const isDataError =
-    isError ||
-    !data ||
-    "error" in data ||
-    (data &&
-      "data" in data &&
-      typeof data.data === "object" &&
-      data.data &&
-      "error" in data.data);
+  const isDataError = isError || !data || "error" in data;
 
   if (isDataError) {
     return (
@@ -71,15 +60,15 @@ export function KnowledgeItemPage() {
   }
 
   // Safely extract our expected item shape after the error checks
-  const itemData = ("data" in data ? data.data : data) as KnowledgeItem;
+  const itemData = data as KnowledgeItem;
 
   return (
     <div className="page-container">
       <div className="page-content">
         <Header
           headerTitleKey={
-            itemData.title.length > 12
-              ? itemData.title.slice(0, 12) + "..."
+            itemData.title.length > 15
+              ? itemData.title.slice(0, 15) + "..."
               : itemData.title
           }
           backButton

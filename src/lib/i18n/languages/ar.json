@@ -108,8 +108,12 @@
     },
     "knowledge": {
       "browse_topics": "تصفح المواضيع",
+      "show_more": "عرض المزيد",
+      "show_less": "عرض أقل",
       "categories": {
         "books": "كتب",
+        "interactive-books": "كتب تفاعلية",
+        "study-books": "كتب للتدارس",
         "poster": "ملصقات",
         "apps": "تطبيقات",
         "favorites": "مفضلات",
