@@ -55,14 +55,14 @@ export function RecitationsCategory() {
     <div className="page-container">
       <div className="page-content">
         <Header
-          headerTitleKey={data.data.title}
+          headerTitleKey={data.title}
           backButton
           className="text-base bg-am"
         />
 
         <div className="flex flex-col justify-items-center -gap-x-2 gap-y-4 mt-6">
-          {data.data.recitations.length > 0 ? (
-            data.data.recitations.map((item: RecitationInfoCondensed) => (
+          {data.recitations.length > 0 ? (
+            data.recitations.map((item: RecitationInfoCondensed) => (
               <AppCard
                 key={item.id}
                 onClick={() =>

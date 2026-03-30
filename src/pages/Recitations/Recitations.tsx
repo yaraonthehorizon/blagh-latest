@@ -12,6 +12,7 @@ export function Recitations() {
   const { data, isLoading, isError } =
     useGetQuranRecitationCategories<RecitationCategoryDetails>(locale);
 
+  console.log("Recitation categories data:", data);
   if (isLoading) {
     return (
       <div className="page-container">
@@ -66,10 +67,10 @@ export function Recitations() {
           <div className="grid grid-cols-1  gap-3">
             {data.map((item) => (
               <CategoryCard
-                key={item.data.id}
-                title={item.data.title}
+                key={item.id}
+                title={item.title}
                 onClick={() => {
-                  navigate(`/recitations/${item.data.id}`);
+                  navigate(`/recitations/${item.id}`);
                 }}
               />
             ))}

@@ -3,12 +3,11 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes, Outlet } from "react-router-dom";
-import { AuthProvider } from "@/contexts/AuthContext";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import BottomNav from "@/components/BottomNav";
 import Index from "./pages/Index";
 import { Knowledge, KnowledgeCategory } from "./pages/Knowledge";
-import Baligh from "./pages/Baligh";
+import { Baligh } from "./pages/Baligh";
 import NotFound from "./pages/NotFound";
 import { Athkar } from "./pages/Athkar";
 import Hadith from "./pages/Hadith";
@@ -36,8 +35,8 @@ import {
   RecitationCategoryItem,
 } from "./pages/Recitations";
 import { KnowledgeItemPage } from "./pages/Knowledge/KnowledgeItemPage";
-import { KnowledgeSubcategory } from "./pages/Knowledge/KnowledgeSubcategory";
 import { GlobalScrollToTop } from "./components/global/GlobalScrollToTop";
+import { AuthProvider } from "./providers/AuthProvider";
 
 const queryClient = new QueryClient();
 
@@ -88,12 +87,7 @@ const App = () => {
                           element={<KnowledgeCategory />}
                         />
                         <Route
-                          path="/knowledge/:categoryId/:subCategoryId"
-                          element={<KnowledgeSubcategory />}
-                        />
-
-                        <Route
-                          path="/knowledge/:categoryId/:subCategoryId/:itemId"
+                          path="/knowledge/:categoryId/:itemId"
                           element={<KnowledgeItemPage />}
                         />
                         <Route
@@ -101,7 +95,6 @@ const App = () => {
                           element={<KnowledgeItemPage />}
                         />
 
-                        <Route path="/baligh" element={<Baligh />} />
                         <Route path="/children" element={<Children />} />
                         <Route
                           path="/children/:categoryId"
@@ -136,6 +129,7 @@ const App = () => {
                         />
                         <Route path="/more-apps" element={<MoreApps />} />
                       </Route>
+                      <Route path="/baligh" element={<Baligh />} />
                       <Route path="/auth/login" element={<Login />} />
                       <Route path="/auth/signup" element={<SignUp />} />
                       <Route path="/auth/otp" element={<OTP />} />

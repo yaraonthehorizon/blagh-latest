@@ -4,14 +4,16 @@ const BASE_URL = import.meta.env.VITE_API_BASE_URL.replace(
 );
 interface RequestConfig extends RequestInit {
   token?: string;
+  data?: unknown;
 }
 
-export async function apiClient<T>(
+export async function apiClient<T, R = T>(
   endpoint: string,
-  { token, headers, ...customConfig }: RequestConfig = {},
-): Promise<T> {
+  { token, headers, data, ...customConfig }: RequestConfig = {},
+  map?: (data: T) => R,
+): Promise<R> {
   const config: RequestInit = {
-    method: "GET",
+    method: data ? "POST" : "GET",
     headers: {
       "Content-Type": "application/json",
       ...(token ? { Authorization: `Bearer ${token}` } : {}),
@@ -19,6 +21,10 @@ export async function apiClient<T>(
     },
     ...customConfig,
   };
+
+  if (data) {
+    config.body = JSON.stringify(data);
+  }
 
   const url = `${BASE_URL}${endpoint}`;
   const response = await fetch(url, config);
@@ -28,5 +34,9 @@ export async function apiClient<T>(
     throw new Error(errorMessage || "Something went wrong");
   }
 
-  return response.json();
+  const json: { data: T } = await response.json();
+
+  // The API wraps most responses in a `data` property. Let's unwrap it.
+  console.log("API response for", endpoint, ":", json.data);
+  return map ? map(json.data) : (json.data as unknown as R);
 }
