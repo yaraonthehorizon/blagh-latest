@@ -47,7 +47,6 @@ export function ReciterCard({
     img ||
     `https://api.dicebear.com/7.x/initials/svg?seed=${name}&backgroundColor=0f2a20`;
 
-  console.log("ReciterCard data:", data);
   let attachments: RecitationAttachment[] = [];
   if (attachmentUrl) {
     attachments = [

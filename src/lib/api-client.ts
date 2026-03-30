@@ -36,7 +36,5 @@ export async function apiClient<T, R = T>(
 
   const json: { data: T } = await response.json();
 
-  // The API wraps most responses in a `data` property. Let's unwrap it.
-  console.log("API response for", endpoint, ":", json.data);
   return map ? map(json.data) : (json.data as unknown as R);
 }
