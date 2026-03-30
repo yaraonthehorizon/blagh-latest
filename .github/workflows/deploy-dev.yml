@@ -1,0 +1,48 @@
+name: Deploy Client - Development
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - dev-upstream
+
+env:
+  REGISTRY: me-central2-docker.pkg.dev
+  IMAGE: us-central1-docker.pkg.dev/ibalagh/ibalagh-registry/ibalagh-client-dev
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Login to Artifact Registry
+        env:
+          GCP_KEY: ${{ secrets.GCP_REGISTRY_KEY }}
+        run: |
+          printf '%s' "$GCP_KEY" | docker login -u _json_key --password-stdin https://${{ env.REGISTRY }}
+
+      - name: Build Docker image
+        run: |
+          docker build --build-arg env=development -t ${{ env.IMAGE }}:${{ github.sha }} -t ${{ env.IMAGE }}:latest .
+
+      - name: Push Docker image
+        run: |
+          docker push ${{ env.IMAGE }}:${{ github.sha }}
+          docker push ${{ env.IMAGE }}:latest
+
+      - name: Deploy to Dev VM
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: 136.113.221.49
+          username: i_khalifa
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cat ~/pusher-key.json | docker login -u _json_key --password-stdin https://us-central1-docker.pkg.dev
+            docker pull us-central1-docker.pkg.dev/ibalagh/ibalagh-registry/ibalagh-client-dev:latest
+            cd /ibalagh
+            docker compose up -d --no-deps --force-recreate client 
+            docker image prune -f
+            echo "✅ Specialist deployed successfully"
