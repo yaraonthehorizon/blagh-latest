@@ -11,9 +11,7 @@ export default function RecitersSection() {
   const locale = i18n.language.startsWith("ar") ? "ar" : "en";
 
   const { data, isLoading, isError } =
-    useGetQuranRecitersAndAssociatedRecitations<{ data: ReciterInfo[] }>(
-      locale,
-    );
+    useGetQuranRecitersAndAssociatedRecitations<ReciterInfo[]>(locale);
 
   if (isLoading) {
     return (
@@ -38,7 +36,7 @@ export default function RecitersSection() {
           {[1, 2, 3].map((i) => (
             <div
               key={i}
-              className="flex-shrink-0  overflow-x-auto  pb-3  no-scrollbar  w-[160px] h-[180px] bg-surface border border-bdr-p rounded-[20px] animate-pulse"
+              className="flex-shrink-0  overflow-x-auto  pb-3  no-scrollbar  w-[160px] h-[175px] bg-surface border border-bdr-p rounded-[20px] animate-pulse"
             ></div>
           ))}
         </div>
@@ -90,8 +88,8 @@ export default function RecitersSection() {
         </div>
       </div>
       <div className="flex gap-3 overflow-x-auto  pb-3 snap-x snap-mandatory no-scrollbar">
-        {data.data && data.data.length > 0 ? (
-          data.data.map((item: ReciterInfo) => (
+        {data && data.length > 0 ? (
+          data.map((item: ReciterInfo) => (
             <ReciterCard
               key={item.id}
               id={item.id}

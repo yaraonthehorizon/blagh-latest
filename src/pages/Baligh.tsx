@@ -51,8 +51,8 @@ export function Baligh() {
               id: response.requestIdentifier,
               role: "assistant",
               content: {
-                message: response?.data?.response?.message || "No message",
-                redirectUrl: response?.data?.response?.redirectUrl,
+                message: response?.response?.message || "No message",
+                redirectUrl: response?.response?.redirectUrl,
               },
             },
           ]);

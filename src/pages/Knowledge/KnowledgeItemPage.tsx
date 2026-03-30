@@ -63,7 +63,7 @@ export function KnowledgeItemPage() {
   const itemData = data as KnowledgeItem;
 
   return (
-    <div className="page-container">
+    <div className="page-container mb-12">
       <div className="page-content">
         <Header
           headerTitleKey={
