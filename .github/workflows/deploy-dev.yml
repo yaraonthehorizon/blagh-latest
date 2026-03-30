@@ -7,7 +7,7 @@ on:
       - dev-upstream
 
 env:
-  REGISTRY: me-central2-docker.pkg.dev
+  REGISTRY: us-central1-docker.pkg.dev
   IMAGE: us-central1-docker.pkg.dev/ibalagh/ibalagh-registry/ibalagh-client-dev
 
 jobs:
