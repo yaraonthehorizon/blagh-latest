@@ -106,13 +106,13 @@ export function KnowledgeCategoryItem() {
               </p>
             </div>
             <div className="flex items-center justify-center gap-2 mt-2">
-              <Badge className="capitalize leading-none px-3 pt-1.5 sm:pt-0.5">
+              <Badge className="capitalize leading-none ">
                 {t(
                   "content.knowledge.categories." +
                     resolvedItem.type.toLowerCase(),
                 )}
               </Badge>
-              <Badge className="capitalize leading-none px-3 pt-1.5 sm:pt-0.5">
+              <Badge className="capitalize leading-none ">
                 {t(
                   "content.knowledge.importance." +
                     resolvedItem.importance_level.toLowerCase(),
