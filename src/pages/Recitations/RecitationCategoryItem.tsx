@@ -13,11 +13,7 @@ export function RecitationCategoryItem() {
   const { t, i18n } = useTranslation();
   const locale = i18n.language.startsWith("ar") ? "ar" : "en";
 
-  interface RecitersResponse {
-    data: RecitationInfo;
-  }
-
-  const { data, isLoading, isError } = useGetRecitationInfo<RecitersResponse>(
+  const { data, isLoading, isError } = useGetRecitationInfo<RecitationInfo>(
     Number(recitationId),
     locale,
   );
@@ -57,17 +53,17 @@ export function RecitationCategoryItem() {
   }
 
   let attachments: RecitationAttachment[] = [];
-  if (Array.isArray(data.data?.attachments)) {
-    attachments = data.data.attachments;
-  } else if (data.data?.attachments) {
-    attachments = [data.data.attachments];
+  if (Array.isArray(data?.attachments)) {
+    attachments = data.attachments;
+  } else if (data?.attachments) {
+    attachments = [data.attachments];
   }
 
   return (
     <div className="page-container">
       <div className="page-content">
         <Header
-          headerTitleKey={data.data?.title || "Attachments"}
+          headerTitleKey={data?.title || "Attachments"}
           backButton
           className="text-sm"
         />
@@ -78,7 +74,7 @@ export function RecitationCategoryItem() {
               <ReciterCard
                 key={item.id || index}
                 id={item.id}
-                name={item.title || data.data.title}
+                name={item.title || data.title}
                 attachmentUrl={item.url}
               />
             ))

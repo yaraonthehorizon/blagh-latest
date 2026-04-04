@@ -8,7 +8,6 @@ import {
 import { useTranslation } from "react-i18next";
 
 interface ApplicationViewerProps {
-  key: number;
   title: string;
   image?: string;
   item: {
@@ -21,7 +20,6 @@ interface ApplicationViewerProps {
 }
 
 export function ApplicationViewer({
-  key,
   item,
   image,
   title,
@@ -34,10 +32,7 @@ export function ApplicationViewer({
   const { t } = useTranslation();
 
   return (
-    <div
-      key={key}
-      className="flex flex-col gap-4 mt-5 w-full bg-card border rounded-xl p-4 shadow-sm"
-    >
+    <div className="flex flex-col gap-4 mt-5 w-full bg-card border rounded-xl p-4 shadow-sm">
       <div className="flex gap-4 items-start">
         <div className="shrink-0">
           {image ? (

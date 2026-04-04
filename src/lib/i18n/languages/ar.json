@@ -108,8 +108,16 @@
     },
     "knowledge": {
       "browse_topics": "تصفح المواضيع",
+      "show_more": "عرض المزيد",
+      "show_less": "عرض أقل",
+      "start_reading": "ابدا القراءة",
+      "reader_loading": "...تحميل السطور",
+      "reader_continue": "واصل القراءة",
+
       "categories": {
         "books": "كتب",
+        "interactive-books": "كتب تفاعلية",
+        "study-books": "كتب للتدارس",
         "poster": "ملصقات",
         "apps": "تطبيقات",
         "favorites": "مفضلات",
@@ -320,13 +328,13 @@
       "gregorian_date_label": "التاريخ الميلادي",
       "gregorian_date_value": "٤ مارس ٢٠٢٦",
       "day": "الأربعاء",
-      "location": "الجيزة، مصر",
+      "location": "الرياض - المملكة العربية السعودية",
       "adhan": "الأذان",
       "calendar": "التقويم"
     },
     "prayer_widget": {
       "next_prayer": "الصلاة القادمة",
-      "time_location": "١٢:١٨ — الجيزة",
+      "time_location": "١١:٥٦ — الرياض",
       "starts_in": "يبدأ خلال",
       "countdown": "٠١:٢٤:٠٠",
       "h_m_s": "س : د : ث"

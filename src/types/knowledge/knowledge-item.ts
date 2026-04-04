@@ -17,6 +17,7 @@ export interface KnowledgeItem {
     size: string;
     order?: number;
     extension_type: string;
+    type: string;
     description: string;
     url: string;
   }[];

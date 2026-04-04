@@ -165,9 +165,9 @@ export default function AppsSection() {
             onClick={() => app.path && navigate(app.path)}
           >
             <div
-              className={`w-full aspect-square rounded-[20px] flex items-center justify-center transition-transform group-active:scale-90 overflow-hidden shadow-sm bg-play-grad`}
+              className={`w-full aspect-square rounded-[20px] flex items-center justify-center transition-transform group-active:scale-90 overflow-hidden shadow-sm border bg-background backdrop-blur-2xl`}
             >
-              <div className="w-12 h-12 rounded-md flex items-center justify-center bg-transparent backdrop-blur-3xl">
+              <div className="w-12 h-12 rounded-md flex items-center justify-center bg-primary backdrop-blur-3xl">
                 {app.icon}
               </div>
             </div>

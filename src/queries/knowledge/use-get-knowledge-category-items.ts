@@ -22,7 +22,7 @@ export function useGetKnowledgeCategoryItems<T = unknown>(
         `knowledge/get-category-items/${categoryId}/${translationLanguage}/${sourceLanguage}/${page}/${pageSize}`,
       );
     },
-    staleTime: 1000 * 60 * 60,
     refetchOnWindowFocus: false,
+    staleTime: 1000 * 60 * 60,
   });
 }

@@ -30,11 +30,7 @@ export function ReciterCard({
   const { t, i18n } = useTranslation();
   const locale = i18n.language.startsWith("ar") ? "ar" : "en";
 
-  interface RecitersResponse {
-    data: RecitationInfo;
-  }
-
-  const { data, isLoading, isError } = useGetRecitationInfo<RecitersResponse>(
+  const { data, isLoading, isError } = useGetRecitationInfo<RecitationInfo>(
     attachmentUrl ? undefined : recitationId,
     locale,
   );
@@ -70,10 +66,10 @@ export function ReciterCard({
     if (Array.isArray(data)) {
       attachments = data;
     } else if (data && typeof data === "object") {
-      if (Array.isArray(data.data?.attachments)) {
-        attachments = data.data?.attachments;
-      } else if (data.data?.attachments) {
-        attachments = [data.data?.attachments];
+      if (Array.isArray(data?.attachments)) {
+        attachments = data?.attachments;
+      } else if (data?.attachments) {
+        attachments = [data?.attachments];
       }
     }
   }

@@ -22,7 +22,7 @@ export function PaginationControls({
         onClick={() => setPage((p) => Math.max(1, p - 1))}
         className="p-3 text-sm font-bold border border-bdr-p rounded-full bg-surface disabled:opacity-50 transition-transform active:scale-95 text-foreground shadow-sm"
       >
-        <ChevronRight className="h-4 w-4" />
+        <ChevronLeft className="h-4 w-4 rtl:rotate-180" />
       </button>
 
       <span className="text-sm font-bold text-muted-foreground">
@@ -34,7 +34,7 @@ export function PaginationControls({
         onClick={() => setPage((p) => p + 1)}
         className="p-3 text-sm font-bold border border-bdr-p rounded-full bg-surface disabled:opacity-50 transition-transform active:scale-95 text-foreground shadow-sm"
       >
-        <ChevronLeft className="h-4 w-4" />
+        <ChevronRight className="h-4 w-4 rtl:rotate-180" />
       </button>
     </div>
   );

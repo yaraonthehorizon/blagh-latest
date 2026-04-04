@@ -1,8 +1,4 @@
-import DailyVerse from "@/components/DailyVerse";
-import DailyHadith from "@/components/DailyHadith";
-import QuickActions from "@/components/QuickActions";
 import { useTranslation } from "react-i18next";
-import { DateAndPrayerCard } from "@/components/DateAndPrayerCard";
 import { Header } from "@/components/Header";
 import Bismillah from "@/components/Bismillah";
 import MegaCard from "@/components/MegaCard";
@@ -29,7 +25,6 @@ export default function Index() {
               {t("content.home.name", { name: "Yara" })}
             </p>
           </div>
-          <Bismillah />
           <MegaCard />
         </div>
       </div>
