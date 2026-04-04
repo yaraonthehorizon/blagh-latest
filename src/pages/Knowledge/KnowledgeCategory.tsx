@@ -46,10 +46,10 @@ export function KnowledgeCategory() {
       const y =
         element.getBoundingClientRect().top +
         window.scrollY -
-        SHOW_LESS_ITEMS_SCROLL_OFFSET; // 100px offset for header
+        SHOW_LESS_ITEMS_SCROLL_OFFSET;
       window.scrollTo({ top: y, behavior: "auto" });
     }
-    setLastCollapsedSection(null); // Reset after scrolling
+    setLastCollapsedSection(null);
   }, [lastCollapsedSection]);
 
   const toggleSection = (key: string) => {
@@ -95,6 +95,8 @@ export function KnowledgeCategory() {
 
   const isPageLoading =
     (isLoading && !data) || (isLoadingCategories && !cachedTitle);
+
+  console.log();
 
   if (isError || "error" in (data ?? {})) {
     return (
@@ -168,7 +170,14 @@ export function KnowledgeCategory() {
                       .map((item: KnowledgeItem) => (
                         <AppCard
                           key={item.id}
-                          onClick={() => navigate(`/knowledge/item/${item.id}`)}
+                          onClick={() =>
+                            navigate(`/knowledge/${categoryId}/${item.id}`, {
+                              state: {
+                                item,
+                                sectionKey: section.key,
+                              },
+                            })
+                          }
                           className="flex flex-col w-full items-center justify-center transition-transform hover:scale-[1.01] active:scale-[0.99]"
                         >
                           <div className="text-center mt-2">

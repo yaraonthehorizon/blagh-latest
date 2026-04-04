@@ -103,6 +103,9 @@
       "browse_topics": "Browse Topics",
       "show_more": "Show More",
       "show_less": "Show Less",
+      "start_reading": "Start reading",
+      "reader_loading": "Loading lines...",
+      "reader_continue": "Continue Reading",
       "categories": {
         "books": "Books",
         "interactive-books": "Interactive Books",
@@ -344,13 +347,13 @@
     "gregorian_date_label": "Gregorian Date",
     "gregorian_date_value": "4 March 2026",
     "day": "Wednesday",
-    "location": "Giza, Egypt",
+    "location": "Riyadh, Saudi Arabia",
     "adhan": "Adhan",
     "calendar": "Calendar"
   },
   "prayer_widget": {
     "next_prayer": "Next Prayer",
-    "time_location": "12:18 — Giza",
+    "time_location": "11:56 — Riyadh",
     "starts_in": "Starts in",
     "countdown": "01:24:00",
     "h_m_s": "h : m : s"

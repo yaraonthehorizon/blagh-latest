@@ -2,7 +2,6 @@ import { useAudioPlayer } from "@/hooks/use-audio-player";
 import { Pause, Play } from "lucide-react";
 
 interface AudioViewerProps {
-  key: number;
   title: string;
   trackId: string;
   item: {
@@ -13,15 +12,12 @@ interface AudioViewerProps {
     url: string;
   };
 }
-export function AudioViewer({ key, item, trackId, title }: AudioViewerProps) {
+export function AudioViewer({ item, trackId, title }: AudioViewerProps) {
   const { playTrack, togglePlay, currentTrack, isPlaying } = useAudioPlayer();
   const isCurrent = currentTrack?.id === trackId;
   const isPlayingTrack = isCurrent && isPlaying;
   return (
-    <div
-      key={key}
-      className="flex flex-col text-center items-center gap-4 rounded-lg border text-sm mt-5 bg-card p-5 text-card-foreground shadow-sm"
-    >
+    <div className="flex flex-col text-center items-center gap-4 rounded-lg border text-sm mt-5 bg-card p-5 text-card-foreground shadow-sm">
       <button
         onClick={() => {
           if (isCurrent) {

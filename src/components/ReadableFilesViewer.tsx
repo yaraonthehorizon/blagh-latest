@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 interface ReadableFilesViewerProps {
-  key: number;
   title: string;
   item: {
     order?: number;
@@ -13,17 +12,13 @@ interface ReadableFilesViewerProps {
     url: string;
   };
 }
-export function ReadableFilesViewer({
-  key,
-  item,
-  title,
-}: ReadableFilesViewerProps) {
+export function ReadableFilesViewer({ item, title }: ReadableFilesViewerProps) {
   const isDocx = item.extension_type.toLowerCase() === "docx";
   const { t } = useTranslation();
   const [showIframe, setShowIframe] = useState(false);
 
   return (
-    <div key={key} className="flex flex-col items-center mt-5 w-full">
+    <div className="flex flex-col items-center mt-5 w-full">
       {isDocx ? (
         <div className="flex flex-col items-center justify-center w-full h-48 bg-muted/20 rounded-lg mb-2 border">
           <File className="w-12 h-12 text-muted-foreground" />

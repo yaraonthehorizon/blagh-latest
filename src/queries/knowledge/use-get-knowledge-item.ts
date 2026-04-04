@@ -8,7 +8,9 @@ export function useGetKnowledgeItem<T = unknown>(
   return useQuery({
     queryKey: ["knowledge-item", itemId, sourceLanguage],
     queryFn: () => {
-      return apiClient<T>(`knowledge/get-item/${itemId}/${sourceLanguage}`);
+      return apiClient<T>(
+        `knowledge/get-categorized-item/${itemId}/${sourceLanguage}`,
+      );
     },
     staleTime: 1000 * 60 * 60,
     refetchOnWindowFocus: false,

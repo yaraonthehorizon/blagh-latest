@@ -6,7 +6,11 @@ import { BrowserRouter, Route, Routes, Outlet } from "react-router-dom";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import BottomNav from "@/components/BottomNav";
 import Index from "./pages/Index";
-import { Knowledge, KnowledgeCategory } from "./pages/Knowledge";
+import {
+  Knowledge,
+  KnowledgeCategory,
+  KnowledgeCategoryItem,
+} from "./pages/Knowledge";
 import { Baligh } from "./pages/Baligh";
 import NotFound from "./pages/NotFound";
 import { Athkar } from "./pages/Athkar";
@@ -34,9 +38,9 @@ import {
   RecitationsCategory,
   RecitationCategoryItem,
 } from "./pages/Recitations";
-import { KnowledgeItemPage } from "./pages/Knowledge/KnowledgeItemPage";
 import { GlobalScrollToTop } from "./components/global/GlobalScrollToTop";
 import { AuthProvider } from "./providers/AuthProvider";
+import { ReadInteractiveBook } from "./pages/Knowledge/Read/ReadInteractiveBook";
 
 const queryClient = new QueryClient();
 
@@ -50,7 +54,7 @@ const MainLayout = () => {
   );
 };
 
-const App = () => {
+export default function App() {
   const [showSplash, setShowSplash] = useState(true);
   return (
     <AudioPlayerProvider>
@@ -88,11 +92,15 @@ const App = () => {
                         />
                         <Route
                           path="/knowledge/:categoryId/:itemId"
-                          element={<KnowledgeItemPage />}
+                          element={<KnowledgeCategoryItem />}
+                        />
+                        <Route
+                          path="/knowledge/read/:contentExternalSourceId"
+                          element={<ReadInteractiveBook />}
                         />
                         <Route
                           path="/knowledge-gift/:itemId"
-                          element={<KnowledgeItemPage />}
+                          element={<KnowledgeCategoryItem />}
                         />
 
                         <Route path="/children" element={<Children />} />
@@ -145,6 +153,4 @@ const App = () => {
       <GlobalAudioPlayer />
     </AudioPlayerProvider>
   );
-};
-
-export default App;
+}

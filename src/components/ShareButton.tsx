@@ -20,7 +20,7 @@ export function ShareButton({ buttonText, title, url }: ShareButtonProps) {
         await Share.share({
           title: title,
           url: fullUrl,
-          dialogTitle: "Share with friends", // This property only applies to Android
+          dialogTitle: "Share with friends", //
         });
       } else {
         await navigator.clipboard.writeText(fullUrl);
